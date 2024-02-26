@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<speechMacros>
+
+  <!-- ##################################################
+       ##
+       ##    IGNORE THESE RECOGNITIONS
+       ##
+       ################################################## -->
+
+  <command priority="127">
+    <listenFor>CUT</listenFor>
+    <sendKeys></sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>END</listenFor>
+    <sendKeys></sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>HOME</listenFor>
+    <sendKeys></sendKeys>
+  </command>
+
+  <!-- ##################################################
+       ##
+       ##    VARIATIONS OF "COPY"
+       ##
+       ################################################## -->
+
+  <command priority="127">
+    <listenFor>COPY ALL</listenFor>
+    <sendKeys>^a</sendKeys>
+    <waitFor seconds="0.3"/>
+    <sendKeys>^c</sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>COPY ALL SWITCH BACK</listenFor>
+    <sendKeys>^a</sendKeys>
+    <waitFor seconds="0.3"/>
+    <sendKeys>^c</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys>%{TAB}</sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>COPY SWITCH BACK</listenFor>
+    <sendKeys>^c</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys>%{TAB}</sendKeys>
+  </command>
+
+  <!-- ##################################################
+       ##
+       ##    LIST AND RULE IMPLEMENTATIONS
+       ##
+       ################################################## -->
+      
+  <command priority="127">
+    <rule> 
+      <p><ruleref name="keyCombo2" propname="keyCombo2"/></p>
+    </rule>
+    <sendKeys>{[keyCombo2.pressedOnce]}</sendKeys>
+  </command>
+
+  <command priority="120">
+    <rule>
+      <p><ruleref name="keys" propname="keys"/></p>
+      <o><ruleref name="1to20" propname="1to20"/></o>
+    </rule>
+    <sendKeys times="{[1to20]}">{[keys.multiPress]}</sendKeys>
+  </command>
+
+
+  <command priority="127">
+    <rule>
+      <p>SWITCH</p>
+      <p><ruleref name="0to10" propname="0to10"/></p>
+    </rule>
+    <sendKeys>{{WIN}}{[0to10]}</sendKeys>
+  </command>
+
+  <!-- ##################################################
+       ##
+       ##    Multi key press streamer 
+       ##
+       ################################################## -->  
+       
+<command priority="127"> 
+    <rule> 
+      <p>
+        <ruleref name="textManipulation" propname="p1.textManipulation"/>
+        <o><ruleref name="1to20" propname="p1.1to20"/></o>
+      </p>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p2.textManipulation"/>
+          <o><ruleref name="1to20" propname="p2.1to20"/></o>
+        </o>
+      </p>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p3.textManipulation"/>
+          <o><ruleref name="1to20" propname="p3.1to20"/></o>
+        </o>
+      </p>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p4.textManipulation"/>
+          <o><ruleref name="1to20" propname="p4.1to20"/></o>
+        </o>
+      </p>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p5.textManipulation"/>
+          <o><ruleref name="1to20" propname="p5.1to20"/></o>
+        </o>
+      </p>
+    </rule>
+    <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="{[p3.1to20]}">{[p3.textManipulation.keys]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="{[p4.1to20]}">{[p4.textManipulation.keys]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="{[p5.1to20]}">{[p5.textManipulation.keys]}</sendKeys>
+</command>
+
+  <!-- ##################################################
+       ##
+       ##    LIST AND RULE DEFINITIONS 
+       ##
+       ################################################## -->
+     
+       <rule name="textManipulation">
+        <list propname = "keys">
+          <p valstr="{TAB}">TAB</p>
+          <p valstr="{{SHIFT}}{TAB}">BACK TAB</p>
+          <p valstr="{{CTRL}}{PGDN}">TAB OVER</p>
+          <p valstr="{{CTRL}}{PGUP}">TAB UNDER</p>
+          <p valstr="{ENTER}">ENTER</p>
+          <p valstr="%{ENTER}">ALTER</p>
+          <p valstr=" ">SPACE</p>
+          <p valstr="+{ENTER}">SHELTER</p>
+          <p valstr="{BACKSPACE}">BACKS</p>
+          <p valstr="{DELETE}">DELETE</p>
+          <p valstr="{END}">ENDS</p>
+          <p valstr="^{END}">ENDER</p>
+          <p valstr="+{END}">ENCH</p>
+          <p valstr="{HOME}">HOMER</p>
+          <p valstr="^{HOME}">TOPPER</p>
+          <p valstr="+{HOME}">TOP CELL</p>
+          <p valstr="^x">CUTS</p>
+          <p valstr="^c">COPY</p>
+          <p valstr="^v">PASTE</p>
+          <p valstr="+{UP}">SLINE UP</p>
+          <p valstr="+{DOWN}">SLINE DOWN</p>
+          <p valstr="^+{HOME}">TOPPER CELL</p>
+          <p valstr = "^+{LEFT}"     > BESSIE </p>
+          <p valstr = "^+{RIGHT}"    > AXEL   </p>
+          <p valstr = "^{LEFT}"      > BASE   </p>
+          <p valstr = "^{RIGHT}"     > JUMP   </p>
+          <p valstr = "^{BACKSPACE}" > DUCK   </p>
+          <p valstr = "^{DELETE}"    > DEER   </p>
+          <p valstr = "{LEFT}"  > LEFT  </p>
+          <p valstr = "+{LEFT}"  > LEACH  </p>
+          <p valstr = "{RIGHT}" > RIGHT  </p>
+          <p valstr = "+{RIGHT}" > REX  </p>
+          <p valstr = "{UP}"    > UP   </p>
+          <p valstr = "{DOWN}"  > DOWN </p>
+          <p valstr = "^{F9}">yes</p>
+        </list>
+      </rule>
+
+      <rule name="keys">
+        <list propname = "multiPress">
+          <p valstr="%{UP}">DIRRUP</p>
+          <p valstr="{{WIN}}{LEFT}">WINDOW LEFT</p>
+          <p valstr="{{WIN}}{RIGHT}">WINDOW RIGHT</p>
+          <p valstr="{{WIN}}{UP}">WINDOW UP</p>
+          <p valstr="{{WIN}}{DOWN}">WINDOW DOWN</p>
+          <p valstr="%{LEFT}">GO BACK</p>
+          <p valstr="%{RIGHT}">GO FORWARD</p>
+        </list>
+      </rule>
+      <rule name="keyCombo2">
+        <list propname = "pressedOnce">
+          <p valstr="^a">SELECT ALL</p>
+          <p valstr="^s">FILE SAVE</p>
+          <p valstr="^o">FILE OPEN</p>
+          <p valstr="%{TAB}">SWITCH BACK</p>
+          <p valstr="^x">CUTS</p>
+          <p valstr="^c">COPY</p>
+          <p valstr="^f">FINDER</p>
+          <p valstr="{{WIN}}v">CLIPBOARD</p>
+          <p valstr="{{WIN}}{{SHIFT}}s">SCREENSHOT</p>
+          <p valstr="{F11}">MOUSER</p>
+          <p valstr="^l">SLINE</p>
+          <p valstr="{{SHIFT}}{INSERT}">PESTER</p>
+        <p valstr="%{{F4}">FORCE CLOSE</p>
+        </list>
+      </rule>
+      <rule name="keyCombo">
+        <list propname = "textEdit">
+          <p valstr = "^+{LEFT}"     > BESSIE </p>
+          <p valstr = "^+{RIGHT}"    > AXEL   </p>
+          <p valstr = "^{LEFT}"      > BASE   </p>
+          <p valstr = "^{RIGHT}"     > JUMP   </p>
+          <p valstr = "^{BACKSPACE}" > DUCK   </p>
+          <p valstr = "^{DELETE}"    > DEER   </p>
+        </list>
+      </rule>
+      <rule name = "keyboard">
+        <list propname = "navigation">
+          <p valstr = "{LEFT}"  > LEFT  </p>
+          <p valstr = "{RIGHT}" > RIGHT </p>
+          <p valstr = "{UP}"    > UP   </p>
+          <p valstr = "{DOWN}"  > DOWN </p>
+          <p valstr = "{HOME}"  > HOMER  </p>
+          <p valstr = "{END}"   > ENDS </p>
+          <p valstr = "{PGUP}"  > MOSS   </p>
+          <p valstr = "{PGDN}"  > LIS  </p>
+          </list> 
+      </rule>
+      <rule name = "directions">
+        <list propname = "direction">
+          <p valstr = "{LEFT}"  > LEFT  </p>
+          <p valstr = "{RIGHT}" > RIGHT  </p>
+          <p valstr = "{UP}"    > UP   </p>
+          <p valstr = "{DOWN}"  > DOWN </p>
+        </list> 
+      </rule>
+      
+      <numbers name="1to20" start="1" stop="20"/>
+      <numbers name="0to10" start="0" stop="10"/>
+
+</speechMacros>
