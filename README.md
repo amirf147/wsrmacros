@@ -1,0 +1,2 @@
+I would like to express my profound gratitude to @leeorhelps for his invaluable contributions to the field of Windows Speech Recognition macros with his project at https://github.com/leeorhelps/SpeechBird. His comprehensive collection of macros, generously shared on GitHub, has been instrumental in my understanding of how Windows Speech Recognition macros function. Without his pioneering work, the progress I’ve made would not have been possible. Thank you, Leeor, for your significant role in this journey.
+
