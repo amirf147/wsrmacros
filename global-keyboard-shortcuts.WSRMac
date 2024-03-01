@@ -54,31 +54,12 @@
        ################################################## -->
       
 
-<!-- 
-  <command priority="127">
-    <rule> 
-      <p><ruleref name="keyCombo" propname="keyCombo"/></p>
-      <o><ruleref name="1to20" propname="1to20"/></o>
-    </rule>
-    <sendKeys times="{[1to20.num]}">{[keyCombo.textEdit]}</sendKeys>
-  </command> -->
-
-
-
-  <!-- <command priority="127">
-    <rule>
-      <p><ruleref name="keyboard" propname="keyboard"/></p>
-      <o><ruleref name="1to20" propname="1to20"/></o>
-    </rule>
-    <sendKeys times="{[1to20.num]}">{[keyboard.navigation]}</sendKeys>
-  </command> -->
-
   <command priority="127">
     <rule>
       <p>SWITCH</p>
-      <p><ruleref name="0to10" propname="0to10"/></p>
+      <p><ruleref name="0to9" propname="0to9"/></p>
     </rule>
-    <sendKeys>{{WIN}}{[0to10]}</sendKeys>
+    <sendKeys>{{WIN}}{[0to9}</sendKeys>
   </command>
 
   <!-- ##################################################
@@ -86,7 +67,6 @@
        ##    EXECUTION OF FIVE KEY/SET COMBINATIONS 
        ##
        ################################################## -->
-
 
 <command priority="127"> 
     <rule> 
@@ -100,7 +80,12 @@
         </o>
         <o>
           <p min="1" max="10">
-            <ruleref name="alphaNumeSym" propname="p1.alphaNumeSym"/> </p>
+            <ruleref name="alphaNumeSym" propname="p1.alphaNumeSym"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p1.0to9"></ruleref></p>
         </o>
       </p>      
       <p>
@@ -115,6 +100,11 @@
           <p min="1" max="10">
             <ruleref name="alphaNumeSym" propname="p2.alphaNumeSym"/> </p>
         </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p2.0to9"></ruleref></p>
+        </o>
       </p>
       <p>
         <o>
@@ -127,6 +117,11 @@
         <o>
           <p min="1" max="10">
             <ruleref name="alphaNumeSym" propname="p3.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p3.0to9"></ruleref></p>
         </o>
       </p>
       <p>
@@ -141,6 +136,11 @@
           <p min="1" max="10">
             <ruleref name="alphaNumeSym" propname="p4.alphaNumeSym"/> </p>
         </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p4.0to9"></ruleref></p>
+        </o>
       </p>
       <p>
         <o>
@@ -154,27 +154,37 @@
           <p min="1" max="10">
             <ruleref name="alphaNumeSym" propname="p5.alphaNumeSym"/> </p>
         </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p5.0to9"></ruleref></p>
+        </o>
       </p>
     </rule>
     <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p1.0to9]}</sendKeys>
     <waitFor seconds="0.05"/>
     <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p2.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p2.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p2.0to9]}</sendKeys>
     <waitFor seconds="0.05"/>
     <sendKeys times="{[p3.1to20]}">{[p3.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p3.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p3.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p3.0to9]}</sendKeys>
     <waitFor seconds="0.05"/>
     <sendKeys times="{[p4.1to20]}">{[p4.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p4.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p4.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p4.0to9]}</sendKeys>
     <waitFor seconds="0.05"/>
     <sendKeys times="{[p5.1to20]}">{[p5.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p5.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p5.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p5.0to9]}</sendKeys>
 </command>
 
   <!-- ##################################################
@@ -230,6 +240,7 @@
         <list propname = "pressedOnce">
           <p valstr="^a">SELECT ALL</p>
           <p valstr="^s">FILE SAVE</p>
+          <p valstr="^+s">FILE SAVE AS</p>
           <p valstr="^o">FILE OPEN</p>
           <p valstr="%{TAB}">SWITCH BACK</p>
           <p valstr="^x">CUTS</p>
@@ -245,7 +256,7 @@
       </rule>
 
       <numbers name="1to20" start="1" stop="20"/>
-      <numbers name="0to10" start="0" stop="10"/>
+      <numbers name="0to9" start="0" stop="9"/>
 
       <rule name="alphaNumeSym">
         <list propname="unit">
@@ -389,24 +400,4 @@
           <p valstr="=">equals</p>
         </list>
       </rule>
-<Signature>
-MIIDpgYJKoZIhvcNAQcCoIIDlzCCA5MCAQExCzAJBgUrDgMCGgUAMGcGCisGAQQBgjcCAQSgWTBX
-MDIGCisGAQQBgjcCAR4wJAIBAQQQQf9itGlsy0O8AOWC49jANAIBAAIBAAIBAAIBAAIBADAhMAkG
-BSsOAwIaBQAEFOJKZXZAI2+8MyiULeODzxsVmjrloIIB0zCCAc8wggE4oAMCAQICEBxsQs6Jg5W9
-RYQrmkcZJ2kwDQYJKoZIhvcNAQEFBQAwEzERMA8GA1UEAxMIYW1pcmYwMTIwHhcNMjQwMjAyMDY0
-MTMwWhcNMjUwMjAxMTI0MTMwWjATMREwDwYDVQQDEwhhbWlyZjAxMjCBnzANBgkqhkiG9w0BAQEF
-AAOBjQAwgYkCgYEAwf9WCFtQHOisuGuKGKHrexw5RrHiGO1yxqXnnRkzx8bheMfMPrFtbD5KavIy
-KhaGm/l0z+P+3CseoxfE6k8fpwnlN4uOwB3qZv8yQtbjTms0euJZdeBkiGPW+VEQHq6IIIGwXvur
-BLRRqeDbOpaTPv6nL0JKacaOV5EdZE+85zUCAwEAAaMkMCIwCwYDVR0PBAQDAgeAMBMGA1UdJQQM
-MAoGCCsGAQUFBwMDMA0GCSqGSIb3DQEBBQUAA4GBAD3LwmSMhNILXuctBPEPMSNTt0u82dSM3bCj
-MQ5v4PaVmXk+Wpb9VDBaOhW+S5C7qpcTTrhDqvNPm1OlQLR0pbQYEmZjZR5Xi5yDJ6o4LCwCS57V
-kdQdCYVkvQU6pu743X3Y74+N2sqH3UbEWVamQRBK6Y2xjkeOIv7NzmD+zfgqMYIBPzCCATsCAQEw
-JzATMREwDwYDVQQDEwhhbWlyZjAxMgIQHGxCzomDlb1FhCuaRxknaTAJBgUrDgMCGgUAoHAwEAYK
-KwYBBAGCNwIBDDECMAAwGQYJKoZIhvcNAQkDMQwGCisGAQQBgjcCAQQwHAYKKwYBBAGCNwIBCzEO
-MAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkEMRYEFLQloyBGPQft4fK6KT0gBQ6N5PxbMA0GCSqG
-SIb3DQEBAQUABIGAoLlVq6uI5RqRClBWq8qQbsvp6pJrIFvjd4la2sOuGTxR26cgCB2/D43KZPZf
-r+jmW1IE6mXne4I8Sxt+1+0FP30h4qwTjVd+W6lRxCYoGMg7HjqDpchV+c/WiUlLJwKzibi0uA1F
-8YvBz/4q/R3RMZj4QLw2UkmkLYH8JuDmJNo=
-</Signature>
 </speechMacros>
-  
