@@ -59,7 +59,7 @@
       <p>SWITCH</p>
       <p><ruleref name="0to9" propname="0to9"/></p>
     </rule>
-    <sendKeys>{{WIN}}{[0to9}</sendKeys>
+    <sendKeys>{{WIN}}{[0to9]}</sendKeys>
   </command>
 
   <!-- ##################################################
