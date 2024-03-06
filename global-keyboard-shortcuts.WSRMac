@@ -258,6 +258,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         <p valstr="^l">SLINE</p>
           <p valstr="{{SHIFT}}{INSERT}">PESTER</p>
         <p valstr="%{F4}">FORCE CLOSE</p>
+        <p valstr="%f">FILE MENU</p>
         </list>
       </rule>
 
