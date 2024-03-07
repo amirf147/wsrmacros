@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Convert to rules -->
+<speechMacros>
+    <command priority="127">
+    	<appIsInForeground processName = "SumatraPDF.exe" />
+        <listenFor>LISSER</listenFor>
+        <sendKeys times="20">{DOWN}</sendKeys>
+    </command>
+    <command priority="127">
+    	<appIsInForeground processName = "SumatraPDF.exe" />
+        <listenFor>MOSSER</listenFor>
+        <sendKeys times="20">{UP}</sendKeys>
+    </command>
+
+
+    <command priority="127">
+        <listenFor>LIS</listenFor>
+        <sendKeys>{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>YEP LIS</listenFor>
+        <mouse command="click" button="left"/>
+        <waitFor seconds="0.100"/>
+        <sendKeys>{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>YEP MOSS</listenFor>
+        <mouse command="click" button="left"/>
+        <waitFor seconds="0.100"/>
+        <sendKeys>{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS</listenFor>
+        <sendKeys>{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 2</listenFor>
+        <sendKeys times="2">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 2</listenFor>
+        <sendKeys times="2">{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 3</listenFor>
+        <sendKeys times="3">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 3</listenFor>
+        <sendKeys times="3">{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 4</listenFor>
+        <sendKeys times="4">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 4</listenFor>
+        <sendKeys times="4">{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 5</listenFor>
+        <sendKeys times="5">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 5</listenFor>
+        <sendKeys times="5">{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 6</listenFor>
+        <sendKeys times="6">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 6</listenFor>
+        <sendKeys times="6">{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 7</listenFor>
+        <sendKeys times="7">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 7</listenFor>
+        <sendKeys times="7">{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 8</listenFor>
+        <sendKeys times="8">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 8</listenFor>
+        <sendKeys times="8">{PGUP}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>LIS 9</listenFor>
+        <sendKeys times="9">{PGDN}</sendKeys>
+    </command>
+    <command priority="127">
+        <listenFor>MOSS 9</listenFor>
+        <sendKeys times="9">{PGUP}</sendKeys>
+    </command>
+
+
+</speechMacros>
