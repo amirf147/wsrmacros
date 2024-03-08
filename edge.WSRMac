@@ -27,6 +27,13 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>SHOW DOWNLOADS</listenFor>
     <sendKeys>^j</sendKeys>
   </command>
+
+    <!-- ##################################################
+         ##
+         ##    COPILOT
+         ##
+         ################################################## -->
+
   <command>
     <appIsInForeground windowTitleContains="Copilot" />
     <listenFor>MOSSER</listenFor>
@@ -36,6 +43,23 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <appIsInForeground windowTitleContains="Copilot" />
     <listenFor>LISSER</listenFor>
     <sendKeys times="3">{DOWN}</sendKeys>
+  </command>
+  
+    <!-- ##################################################
+         ##
+         ##    YOUTUBE
+         ##
+         ################################################## -->
+
+  <command>
+    <appIsInForeground windowTitleContains="Youtube" />
+    <listenFor>SLOW DOWN</listenFor>
+    <sendKeys times="1">+,</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground windowTitleContains="Youtube" />
+    <listenFor>SPEED UP</listenFor>
+    <sendKeys times="1">+.</sendKeys>
   </command>
 
   <command>
