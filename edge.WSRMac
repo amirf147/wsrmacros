@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Thank you to Leeor from Speech Bird.
+A lot of these macros would not be possible without the sharing of his repository and his macros.
+Some of these are directly inspired by him, and some are directly from his macros.
+You can find his work here: https://github.com/leeorhelps/SpeechBird
+-->
+<speechMacros>
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>SHOW CHAT</listenFor>
+    <sendKeys>^+.</sendKeys>
+  </command>
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>NEW PRIVATE</listenFor>
+    <sendKeys>^+n</sendKeys>
+  </command>
+
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>SHOW NOTES</listenFor>
+    <sendKeys>%n</sendKeys>
+  </command>
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>SHOW DOWNLOADS</listenFor>
+    <sendKeys>^j</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground windowTitleContains="Copilot" />
+    <listenFor>MOSSER</listenFor>
+    <sendKeys times="3">{UP}</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground windowTitleContains="Copilot" />
+    <listenFor>LISSER</listenFor>
+    <sendKeys times="3">{DOWN}</sendKeys>
+  </command>
+
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>NEW PESO</listenFor>
+    <emulateRecognition>TAB NEW</emulateRecognition>
+    <waitFor seconds="00.300"/>
+    <emulateRecognition>PESO</emulateRecognition>
+  </command>
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>YEAH SO</listenFor>
+    <emulateRecognition>YEAH</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>COPY</emulateRecognition>
+    <waitFor seconds="00.20"/>
+    <emulateRecognition>TAB NEW</emulateRecognition>
+    <waitFor seconds="00.200"/>
+    <emulateRecognition>PESO</emulateRecognition>
+  </command>
+  
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>PESO</listenFor>
+    <sendKeys>^+l</sendKeys>
+  </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 1</listenFor>
+      <sendKeys>^1</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 2</listenFor>
+      <sendKeys>^2</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 3</listenFor>
+      <sendKeys>^3</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 4</listenFor>
+      <sendKeys>^4</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 5</listenFor>
+      <sendKeys>^5</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 6</listenFor>
+      <sendKeys>^6</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 7</listenFor>
+      <sendKeys>^7</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 8</listenFor>
+      <sendKeys>^8</sendKeys>
+    </command>
+
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB 9</listenFor>
+      <sendKeys>^9</sendKeys>
+    </command>
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>TAB LAST</listenFor>
+      <sendKeys>^9</sendKeys>
+    </command>
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+      <listenFor>REFRESH</listenFor>
+      <sendKeys>{F5}</sendKeys>
+    </command>
+
+</speechMacros>
