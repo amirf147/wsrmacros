@@ -387,8 +387,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p valstr="$">dollar sign</p>
           <p valstr="'">'</p>
           <p valstr="{U+0020}">space</p>
-          <p valstr="{U+0022}">open quote</p>
-          <p valstr="{U+0022}">close quote</p>
+          <p valstr="{U+0022}">double quote</p>
           <p valstr="{U+0028}">open paren</p>
           <p valstr="{U+0029}">close paren</p>
           <p valstr="{U+003C}">less than</p>
@@ -399,7 +398,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p valstr="]">close bracket</p>
           <p valstr="{U+007B}">open brace</p>
           <p valstr="{U+007D}">close brace</p>
-          <p valstr="/">slash</p>
+          <p valstr="/">slash</p> 
           <p valstr="\">backslash</p>
           <p valstr="-">minus</p>
           <p valstr="-">hyphen</p>
