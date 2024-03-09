@@ -25,6 +25,17 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         <listenFor>HOME</listenFor>
         <sendKeys></sendKeys>
       </command>
+
+   <!-- ##################################################
+        ##
+        ##    HELPFUL EMULATIONS 
+        ##
+        ################################################## -->
+
+  <command priority="127">
+    <listenFor>SHUSH</listenFor>
+    <emulateRecognition>CLICK CANCEL</emulateRecognition>
+  </command>
     
       <!-- ##################################################
            ##
