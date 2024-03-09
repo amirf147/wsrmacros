@@ -150,5 +150,15 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <listenFor>REFRESH</listenFor>
       <sendKeys>{F5}</sendKeys>
     </command>
+    <command>
+      <appIsInForeground processName = "msedge.exe" />
+        <listenFor>ZOOM IN</listenFor>
+        <sendKeys>^=</sendKeys>
+    </command>
+    <command>
+      <appIsInForeground processName = "msedge.exe" />
+        <listenFor>ZOOM OUT</listenFor>
+        <sendKeys>^-</sendKeys>
+    </command>
 
 </speechMacros>
