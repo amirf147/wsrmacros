@@ -267,7 +267,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="{{WIN}}v">CLIPBOARD</p>
               <p valstr="{{WIN}}{{SHIFT}}s">SCREENSHOT</p>
               <p valstr="{{WIN}}t{TAB}">SYS TRAY</p>
-              <p valstr="{F11}">MOUSER</p>
+              <p valstr="{F11}">POINTER</p>
             <p valstr="^l">SLINE</p>
               <p valstr="{{SHIFT}}{INSERT}">PESTER</p>
             <p valstr="%{F4}">FORCE CLOSE</p>
