@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Thank you to Leeor from Speech Bird.
+A lot of these macros would not be possible without the sharing of his repository and his macros.
+Some of these are directly inspired by him, and some are directly from his macros.
+You can find his work here: https://github.com/leeorhelps/SpeechBird
+-->
+<speechMacros>
+
+<!-- Clicks -->
+
+<command priority="127"> 
+<!-- The condition/state check is necessary, because this command is also used to stop scrolling, see far below, under the "Scroll" section -->
+	<condition operator="NOT">
+	<stateIsSet name = "scroller" value = "1" />
+	</condition>
+        <listenFor>yep</listenFor>
+	<emulateRecognition>click that</emulateRecognition>
+  </command>
+
+<!-- Same as "yep", in case the user hesitates / needs extra time to position the cursor for the click ... "yyyy...yep" -->
+<command priority="127"> 
+    <listenFor>E yep</listenFor> 	
+	<emulateRecognition>click that</emulateRecognition>
+  </command>
+
+<!-- This is short for "yep hawk" -->
+<!-- <command priority="127"> 
+    <listenFor>yeppok</listenFor> 
+	<emulateRecognition>click that</emulateRecognition>
+	<sendKeys>{F11}</sendKeys>
+  </command> -->
+
+<command priority="127"> 
+    <listenFor>yeller</listenFor> 
+	<emulateRecognition>click that</emulateRecognition>
+  <waitFor seconds="0.1"/>
+	<sendKeys>{ENTER}</sendKeys>
+</command>
+<command priority="127"> 
+    <listenFor>yahtzee</listenFor> 
+	<emulateRecognition>click that</emulateRecognition>
+  <waitFor seconds="0.1"/>
+	<emulateRecognition>Paste</emulateRecognition>
+</command>
+
+<command> 
+    <listenFor>yalt</listenFor>
+  <emulateRecognition>alt click that</emulateRecognition>
+</command>
+
+<command> 
+    <listenFor>yesh</listenFor>
+  <emulateRecognition>shift click that</emulateRecognition>
+</command>
+<command> 
+    <listenFor>yuck</listenFor>
+  <emulateRecognition>control click that</emulateRecognition>
+</command>
+
+
+<command> 
+    <listenFor>yeah</listenFor>
+	<emulateRecognition>double click that</emulateRecognition>
+</command>
+
+<!-- Same as "yeah", in case the user hesitates / needs extra time to position the cursor for the click ... "yyyy...yeah" -->
+<command> 
+    <listenFor>E yeah</listenFor>
+	<emulateRecognition>double click that</emulateRecognition>
+</command>
+
+<command> 
+    <listenFor>triple</listenFor>
+	<emulateRecognition>click that</emulateRecognition>
+	<emulateRecognition>double click that</emulateRecognition>
+</command>
+
+<command priority="127"> 
+  <listenFor>yerkey</listenFor> 
+<emulateRecognition>triple</emulateRecognition>
+<waitFor seconds="0.1"/>
+<emulateRecognition>copy</emulateRecognition>
+</command>
+
+<command>
+  <listenFor>bye bye</listenFor>
+<!-- 	<emulateRecognition>Middle click that</emulateRecognition>
+Sadly, the above does not work as an "emulate" command, so reverting to the built-in, which sometimes gets ignored by apps. Maybe, someday... through AHK? -->
+      <mouse button="middle" command="click"/> 
+<!-- 	<sendKeys>{F11}{300 WAIT}{F11}</sendKeys> -->
+</command>
+
+<command>
+    <listenFor>are yep</listenFor>
+	<emulateRecognition>right click that</emulateRecognition>
+</command>
+
+<!-- Drag & Drop. Since WSR macros cannot do a click and drag natively, Autohotkey is needed to pick up this key press and perform the drag operation. AHK script is in the installation documentation. -->
+  <command>
+	<listenFor>drag</listenFor>
+	<sendKeys>{{LSHIFT}}{F12}</sendKeys>
+  </command>
+
+<!-- Does a double click that ends with a drag, so that the word under the cursor gets selected, and more whole words can be selected by moving the cursor before dropping. Useful for selecting words in Microsoft edge and other situations. -->
+<!-- <command priority="127"> 
+    <listenFor>wordrag</listenFor>
+    <mouse button="left" command="click"/> 
+	<sendKeys>{{LSHIFT}}{F12}</sendKeys>
+</command>
+
+<command priority="127"> 
+    <listenFor>line drag</listenFor>
+    <mouse button="left" command="dblclick"/> 
+	<sendKeys>{{LSHIFT}}{F12}</sendKeys>
+</command> -->
+
+<!-- Drops, whether dragging with left or right mouse button -->
+<command>
+	<listenFor>drop</listenFor>
+	<sendKeys>{F12}</sendKeys>
+</command>
+
+<!-- See comment of "Drag". Drags, moves mouse to center, hits ALT+TAB to switch to previous window so you can drop when/where you would like. -->
+  <!-- <command priority="127">
+	<listenFor>drag back</listenFor>
+	<sendKeys>{{LSHIFT}}{F12}</sendKeys>
+	<waitFor seconds="0.3"/>
+    <mouse command="scroll" scrollAmount="0" position="944,236" /> 
+	<waitFor seconds="0.3"/>
+    <sendKeys>%{TAB}</sendKeys>
+  </command> -->
+
+<!-- See comment of "Dragger". Drags, moves mouse to center, hits ALT+WIN+TAB to switch to any window so you can drop when/where you would like. Use "Up/Down/Left/Right/Enter" to choose window. -->
+  <!-- <command>
+	<listenFor>drag to</listenFor>
+	<sendKeys>{{LSHIFT}}{F12}</sendKeys>
+	<waitFor seconds="0.3"/>
+	<mouse command="scroll" scrollAmount="0" position="944,236" /> 
+	<waitFor seconds="0.3"/>
+	<sendKeys>^%{TAB}</sendKeys>
+  </command> -->
+
+<!-- See comment of "Drag". Right-button drag. -->
+  <!-- <command>
+	<listenFor>are drag</listenFor>
+	<sendKeys>{{RSHIFT}}{F12}</sendKeys>
+  </command> -->
+
+  <!-- ###############################################
+                Mousegrid using AutoHotkey
+       ###############################################
+    -->
+<!-- <command priority = "127"> 
+  <listenFor>one</listenFor>
+  <sendKeys>{{LSHIFT}}{F1}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>two</listenFor>
+  <sendKeys>{{LSHIFT}}{F2}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>three</listenFor>
+  <sendKeys>{{LSHIFT}}{F3}</sendKeys>
+</command>
+<command priority = "127">
+<listenFor>four</listenFor>
+<sendKeys>{{LSHIFT}}{F4}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>five</listenFor>
+  <sendKeys>{{LSHIFT}}{F5}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>six</listenFor>
+  <sendKeys>{{LSHIFT}}{F6}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>seven</listenFor>
+  <sendKeys>{{LSHIFT}}{F7}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>eight</listenFor>
+  <sendKeys>{{LSHIFT}}{F8}</sendKeys>
+</command>
+<command priority = "127" > 
+  <listenFor>nine</listenFor>
+  <sendKeys>{{LSHIFT}}{F9}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>one</listenFor>
+  <sendKeys>{{LSHIFT}}{F1}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>two</listenFor>
+  <sendKeys>{{LSHIFT}}{F2}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>three</listenFor>
+  <sendKeys>{{LSHIFT}}{F3}</sendKeys>
+</command>
+<command priority = "127">
+<listenFor>four</listenFor>
+<sendKeys>{{LSHIFT}}{F4}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>five</listenFor>
+  <sendKeys>{{LSHIFT}}{F5}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>six</listenFor>
+  <sendKeys>{{LSHIFT}}{F6}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>seven</listenFor>
+  <sendKeys>{{LSHIFT}}{F7}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>eight</listenFor>
+  <sendKeys>{{LSHIFT}}{F8}</sendKeys>
+</command>
+<command priority = "127" > 
+  <listenFor>nine</listenFor>
+  <sendKeys>{{LSHIFT}}{F9}</sendKeys>
+</command>
+<command priority = "127" > 
+  <listenFor>ten</listenFor>
+  <sendKeys>{{LSHIFT}}{F10}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>eleven</listenFor>
+  <sendKeys>{{RSHIFT}}{F1}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>twelve</listenFor>
+  <sendKeys>{{RSHIFT}}{F2}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>thirteen</listenFor>
+  <sendKeys>{{RSHIFT}}{F3}</sendKeys>
+</command>
+<command priority = "127">
+<listenFor>fourteen</listenFor>
+<sendKeys>{{RSHIFT}}{F4}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>fifteen</listenFor>
+  <sendKeys>{{RSHIFT}}{F5}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>sixteen</listenFor>
+  <sendKeys>{{RSHIFT}}{F6}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>seventeen</listenFor>
+  <sendKeys>{{RSHIFT}}{F7}</sendKeys>
+</command>
+<command priority = "127"> 
+  <listenFor>eighteen</listenFor>
+  <sendKeys>{{RSHIFT}}{F8}</sendKeys>
+</command>
+<command priority = "127" > 
+  <listenFor>nineteen</listenFor>
+  <sendKeys>{{RSHIFT}}{F9}</sendKeys>
+</command>
+<command priority = "127" > 
+  <listenFor>twenty</listenFor>
+  <sendKeys>{{RSHIFT}}{F10}</sendKeys>
+</command>
+<command priority = "127" > 
+  <listenFor>Court</listenFor>
+  <sendKeys>{{RSHIFT}}{F11}</sendKeys>
+</command>
+<command priority = "127" > 
+  <listenFor>Loker</listenFor>
+  <sendKeys>{{CTRL}}{{ALT}}q</sendKeys>
+</command> -->
+<!-- Position cursor on primary monitor, Uses AutoHotkey -->
+    <command>
+      <listenFor>TV one</listenFor>
+      <sendKeys>{{CTRL}}{{ALT}}t</sendKeys>
+    </command>
+
+  <!-- Position cursor on secondary monitor, Uses AutoHotkey -->
+    <command>
+      <listenFor>TV to</listenFor>
+      <sendKeys>{{CTRL}}{{ALT}}v</sendKeys>
+    </command>
+
+    
+    <command>
+      <listenFor>TRIPLE 2</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 3</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="1">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 4</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="2">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 5</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="3">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 6</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="4">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 7</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="5">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 8</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="6">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 9</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="7">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 10</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="8">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 11</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="9">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 12</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="10">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 13</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="11">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 14</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="12">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 15</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="13">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 16</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="14">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 17</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="15">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 18</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="16">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 19</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="17">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  <command>
+      <listenFor>TRIPLE 20</listenFor>
+      <emulateRecognition>triple</emulateRecognition>
+      <waitFor seconds="0.3"/>
+      <sendKeys times="18">+{DOWN}</sendKeys>
+      <waitFor seconds="0.15"/>
+      <sendKeys times="1">+{END}</sendKeys>
+  </command>
+  
+</speechMacros>
