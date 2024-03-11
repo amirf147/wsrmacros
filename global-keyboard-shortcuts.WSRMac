@@ -182,7 +182,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
         <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
         <sendKeys>{[p1.0to9]}</sendKeys>
-        <waitFor seconds="0.05"/>
+        <waitFor seconds="0.2"/>
         <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
         <sendKeys>{[p2.keyCombo2.pressedOnce]}</sendKeys>
         <sendKeys>{[p2.alphaNumeSym.unit]}</sendKeys>
