@@ -1,0 +1,12 @@
+﻿<speechMacros>
+  <command>
+    <listenFor>quit python</listenFor>
+    <insertText>quit()</insertText>
+    <sendKeys>{ENTER}</sendKeys>
+  </command>
+  <command>
+    <listenFor>insert python</listenFor>
+    <insertText>python</insertText>
+  </command>
+
+</speechMacros>
