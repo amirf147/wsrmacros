@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speechMacros>
+
+  <command priority="127">
+    <listenFor>STOP SERVICE</listenFor>
+    <emulateRecognition>POINTER</emulateRecognition>
+    <waitFor seconds="0.1"/>
+    <emulateRecognition>STOP LISTENING</emulateRecognition>
+  </command>
+
+</speechMacros>
