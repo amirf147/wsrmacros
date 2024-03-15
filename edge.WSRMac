@@ -44,6 +44,19 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>LISSER</listenFor>
     <sendKeys times="3">{DOWN}</sendKeys>
   </command>
+    
+  <command>
+    <appIsInForeground windowTitleContains="Copilot" />
+    <listenFor>HEY LISTEN</listenFor>
+    <emulateRecognition>CLICK USE MICROPHONE</emulateRecognition>
+    <emulateRecognition>STOP LISTENING</emulateRecognition>
+  </command>
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+    <listenFor>Ask Chat</listenFor>
+    <emulateRecognition>CLICK ask me anything</emulateRecognition>
+  </command>
+
   
     <!-- ##################################################
          ##
