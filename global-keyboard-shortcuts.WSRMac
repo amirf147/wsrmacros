@@ -250,6 +250,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr = "^{F9}">yes</p>
               <p valstr="%{UP}">DIRRUP</p>
               <p valstr="%{LEFT}">GO BACK</p>
+              <p valstr="%{LEFT}">PREVIOUS PAGE</p>
               <p valstr="%{RIGHT}">GO FORWARD</p>
             </list>
           </rule>
