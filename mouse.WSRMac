@@ -439,4 +439,5 @@ Sadly, the above does not work as an "emulate" command, so reverting to the buil
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   
+
 </speechMacros>
