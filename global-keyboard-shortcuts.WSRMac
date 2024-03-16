@@ -78,6 +78,14 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         </rule>
         <sendKeys>{{WIN}}{[0to9]}</sendKeys>
       </command>
+
+      <command priority="127">
+        <rule>
+          <p><ruleref name="explorerNav" propname="explorerNav"/> </p>
+          <o><ruleref name="1to20" propname="1to20"/></o>
+        </rule>
+        <sendKeys times="{[1to20]}">{[explorerNav.key]}</sendKeys>
+      </command>
     
       <!-- ##################################################
            ##
@@ -248,10 +256,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr = "{UP}"    > SKAY   </p>
               <p valstr = "{DOWN}"  > DRUM </p>
               <p valstr = "^{F9}">click</p>
-              <p valstr="%{UP}">DIRRUP</p>
-              <p valstr="%{LEFT}">GO BACK</p>
-              <p valstr="%{LEFT}">PREVIOUS PAGE</p>
-              <p valstr="%{RIGHT}">GO FORWARD</p>
             </list>
           </rule>
     
@@ -274,6 +278,15 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="%{F4}">FORCE CLOSE</p>
               <p valstr="%f">FILE MENU</p>
               <p valstr="{ESC}">CANCEL</p>
+            </list>
+          </rule>
+
+          <rule name="explorerNav">
+            <list propname = "key">
+              <p valstr="%{UP}">DIRRUP</p>
+              <p valstr="%{LEFT}">GO BACK</p>
+              <p valstr="%{LEFT}">PREVIOUS PAGE</p>
+              <p valstr="%{RIGHT}">GO FORWARD</p>
             </list>
           </rule>
     
