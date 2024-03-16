@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speechMacros>
+
+<command priority="127"> 
+    <listenFor>Open ?My Documents</listenFor>
+	<run command="explorer.exe" params="%userprofile%\\Documents"/>
+  </command>
+<command priority="127"> 
+    <listenFor>Open ?My Downloads</listenFor>
+	<run command="explorer.exe" params="%userprofile%\\Downloads"/>
+  </command>
+
+</speechMacros>

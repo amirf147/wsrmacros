@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speechMacros>
+
+  <command>
+    <listenFor>scribble [text]</listenFor>
+     <prompt defaultValue="{[text]}" title="Scribble" resultState="scribbles">
+  Say "OK" to Cap and Paste
+  Or say "Just Paste" or "Just Copy"
+  </prompt>
+    <!-- !Private! --> <run command="cmd" params="/c echo | set /p={[scribbles]}|clip" />
+  </command>
+  <rule name="text">
+    <p> <DICTATION MAX="30"/> </p>
+    </rule>
+
+</speechMacros>
