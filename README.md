@@ -35,4 +35,66 @@ If you want to tailor this repository to your own use and keep track of updates 
 
 Please note that the `setup.sh` script and the Git filter it sets up are local to your machine. If you clone your forked repository to a new machine, you'll need to run the `setup.sh` script again on that machine.
 
+## Five Key Press or Key Combo Streamer
 
+This collection of macros features a 5 Key Press or Key Combo Streamer in the file `global-keyboard-shortcuts.WSRMac`.
+
+The tree structure presented below is a visual representation of the hierarchical organization of the elements in the grammar used in our macros. This grammar is designed to recognize a sequence of five key presses or key combinations.
+
+Each node in the tree represents a rule or an option within a rule. The tree structure helps to understand the flow and the possible paths that can be taken when the grammar is being parsed.
+
+Here is an ASCII representation of the tree structure of the grammar:
+```
+Command
+└── Rule
+    ├── P
+    │   ├── O
+    │   │   ├── TextManipulation
+    │   │   └── O: Number between 1 and 20
+    │   ├── O: KeyCombo2
+    │   ├── O
+    │   │   └── P: Keyboard Key (min=1, max=10)
+    │   └── O
+    │       ├── P: NUMBER
+    │       └── P: Number between 0 and 9 (min=1, max=10)
+    ├── P
+    │   ├── O
+    │   │   ├── TextManipulation
+    │   │   └── O: Number between 1 and 20
+    │   ├── O: KeyCombo2
+    │   ├── O
+    │   │   └── P: Keyboard Key (min=1, max=10)
+    │   └── O
+    │       ├── P: NUMBER
+    │       └── P: Number between 0 and 9 (min=1, max=10)
+    ├── P
+    │   ├── O
+    │   │   ├── TextManipulation
+    │   │   └── O: Number between 1 and 20
+    │   ├── O: KeyCombo2
+    │   ├── O
+    │   │   └── P: Keyboard Key (min=1, max=10)
+    │   └── O
+    │       ├── P: NUMBER
+    │       └── P: Number between 0 and 9 (min=1, max=10)
+    ├── P
+    │   ├── O
+    │   │   ├── TextManipulation
+    │   │   └── O: Number between 1 and 20
+    │   ├── O: KeyCombo2
+    │   ├── O
+    │   │   └── P: Keyboard Key (min=1, max=10)
+    │   └── O
+    │       ├── P: NUMBER
+    │       └── P: Number between 0 and 9 (min=1, max=10)
+    └── P
+        ├── O
+        │   ├── TextManipulation
+        │   └── O: Number between 1 and 20
+        ├── O: KeyCombo2
+        ├── O
+        │   └── P: Keyboard Key (min=1, max=10)
+        └── O
+            ├── P: NUMBER
+            └── P: Number between 0 and 9 (min=1, max=10)
+```
