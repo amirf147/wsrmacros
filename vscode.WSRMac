@@ -36,6 +36,14 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
          </command>
           <command>
             <appIsInForeground processName="code.exe" />
+            <listenFor>SHOW PREVIEW</listenFor>
+            <sendKeys times="1">^k</sendKeys>
+            <waitFor seconds="0.05"/>
+            <sendKeys times="1">v</sendKeys>
+            <setTextFeedback>CTRL+K  V</setTextFeedback>
+         </command>
+          <command>
+            <appIsInForeground processName="code.exe" />
             <listenFor>GROUP DOWN</listenFor>
             <emulateRecognition>click that</emulateRecognition>
             <waitFor seconds="0.05"/>
