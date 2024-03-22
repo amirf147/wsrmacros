@@ -277,7 +277,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="{{SHIFT}}{INSERT}">TERMINAL PASTE</p>
               <p valstr="%{F4}">FORCE CLOSE</p>
               <p valstr="%f">FILE MENU</p>
-              <p valstr="{ESC}">CANCEL</p>
+              <p valstr="{ESC}">ESCAPE</p>
             </list>
           </rule>
 
