@@ -278,6 +278,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="%{F4}">FORCE CLOSE</p>
               <p valstr="%f">FILE MENU</p>
               <p valstr="{ESC}">ESCAPE</p>
+              <p valstr="{{WIN}}P">MONITOR SELECT</p>
             </list>
           </rule>
 
