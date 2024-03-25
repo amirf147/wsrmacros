@@ -27,23 +27,23 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>SHOW DOWNLOADS</listenFor>
     <sendKeys>^j</sendKeys>
   </command>
+  
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+    <listenFor>MOSSER</listenFor>
+    <sendKeys times="3">{UP}</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground processName = "msedge.exe" />
+    <listenFor>LISSER</listenFor>
+    <sendKeys times="3">{DOWN}</sendKeys>
+  </command>
 
     <!-- ##################################################
          ##
          ##    COPILOT
          ##
          ################################################## -->
-
-  <command>
-    <appIsInForeground windowTitleContains="Copilot" />
-    <listenFor>MOSSER</listenFor>
-    <sendKeys times="3">{UP}</sendKeys>
-  </command>
-  <command>
-    <appIsInForeground windowTitleContains="Copilot" />
-    <listenFor>LISSER</listenFor>
-    <sendKeys times="3">{DOWN}</sendKeys>
-  </command>
     
   <command>
     <appIsInForeground windowTitleContains="Copilot" />
