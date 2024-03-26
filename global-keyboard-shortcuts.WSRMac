@@ -36,6 +36,20 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>SHUSH</listenFor>
     <emulateRecognition>CLICK CANCEL</emulateRecognition>
   </command>
+
+  <!-- Pop up the Volume OSD (On-Screen Display) -->
+  <command priority="127">
+    <listenFor>VOLUME OUTPUT</listenFor>
+    <emulateRecognition>SYS TRAY</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
+    <waitFor seconds="0.3"/>
+    <emulateRecognition>BACK TAB 2</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>ENTER</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>TAB</emulateRecognition>
+  </command>
     
       <!-- ##################################################
            ##
