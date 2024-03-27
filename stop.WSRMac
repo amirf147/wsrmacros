@@ -7,6 +7,10 @@
     <waitFor seconds="0.1"/>
     <emulateRecognition>STOP LISTENING</emulateRecognition>
   </command>
-
+  
+  <command>
+    <listenFor>RELEASE CAMERA</listenFor>
+    <run command="powershell" params="-WindowStyle Hidden -Command Start-Process -Verb RunAs -FilePath 'powershell' -ArgumentList '-WindowStyle Hidden -Command Stop-Process -Name eviacam -Force'"/>
+</command>
 
 </speechMacros>

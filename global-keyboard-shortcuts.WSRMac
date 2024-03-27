@@ -277,6 +277,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
             <list propname = "pressedOnce">
               <p valstr="^a">SELECT ALL</p>
               <p valstr="^s">FILE SAVE</p>
+              <p valstr="^s">SAVE THIS</p>
               <p valstr="^+s">FILE SAVE AS</p>
               <p valstr="^o">FILE OPEN</p>
               <p valstr="%{TAB}">SWITCH BACK</p>
