@@ -268,8 +268,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr = "{RIGHT}" > RIGHT  </p>
               <p valstr = "+{RIGHT}" > REX  </p>
               <p valstr = "{UP}"    > SKAY   </p>
+              <p valstr = "^{F9}">yep</p>
               <p valstr = "{DOWN}"  > DRUM </p>
-              <p valstr = "^{F9}">click</p>
             </list>
           </rule>
     
