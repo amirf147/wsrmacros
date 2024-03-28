@@ -254,8 +254,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="^x">CUTS</p>
               <p valstr="^c">COPY</p>
               <p valstr="^v">PASTE</p>
-              <p valstr="+{UP}">SLINE UP</p>
-              <p valstr="+{DOWN}">SLINE DOWN</p>
+              <p valstr="+{UP}">USHER</p>
+              <p valstr="+{DOWN}">SHELBY</p>
               <p valstr="^+{HOME}">TOPPER CELL</p>
               <p valstr = "^+{LEFT}"     > BESSIE </p>
               <p valstr = "^+{RIGHT}"    > AXEL   </p>
