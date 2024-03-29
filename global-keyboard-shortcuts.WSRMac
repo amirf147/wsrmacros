@@ -275,6 +275,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     
           <rule name="keyCombo2">
             <list propname = "pressedOnce">
+            <p valstr = "{ESC}"  > ESCAPE </p>
               <p valstr="^a">SELECT ALL</p>
               <p valstr="^s">FILE SAVE</p>
               <p valstr="^s">SAVE THIS</p>
