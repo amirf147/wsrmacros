@@ -295,6 +295,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="{ESC}">ESCAPE</p>
               <p valstr="{{WIN}}P">MONITOR SELECT</p>
               <p valstr="{F2}">FLASH</p>
+              <p valstr="{{WIN}}r">WIN RUN</p>
             </list>
           </rule>
 
