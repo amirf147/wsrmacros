@@ -31,10 +31,6 @@
 	<emulateRecognition>press control tango</emulateRecognition>
   </command>
 
-  <command> 
-    <listenFor>TAB CLOSE</listenFor>
-	<emulateRecognition>press control whiskey</emulateRecognition>
-  </command>
 
   <command> 
     <listenFor>TAB RESTORE</listenFor>
