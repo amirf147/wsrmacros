@@ -269,6 +269,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="{{CTRL}}{PGDN}">TAB UNDER</p>
               <p valstr="{{CTRL}}{PGUP}">TAB OVER</p>
               <p valstr="^w">TAB CLOSE</p>
+              <p valstr="^w">SHUT TAB</p>
               <p valstr="^+t">TAB RESTORE</p>
               <p valstr="{ENTER}">ENTER</p>
               <p valstr="%{ENTER}">ALTER</p>
