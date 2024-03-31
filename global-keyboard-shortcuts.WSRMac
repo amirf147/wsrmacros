@@ -311,6 +311,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
             <list propname = "pressedOnce">
             <p valstr = "{ESC}"  > ESCAPE </p>
               <p valstr="^a">SELECT ALL</p>
+              <p valstr="^l">ADDRESS BAR</p>
               <p valstr="^s">FILE SAVE</p>
               <p valstr="^s">SAVE THIS ?FILE</p>
               <p valstr="^+s">FILE SAVE AS</p>
