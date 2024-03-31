@@ -239,6 +239,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="{{CTRL}}{PGDN}">TAB UNDER</p>
               <p valstr="{{CTRL}}{PGUP}">TAB OVER</p>
               <p valstr="^w">TAB CLOSE</p>
+              <p valstr="^+t">TAB RESTORE</p>
               <p valstr="{ENTER}">ENTER</p>
               <p valstr="%{ENTER}">ALTER</p>
               <p valstr=" ">SPACE</p>
@@ -279,7 +280,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
             <p valstr = "{ESC}"  > ESCAPE </p>
               <p valstr="^a">SELECT ALL</p>
               <p valstr="^s">FILE SAVE</p>
-              <p valstr="^s">SAVE THIS</p>
+              <p valstr="^s">SAVE THIS ?FILE</p>
               <p valstr="^+s">FILE SAVE AS</p>
               <p valstr="^o">FILE OPEN</p>
               <p valstr="%{TAB}">SWITCH BACK</p>
