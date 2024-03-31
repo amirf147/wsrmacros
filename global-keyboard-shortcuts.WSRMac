@@ -122,6 +122,11 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
                 <ruleref name="alphaNumeSym" propname="p1.alphaNumeSym"/></p>
             </o>
             <o>
+              <p>ALL CAPS</p>
+              <p min="1" max="10">
+                <ruleref name="capitalLetters" propname="p1.capitalLetters"/></p>
+            </o>
+            <o>
               <p>NUMBER</p>
               <p min="1" max="10">
                 <ruleref name="0to9" propname="p1.0to9"></ruleref></p>
@@ -138,6 +143,11 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
             <o>
               <p min="1" max="10">
                 <ruleref name="alphaNumeSym" propname="p2.alphaNumeSym"/> </p>
+            </o>
+            <o>
+              <p>ALL CAPS</p>
+              <p min="1" max="10">
+                <ruleref name="capitalLetters" propname="p2.capitalLetters"/></p>
             </o>
             <o>
               <p>NUMBER</p>
@@ -158,6 +168,11 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
                 <ruleref name="alphaNumeSym" propname="p3.alphaNumeSym"/> </p>
             </o>
             <o>
+              <p>ALL CAPS</p>
+              <p min="1" max="10">
+                <ruleref name="capitalLetters" propname="p3.capitalLetters"/></p>
+            </o>
+            <o>
               <p>NUMBER</p>
               <p min="1" max="10">
                 <ruleref name="0to9" propname="p3.0to9"></ruleref></p>
@@ -174,6 +189,11 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
             <o>
               <p min="1" max="10">
                 <ruleref name="alphaNumeSym" propname="p4.alphaNumeSym"/> </p>
+            </o>
+            <o>
+              <p>ALL CAPS</p>
+              <p min="1" max="10">
+                <ruleref name="capitalLetters" propname="p4.capitalLetters"/></p>
             </o>
             <o>
               <p>NUMBER</p>
@@ -194,6 +214,11 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
                 <ruleref name="alphaNumeSym" propname="p5.alphaNumeSym"/> </p>
             </o>
             <o>
+              <p>ALL CAPS</p>
+              <p min="1" max="10">
+                <ruleref name="capitalLetters" propname="p5.capitalLetters"/></p>
+            </o>
+            <o>
               <p>NUMBER</p>
               <p min="1" max="10">
                 <ruleref name="0to9" propname="p5.0to9"></ruleref></p>
@@ -203,26 +228,31 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
         <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
         <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
+        <sendKeys>{[p1.capitalLetters.unit]}</sendKeys>
         <sendKeys>{[p1.0to9]}</sendKeys>
         <waitFor seconds="0.2"/>
         <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
         <sendKeys>{[p2.keyCombo2.pressedOnce]}</sendKeys>
         <sendKeys>{[p2.alphaNumeSym.unit]}</sendKeys>
+        <sendKeys>{[p2.capitalLetters.unit]}</sendKeys>
         <sendKeys>{[p2.0to9]}</sendKeys>
         <waitFor seconds="0.05"/>
         <sendKeys times="{[p3.1to20]}">{[p3.textManipulation.keys]}</sendKeys>
         <sendKeys>{[p3.keyCombo2.pressedOnce]}</sendKeys>
         <sendKeys>{[p3.alphaNumeSym.unit]}</sendKeys>
+        <sendKeys>{[p3.capitalLetters.unit]}</sendKeys>
         <sendKeys>{[p3.0to9]}</sendKeys>
         <waitFor seconds="0.05"/>
         <sendKeys times="{[p4.1to20]}">{[p4.textManipulation.keys]}</sendKeys>
         <sendKeys>{[p4.keyCombo2.pressedOnce]}</sendKeys>
         <sendKeys>{[p4.alphaNumeSym.unit]}</sendKeys>
+        <sendKeys>{[p4.capitalLetters.unit]}</sendKeys>
         <sendKeys>{[p4.0to9]}</sendKeys>
         <waitFor seconds="0.05"/>
         <sendKeys times="{[p5.1to20]}">{[p5.textManipulation.keys]}</sendKeys>
         <sendKeys>{[p5.keyCombo2.pressedOnce]}</sendKeys>
         <sendKeys>{[p5.alphaNumeSym.unit]}</sendKeys>
+        <sendKeys>{[p5.capitalLetters.unit]}</sendKeys>
         <sendKeys>{[p5.0to9]}</sendKeys>
     </command>
     
@@ -455,8 +485,65 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p valstr="-">minus</p>
           <p valstr="-">hyphen</p>
           <p valstr="{U+002B}">plus</p>
-          <p valstr="=">equals</p>     
+          <p valstr="=">equals</p> 
+            </list>    
+          </rule>
+          <rule name="capitalLetters">
+            <list propname="unit">
+              <p valstr="A">Alpha</p>
+              <p valstr="B">Bravo</p>
+              <p valstr="C">Charlie</p>
+              <p valstr="D">Delta</p>
+              <p valstr="E">Echo</p>
+              <p valstr="F">Foxtrot</p>
+              <p valstr="G">Golf</p>
+              <p valstr="H">Hotel</p>
+              <p valstr="I">India</p>
+              <p valstr="J">Juliett</p>
+              <p valstr="K">Kilo</p>
+              <p valstr="L">Lima</p>
+              <p valstr="M">Mike</p>
+              <p valstr="N">November</p>
+              <p valstr="O">Oscar</p>
+              <p valstr="P">Papa</p>
+              <p valstr="Q">Quebec</p>
+              <p valstr="R">Romeo</p>
+              <p valstr="S">Sierra</p>
+              <p valstr="T">Tango</p>
+              <p valstr="U">Uniform</p>
+              <p valstr="V">Victor</p>
+              <p valstr="W">Whiskey</p>
+              <p valstr="X">X-ray</p>
+              <p valstr="Y">Yankee</p>
+              <p valstr="Z">Zulu</p>
+              <p valstr="A">a</p>
+              <p valstr="B">b</p>
+              <p valstr="C">c</p>
+              <p valstr="D">d</p>
+              <p valstr="E">e</p>
+              <p valstr="F">f</p>
+              <p valstr="G">g</p>
+              <p valstr="H">h</p>
+              <p valstr="I">i</p>
+              <p valstr="J">j</p>
+              <p valstr="K">k</p>
+              <p valstr="L">l</p>
+              <p valstr="M">m</p>
+              <p valstr="N">n</p>
+              <p valstr="O">o</p>
+              <p valstr="P">p</p>
+              <p valstr="Q">q</p>
+              <p valstr="R">r</p>
+              <p valstr="S">s</p>
+              <p valstr="T">t</p>
+              <p valstr="U">u</p>
+              <p valstr="V">v</p>
+              <p valstr="W">w</p>
+              <p valstr="X">x</p>
+              <p valstr="Y">y</p>
+              <p valstr="Z">z</p>
             </list>
           </rule>
+
 
 </speechMacros>
