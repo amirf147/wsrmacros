@@ -330,6 +330,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="{{WIN}}P">MONITOR SELECT</p>
               <p valstr="{F2}">FLASH</p>
               <p valstr="{{WIN}}r">WIN RUN</p>
+              <p valstr="{{CTRL}}{{ALT}}t">PRIMARY MONITOR</p>
+              <p valstr="{{CTRL}}{{ALT}}v">SECONDARY MONITOR</p>
             </list>
           </rule>
 
