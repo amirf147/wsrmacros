@@ -124,6 +124,13 @@ git clone https://github.com/amirf147/WSR_macros.git .
     This tells Git to use the "removesig" filter for all files with the `.WSRmac` extension.
 Now you're ready to start using and updating your own version of the repository!
 
+# Parsing Scripts
+
+This repository includes a folder named `parsing_scripts`. This folder contains scripts that are functional but not fully fleshed out. They are designed to help with getting the macros into an Excel or a spreadsheet file, making it easier to view and understand the macros and keyboard shortcuts you have.
+
+While these scripts are operational and can accomplish most tasks, they are not fully featured. This means they might not perform all the functionalities originally intended. However, they are still a valuable tool for managing and understanding your macros.
+
+Please note that these scripts are a work in progress and improvements may be added over time.
 
 ## Acknowledgements
 
