@@ -39,11 +39,20 @@ Please note that the `setup.sh` script and the Git filter it sets up are local t
 
 This collection of macros features a 5 Key Press or Key Combo Streamer in the file `global-keyboard-shortcuts.WSRMac`.
 
-The tree structure presented below is a visual representation of the hierarchical organization of the elements in the grammar used in our macros. This grammar is designed to recognize a sequence of five key presses or key combinations.
+It is a feature that recognizes a sequence of five key presses or key combinations. The structure is based on the XML syntax used in the speech grammar specification for Windows Speech Recognition.
 
-Each node in the tree represents a rule or an option within a rule. The tree structure helps to understand the flow and the possible paths that can be taken when the grammar is being parsed.
+Each sequence is represented by a P (Phrase) element in the tree. P stands for Phrase, which is a sequence of words that the speech recognition system should listen for. Each P in the tree is a phrase that’s waiting to be recognized. Technically, each P is optional as well because each of their contents consist of only O elements.
 
-Here is an ASCII representation of the tree structure of the grammar:
+O stands for Option, which is a choice between different phrases or rules that the speech recognition system can recognize. Each P has several O (Option) elements within it.
+
+Here’s a breakdown of the options within each P:
+
+The first option is a text manipulation key combo. If the user speaks this, the system will recognize it and perform the corresponding action. The user can also specify a number that represents how many times that key combo gets repeated.
+The second option is a key combo that only gets pressed one time. That’s why there is no second option for how many times it gets pressed.
+The third option is a sequence of letters, numbers, and symbols and the user can specify up to 10 them.
+The fourth option is for capital letters. To activate this, the user has to preface the option with the keyword “ALL CAPS”. Afterwards, the system will accept a total of 10 capital letters.
+The last option is for numbers. To activate this, the user has to preface the option with the keyword “NUMBER”. Afterwards, the system will accept a sequence of 1 to 10 numbers.
+
 ```
 Command
 └── Rule
@@ -54,6 +63,9 @@ Command
     │   ├── O: KeyCombo2
     │   ├── O
     │   │   └── P: Keyboard Key (min=1, max=10)
+    │   ├── O
+    │   │   ├── P: ALL CAPS
+    │   │   └── P: capitalLetters (min=1, max=10)
     │   └── O
     │       ├── P: NUMBER
     │       └── P: Number between 0 and 9 (min=1, max=10)
@@ -64,6 +76,9 @@ Command
     │   ├── O: KeyCombo2
     │   ├── O
     │   │   └── P: Keyboard Key (min=1, max=10)
+    │   ├── O
+    │   │   ├── P: ALL CAPS
+    │   │   └── P: capitalLetters (min=1, max=10)
     │   └── O
     │       ├── P: NUMBER
     │       └── P: Number between 0 and 9 (min=1, max=10)
@@ -74,6 +89,9 @@ Command
     │   ├── O: KeyCombo2
     │   ├── O
     │   │   └── P: Keyboard Key (min=1, max=10)
+    │   ├── O
+    │   │   ├── P: ALL CAPS
+    │   │   └── P: capitalLetters (min=1, max=10)
     │   └── O
     │       ├── P: NUMBER
     │       └── P: Number between 0 and 9 (min=1, max=10)
@@ -84,6 +102,9 @@ Command
     │   ├── O: KeyCombo2
     │   ├── O
     │   │   └── P: Keyboard Key (min=1, max=10)
+    │   ├── O
+    │   │   ├── P: ALL CAPS
+    │   │   └── P: capitalLetters (min=1, max=10)
     │   └── O
     │       ├── P: NUMBER
     │       └── P: Number between 0 and 9 (min=1, max=10)
@@ -94,6 +115,9 @@ Command
         ├── O: KeyCombo2
         ├── O
         │   └── P: Keyboard Key (min=1, max=10)
+        ├── O
+        │   ├── P: ALL CAPS
+        │   └── P: capitalLetters (min=1, max=10)
         └── O
             ├── P: NUMBER
             └── P: Number between 0 and 9 (min=1, max=10)
