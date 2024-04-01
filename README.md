@@ -104,20 +104,25 @@ Before you start using this repository, you need to set up your local environmen
 ```bash
 git clone https://github.com/amirf147/WSR_macros.git .
 ```
+3. **Add lines to your `.git/config` file**: Add the following lines to your `.git/config` file:
 
-3. **Run the setup script**: Run the `setup.sh` script to set up the Git filter that removes the signature block from files when they're staged for commit. You can do this with the following command:
+    ```bash
+    [filter "removesig"]
+        clean = "sed '/<signature>/,/<\/signature>/d'"
+        smudge = cat
+        required
+    ```
 
-```bashi
-./setup.sh
-```
+    This sets up a filter called "removesig" that removes lines between `<signature>` and `</signature>` (replace these with your actual signature tags) when you run `git add`.
 
-Now you're ready to start using the repository!
+4. **Update your `.gitattributes` file**: Add this line to your `.gitattributes` file (create it in the same directory as your `.gitignore` if it doesn't exist):
 
-## Tailoring to Your Use
+    ```bash
+    *.WSRmac filter=removesig
+    ```
 
-If you want to tailor this repository to your own use and keep track of updates both locally and remotely, you can fork it and make changes in your forked repository. 
-
-Please note that the `setup.sh` script and the Git filter it sets up are local to your machine. If you clone your forked repository to a new machine, you'll need to run the `setup.sh` script again on that machine.
+    This tells Git to use the "removesig" filter for all files with the `.WSRmac` extension.
+Now you're ready to start using and updating your own version of the repository!
 
 
 ## Acknowledgements
