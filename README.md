@@ -9,7 +9,7 @@ This collection of macros features a 5 Key Press or Key Combo Streamer in the fi
 
 It is a feature that recognizes a sequence of five key presses or key combinations. The structure is based on the XML syntax used in the speech grammar specification for Windows Speech Recognition.
 
-Each sequence is represented by a P (Phrase) element in the tree. P stands for Phrase, which is a sequence of words that the speech recognition system should listen for. Each P in the tree is a phrase that’s waiting to be recognized. Technically, each P is optional as well because each of their contents consist of only O elements.
+Each sequence is represented by a P (Phrase) element in the tree. P stands for Phrase, which is a sequence of words that the speech recognition system should listen for. Each P in the tree is a phrase that’s waiting to be recognized. Technically, each P in this case is optional as well because each of its contents consist of only O elements.
 
 O stands for Option, which is a choice between different phrases or rules that the speech recognition system can recognize. Each P has several O (Option) elements within it.
 
