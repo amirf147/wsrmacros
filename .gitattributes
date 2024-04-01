@@ -1,1 +1,2 @@
 *.WSRMac filter=removesig
+*.WSRMac linguist-language=XML

@@ -48,7 +48,35 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <waitFor seconds="0.2"/>
     <emulateRecognition>ENTER</emulateRecognition>
     <waitFor seconds="0.2"/>
-    <emulateRecognition>TAB</emulateRecognition>
+    <emulateRecognition>TABLE</emulateRecognition>
+  </command>
+  
+  <!-- Change sound output up one option in the Volume OSD -->
+  <command priority="127">
+    <listenFor>VOLUME OUTPUT UP</listenFor>
+    <emulateRecognition>SYS TRAY</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
+    <waitFor seconds="0.3"/>
+    <emulateRecognition>BACK TAB 2</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>ENTER</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>TABLE SKAY ENTER</emulateRecognition>
+  </command>
+  
+  <!-- Change sound output down one option in the Volume OSD -->
+  <command priority="127">
+    <listenFor>VOLUME OUTPUT DOWN</listenFor>
+    <emulateRecognition>SYS TRAY</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
+    <waitFor seconds="0.3"/>
+    <emulateRecognition>BACK TAB 2</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>ENTER</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>TABLE DRUM ENTER</emulateRecognition>
   </command>
     
       <!-- ##################################################
@@ -311,7 +339,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
             <list propname = "pressedOnce">
             <p valstr = "{ESC}"  > ESCAPE </p>
               <p valstr="^a">SELECT ALL</p>
-              <p valstr="^t">TAB NEW</p>
               <p valstr="^l">ADDRESS BAR</p>
               <p valstr="^s">FILE SAVE</p>
               <p valstr="^s">SAVE THIS ?FILE</p>
