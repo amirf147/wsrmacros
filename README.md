@@ -104,7 +104,7 @@ Before you start using this repository, you need to set up your local environmen
 ```bash
 git clone https://github.com/amirf147/WSR_macros.git .
 ```
-3. **Add lines to your `.git/config` file**: Add the following lines to your `.git/config` file:
+4. **Add lines to your `.git/config` file**: Add the following lines to your `.git/config` file:
 
     ```bash
     [filter "removesig"]
@@ -115,7 +115,7 @@ git clone https://github.com/amirf147/WSR_macros.git .
 
     This sets up a filter called "removesig" that removes lines between `<signature>` and `</signature>` (replace these with your actual signature tags) when you run `git add`.
 
-4. **Update your `.gitattributes` file**: Add this line to your `.gitattributes` file (create it in the same directory as your `.gitignore` if it doesn't exist):
+5. **Update your `.gitattributes` file**: Add this line to your `.gitattributes` file (create it in the same directory as your `.gitignore` if it doesn't exist):
 
     ```bash
     *.WSRmac filter=removesig
