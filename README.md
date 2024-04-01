@@ -1,7 +1,7 @@
 
 # wsrmacros
 
-> **Note:** This repository contains macros for Windows Speech Recognition. If you're cloning this repository, please follow the setup instructions below to ensure the macros work correctly on your machine.
+> **Note:** This repository contains macros for the Microsoft program, Windows Speech Recognition Macros. This program is no longer officially available and would have to be found from alternate sources. Windows Speech Recognition Macros was a tool developed by Microsoft that allowed users to create custom voice commands for their computer, automate repetitive tasks, and even control their computer using their voice. It was a powerful tool for accessibility and productivity. However, please be aware that the macros in this repository will not work without this specific program.
 
 ## Five Key Press or Key Combo Streamer
 
