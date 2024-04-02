@@ -330,7 +330,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr = "{RIGHT}" > RIGHT  </p>
               <p valstr = "+{RIGHT}" > REX  </p>
               <p valstr = "{UP}"    > SKAY   </p>
-              <p valstr = "^{F9}">yep</p>
               <p valstr = "{DOWN}"  > DRUM </p>
             </list>
           </rule>
@@ -499,6 +498,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p valstr=";">semicolon</p>
           <p valstr="$">dollar sign</p>
           <p valstr="'">'</p>
+          <p valstr="@">at ?symbol</p>
           <p valstr="{U+005E}">caret</p>
           <p valstr="{U+005F}">underscore</p>
           <p valstr="{U+0020}">space</p>
