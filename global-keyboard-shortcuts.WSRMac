@@ -517,6 +517,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p valstr="\">backslash</p>
           <p valstr="-">minus</p>
           <p valstr="-">hyphen</p>
+          <p valstr="-">dash</p>
           <p valstr="{U+002B}">plus</p>
           <p valstr="=">equals</p> 
             </list>    
