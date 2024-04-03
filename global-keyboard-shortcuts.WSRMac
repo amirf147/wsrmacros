@@ -323,7 +323,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr = "^+{RIGHT}"    > AXEL   </p>
               <p valstr = "^{LEFT}"      > BASE   </p>
               <p valstr = "^{RIGHT}"     > JUMP   </p>
-              <p valstr = "^{BACKSPACE}" > WHISKER  </p>
+              <p valstr = "^{BACKSPACE}" > SHELLAC  </p>
               <p valstr = "^{DELETE}"    > DEER   </p>
               <p valstr = "{LEFT}"  > LEFT  </p>
               <p valstr = "+{LEFT}"  > LEACH  </p>
@@ -336,8 +336,9 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     
           <rule name="keyCombo2">
             <list propname = "pressedOnce">
-            <p valstr = "{ESC}"  > ESCAPE </p>
-            <p valstr = "^t"  > TAB NEW</p>
+              <p valstr = "{ESC}"  > ESCAPE </p>
+              <p valstr = "^t"  > TAB NEW</p>
+              <p valstr = "^t"  > PAGE NEW</p>
               <p valstr="^a">SELECT ALL</p>
               <p valstr="^l">ADDRESS BAR</p>
               <p valstr="^s">FILE SAVE</p>
@@ -521,6 +522,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p valstr="-">dash</p>
           <p valstr="{U+002B}">plus</p>
           <p valstr="=">equals</p> 
+          <p valstr="#">hash</p> 
             </list>    
           </rule>
           <rule name="capitalLetters">
