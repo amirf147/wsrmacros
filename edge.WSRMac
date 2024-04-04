@@ -38,6 +38,46 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>LISSER</listenFor>
     <sendKeys times="3">{DOWN}</sendKeys>
   </command>
+  <command>
+  <appIsInForeground processName = "msedge.exe" />
+  <listenFor>REFRESH</listenFor>
+  <sendKeys>{F5}</sendKeys>
+</command>
+<command>
+  <appIsInForeground processName = "msedge.exe" />
+    <listenFor>ZOOM IN</listenFor>
+    <sendKeys>^=</sendKeys>
+</command>
+<command>
+  <appIsInForeground processName = "msedge.exe" />
+    <listenFor>ZOOM OUT</listenFor>
+    <sendKeys>^-</sendKeys>
+</command>
+
+<command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>NEW PESO</listenFor>
+    <emulateRecognition>TAB NEW</emulateRecognition>
+    <waitFor seconds="00.300"/>
+    <emulateRecognition>PESO</emulateRecognition>
+  </command>
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>YEAH SO</listenFor>
+    <emulateRecognition>YEAH</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>COPY</emulateRecognition>
+    <waitFor seconds="00.20"/>
+    <emulateRecognition>TAB NEW</emulateRecognition>
+    <waitFor seconds="00.200"/>
+    <emulateRecognition>PESO</emulateRecognition>
+  </command>
+  
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>PESO</listenFor>
+    <sendKeys>^+l</sendKeys>
+  </command>
 
     <!-- ##################################################
          ##
@@ -75,104 +115,44 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <sendKeys times="1">+.</sendKeys>
   </command>
 
-  <command>
-	<appIsInForeground processName = "msedge.exe" />
-    <listenFor>NEW PESO</listenFor>
-    <emulateRecognition>TAB NEW</emulateRecognition>
-    <waitFor seconds="00.300"/>
-    <emulateRecognition>PESO</emulateRecognition>
+  <!-- ##################################################
+       ##
+       ##    TAB NAVIGATION
+       ##
+       ################################################## -->
+       
+  <command priority="127">
+    <appIsInForeground processName = "msedge.exe" />
+      <rule>
+        <p>TAB</p>
+        <p><ruleref name="num" propname="num"/></p>
+      </rule>
+      <sendKeys>^{[num.ordinal]}</sendKeys>
   </command>
-  <command>
-	<appIsInForeground processName = "msedge.exe" />
-    <listenFor>YEAH SO</listenFor>
-    <emulateRecognition>YEAH</emulateRecognition>
-    <waitFor seconds="0.05"/>
-    <emulateRecognition>COPY</emulateRecognition>
-    <waitFor seconds="00.20"/>
-    <emulateRecognition>TAB NEW</emulateRecognition>
-    <waitFor seconds="00.200"/>
-    <emulateRecognition>PESO</emulateRecognition>
-  </command>
-  
-  <command>
-	<appIsInForeground processName = "msedge.exe" />
-    <listenFor>PESO</listenFor>
-    <sendKeys>^+l</sendKeys>
-  </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 1</listenFor>
-      <sendKeys>^1</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 2</listenFor>
-      <sendKeys>^2</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 3</listenFor>
-      <sendKeys>^3</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 4</listenFor>
-      <sendKeys>^4</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 5</listenFor>
-      <sendKeys>^5</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 6</listenFor>
-      <sendKeys>^6</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 7</listenFor>
-      <sendKeys>^7</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 8</listenFor>
-      <sendKeys>^8</sendKeys>
-    </command>
-
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>TAB 9</listenFor>
-      <sendKeys>^9</sendKeys>
-    </command>
   <command>
     <appIsInForeground processName = "msedge.exe" />
       <listenFor>TAB LAST</listenFor>
       <sendKeys>^9</sendKeys>
     </command>
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-      <listenFor>REFRESH</listenFor>
-      <sendKeys>{F5}</sendKeys>
-    </command>
-    <command>
-      <appIsInForeground processName = "msedge.exe" />
-        <listenFor>ZOOM IN</listenFor>
-        <sendKeys>^=</sendKeys>
-    </command>
-    <command>
-      <appIsInForeground processName = "msedge.exe" />
-        <listenFor>ZOOM OUT</listenFor>
-        <sendKeys>^-</sendKeys>
-    </command>
 
+ <!-- ##################################################
+      ##
+      ##   RULES
+      ##
+      ################################################## -->
+
+    <rule name="num">
+      <list propname="ordinal">
+          <p valstr="1">FIRST</p>
+          <p valstr="2">SECOND</p>
+          <p valstr="3">THIRD</p>
+          <p valstr="4">FOURTH</p>
+          <p valstr="5">FIFTH</p>
+          <p valstr="6">SIXTH</p>
+          <p valstr="7">SEVENTH</p>
+          <p valstr="8">EIGHTH</p>
+          <p valstr="9">NINTH</p>
+      </list>
+    </rule>
 
 </speechMacros>

@@ -323,7 +323,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr = "^+{RIGHT}"    > AXEL   </p>
               <p valstr = "^{LEFT}"      > BASE   </p>
               <p valstr = "^{RIGHT}"     > JUMP   </p>
-              <p valstr = "^{BACKSPACE}" > SHELLAC  </p>
+              <p valstr = "^{BACKSPACE}" > SCRATCH  </p>
               <p valstr = "^{DELETE}"    > DEER   </p>
               <p valstr = "{LEFT}"  > LEFT  </p>
               <p valstr = "+{LEFT}"  > LEACH  </p>
