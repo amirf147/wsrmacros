@@ -78,6 +78,20 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <waitFor seconds="0.2"/>
     <emulateRecognition>TABLE DRUM ENTER</emulateRecognition>
   </command>
+
+  <!-- Change monitor setup  -->
+  <command priority="127">
+    <listenFor>MONITOR EXTEND</listenFor>
+    <emulateRecognition>PRESS KEY WINDOWS PAPA</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>SKAY ENTER</emulateRecognition>
+  </command>
+  <command priority="127">
+    <listenFor>MONITOR SECOND SCREEN</listenFor>
+    <emulateRecognition>PRESS KEY WINDOWS PAPA</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>DRUM ENTER</emulateRecognition>
+  </command>
     
       <!-- ##################################################
            ##
