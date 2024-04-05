@@ -38,7 +38,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>LISSER</listenFor>
     <sendKeys times="3">{DOWN}</sendKeys>
   </command>
-  <command>
+  <command> 
   <appIsInForeground processName = "msedge.exe" />
   <listenFor>REFRESH</listenFor>
   <sendKeys>{F5}</sendKeys>
@@ -46,6 +46,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
 <command>
   <appIsInForeground processName = "msedge.exe" />
     <listenFor>ZOOM IN</listenFor>
+    <listenFor>TEXT ENLARGE</listenFor>
     <sendKeys>^=</sendKeys>
 </command>
 <command>
