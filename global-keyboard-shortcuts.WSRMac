@@ -41,7 +41,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command priority="127">
     <listenFor>VOLUME OUTPUT</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.5"/>
+    <waitFor seconds="0.7"/>
     <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
     <waitFor seconds="0.3"/>
     <emulateRecognition>BACK TAB 2</emulateRecognition>
@@ -55,13 +55,13 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command priority="127">
     <listenFor>VOLUME OUTPUT UP</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.5"/>
+    <waitFor seconds="0.7"/>
     <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
     <waitFor seconds="0.3"/>
     <emulateRecognition>BACK TAB 2</emulateRecognition>
-    <waitFor seconds="0.2"/>
+    <waitFor seconds="0.3"/>
     <emulateRecognition>ENTER</emulateRecognition>
-    <waitFor seconds="0.2"/>
+    <waitFor seconds="0.3"/>
     <emulateRecognition>TABLE SKAY ENTER</emulateRecognition>
   </command>
   
@@ -69,13 +69,13 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command priority="127">
     <listenFor>VOLUME OUTPUT DOWN</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.5"/>
+    <waitFor seconds="0.7"/>
     <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
     <waitFor seconds="0.3"/>
     <emulateRecognition>BACK TAB 2</emulateRecognition>
-    <waitFor seconds="0.2"/>
+    <waitFor seconds="0.3"/>
     <emulateRecognition>ENTER</emulateRecognition>
-    <waitFor seconds="0.2"/>
+    <waitFor seconds="0.3"/>
     <emulateRecognition>TABLE DRUM ENTER</emulateRecognition>
   </command>
 
