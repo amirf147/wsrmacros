@@ -102,7 +102,7 @@ Before you start using this repository, you need to set up your local environmen
 3. **Clone the repository**: Open a terminal, navigate to the "Speech Macros" folder, and clone the repository with the following command:
 
 ```bash
-git clone https://github.com/amirf147/WSR_macros.git .
+git clone https://github.com/amirf147/wsrmacros.git .
 ```
 4. **Add lines to your `.git/config` file**: Add the following lines to your `.git/config` file:
 
