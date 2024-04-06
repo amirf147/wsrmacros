@@ -41,26 +41,20 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command priority="127">
     <listenFor>VOLUME OUTPUT</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.7"/>
-    <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
-    <waitFor seconds="0.3"/>
-    <emulateRecognition>BACK TAB 2</emulateRecognition>
     <waitFor seconds="0.2"/>
-    <emulateRecognition>ENTER</emulateRecognition>
-    <waitFor seconds="0.2"/>
-    <emulateRecognition>TABLE</emulateRecognition>
+    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>BACK TAB 2 ENTER TABLE</emulateRecognition>
   </command>
   
   <!-- Change sound output up one option in the Volume OSD -->
   <command priority="127">
     <listenFor>VOLUME OUTPUT UP</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.7"/>
-    <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
-    <waitFor seconds="0.3"/>
-    <emulateRecognition>BACK TAB 2</emulateRecognition>
-    <waitFor seconds="0.3"/>
-    <emulateRecognition>ENTER</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>BACK TAB 2 ENTER</emulateRecognition>
     <waitFor seconds="0.3"/>
     <emulateRecognition>TABLE SKAY ENTER</emulateRecognition>
   </command>
@@ -69,12 +63,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command priority="127">
     <listenFor>VOLUME OUTPUT DOWN</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.7"/>
-    <emulateRecognition>CLICK SPEAKERS</emulateRecognition>
-    <waitFor seconds="0.3"/>
-    <emulateRecognition>BACK TAB 2</emulateRecognition>
-    <waitFor seconds="0.3"/>
-    <emulateRecognition>ENTER</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>BACK TAB 2 ENTER</emulateRecognition>
     <waitFor seconds="0.3"/>
     <emulateRecognition>TABLE DRUM ENTER</emulateRecognition>
   </command>
@@ -365,7 +357,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="^f">FINDER</p>
               <p valstr="{{WIN}}v">CLIPBOARD</p>
               <p valstr="{{WIN}}{{SHIFT}}s">SCREENSHOT</p>
-              <p valstr="{{WIN}}t{50 WAIT}{TAB}">SYS TRAY</p>
+              <p valstr="{{WIN}}b">SYS TRAY</p>
               <p valstr="{F11}">POINTER</p>
               <p valstr="^l">SLINE</p>
               <p valstr="{{SHIFT}}{INSERT}">TERMINAL PASTE</p>
