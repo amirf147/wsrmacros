@@ -87,7 +87,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
          ################################################## -->
     
   <command>
-    <appIsInForeground windowTitleContains="Copilot" />
+    <appIsInForeground windowTitleContains="Copilot"/>
     <listenFor>HEY LISTEN</listenFor>
     <emulateRecognition>CLICK USE MICROPHONE</emulateRecognition>
     <emulateRecognition>STOP LISTENING</emulateRecognition>
@@ -97,7 +97,11 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>Ask Chat</listenFor>
     <emulateRecognition>CLICK ask me anything</emulateRecognition>
   </command>
-
+  <command>
+    <appIsInForeground windowTitleContains="Copilot"/>
+    <listenFor>INSERT PROMPT HEADER</listenFor>
+    <insertText>The user is using a voice recognition application. Commands such as "stop listening", "stop service", and "start listening" are used to control this application and should not be interpreted as part of the user's request.</insertText>
+  </command>
   
     <!-- ##################################################
          ##
