@@ -113,7 +113,7 @@ git clone https://github.com/amirf147/wsrmacros.git .
     required
 ```
 
-    This sets up a filter called "removesig" that removes lines between `<signature>` and `</signature>` (replace these with your actual signature tags) when you run `git add`.
+This sets up a filter called "removesig" that removes lines between `<signature>` and `</signature>` (replace these with your actual signature tags) when you run `git add`.
 
 5. **Update your `.gitattributes` file**: Add this line to your `.gitattributes` file (create it in the same directory as your `.gitignore` if it doesn't exist):
 
@@ -121,7 +121,7 @@ git clone https://github.com/amirf147/wsrmacros.git .
 *.WSRmac filter=removesig
 ```
 
-    This tells Git to use the "removesig" filter for all files with the `.WSRmac` extension.
+This tells Git to use the "removesig" filter for all files with the `.WSRmac` extension.
 Now you're ready to start using and updating your own version of the repository!
 
 ## Parsing Scripts
