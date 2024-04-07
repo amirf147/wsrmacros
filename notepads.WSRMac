@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speechMacros>
+
+  <command>
+    <appIsInForeground windowTitleContains="Notepads"/>
+    <listenFor>TAB NEW</listenFor>
+    <sendKeys>^n</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground windowTitleContains="Notepads"/>
+    <listenFor>TAB CLOSE</listenFor>
+    <sendKeys>^w</sendKeys>
+  </command>
+
+
+</speechMacros>

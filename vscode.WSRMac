@@ -154,6 +154,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
              <p valstr="^{F2}">CHANGE ALL</p>
              <p valstr="^/">COMMENT</p>
              <p valstr="^+n">NEW WINDOW</p>
+             <p valstr="{F5}">RUN DEBUG</p>
+             <p valstr="+{F5}">STOP DEBUG</p>
             </list>
           </rule>
         
