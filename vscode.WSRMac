@@ -6,159 +6,170 @@ Some of these are directly inspired by him, and some are directly from his macro
 You can find his work here: https://github.com/leeorhelps/SpeechBird
 -->
 <speechMacros>
-      <!-- ##################################################
-           ##
-           ##    COMPOSITE COMMANDS
-           ##
-           ################################################## -->
-           <command>
-            <appIsInForeground processName="code.exe" />
-            <listenFor>SHOW KEYBOARD SHORTCUTS</listenFor>
-            <sendKeys times="1">^k</sendKeys>
-            <waitFor seconds="0.05"/>
-            <sendKeys times="1">^s</sendKeys>
-          </command>
-          <command>
-            <appIsInForeground processName="code.exe" />
-            <listenFor>SHOW SETTINGS JSON</listenFor>
-            <sendKeys times="1">^k</sendKeys>
-            <waitFor seconds="0.05"/>
-            <sendKeys times="1">^+j</sendKeys>
-            <setTextFeedback>CTRL+K  CTRL+SHIFT+J</setTextFeedback>
-         </command>
-          <command>
-            <appIsInForeground processName="code.exe" />
-            <listenFor>FOLDER OPEN</listenFor>
-            <sendKeys times="1">^k</sendKeys>
-            <waitFor seconds="0.05"/>
-            <sendKeys times="1">^o</sendKeys>
-            <setTextFeedback>CTRL+K  CTRL+O</setTextFeedback>
-         </command>
-          <command>
-            <appIsInForeground processName="code.exe" />
-            <listenFor>SHOW PREVIEW</listenFor>
-            <sendKeys times="1">^k</sendKeys>
-            <waitFor seconds="0.05"/>
-            <sendKeys times="1">v</sendKeys>
-            <setTextFeedback>CTRL+K  V</setTextFeedback>
-         </command>
-          <command>
-            <appIsInForeground processName="code.exe" />
-            <listenFor>GROUP DOWN</listenFor>
-            <emulateRecognition>click that</emulateRecognition>
-            <waitFor seconds="0.05"/>
-            <emulateRecognition>BALANCE OUT</emulateRecognition>
-            <waitFor seconds="0.05"/>
-            <emulateRecognition>SAME BELOW</emulateRecognition>
-          </command>
-        
-          <!-- ##################################################
-               ##
-               ##    SCROLLING FIX
-               ##
-               ################################################## -->
-        
-          <command priority="127">
-            <appIsInForeground processName="code.exe" />
-            <listenFor>LIS</listenFor>
-            <emulateRecognition>PAGE Down</emulateRecognition>
-            <waitFor seconds="0.05"/>
-            <emulateRecognition>ROLL DOWN 20</emulateRecognition>
-          </command>
-        
-          <command priority="127">
-            <appIsInForeground processName="code.exe" />
-            <listenFor>LISSER</listenFor>
-            <emulateRecognition>go down 20</emulateRecognition>
-            <waitFor seconds="0.05"/>
-            <emulateRecognition>ROLL DOWN 10</emulateRecognition>
-          </command>
-        
-          <command priority="127">
-            <appIsInForeground processName="code.exe" />
-            <listenFor>MOSSER</listenFor>
-            <emulateRecognition>go up 20</emulateRecognition>
-            <waitFor seconds="0.05"/>
-            <emulateRecognition>ROLL up 10</emulateRecognition>
-          </command>
-        
-          <command priority="127">
-            <appIsInForeground processName="code.exe" />
-            <listenFor>MOSS</listenFor>
-            <emulateRecognition>PAGE Up</emulateRecognition>
-            <waitFor seconds="0.05"/>
-            <emulateRecognition>ROLL UP 20</emulateRecognition>
-          </command>
-        
-          <!-- ##################################################
-               ##
-               ##    LIST AND RULE IMPLEMENTATIONS
-               ##
-               ################################################## -->
-        
-          <command>
-            <appIsInForeground processName="code.exe"/>
-            <rule>
-              <p><ruleref name="vsKeys" propname="vsKeys"/></p>
-              <o><ruleref name="1to20" propname="1to20"/></o>
-            </rule>
-            <sendKeys times="{[1to20]}">{[vsKeys.multiPress]}</sendKeys>
-          </command>
-                  
-          <command>
-            <appIsInForeground processName="code.exe"/>
-              <rule> 
-              <p><ruleref name="vsKeys2" propname="vsKeys2"/></p>
-            </rule>
-            <sendKeys>{[vskeys2.pressedOnce]}</sendKeys>
-          </command>
-          
-            <!-- ##################################################
-                ##  
-                ##      LIST AND RULE DEFINITIONS 
-                ##  
-                ################################################## -->
-        
-          <rule name="vsKeys">
-            <list propname = "multiPress">
-                <p valstr="^+k">LINE DEL</p>
-                <p valstr="%+{DOWN}">SAME BELOW</p>
-                <p valstr="^%{DOWN}">CURSE DOWN</p>
-                <p valstr="^%{UP}">CURSE UP</p>
-                <p valstr="^+i">PANE INCREASE</p>
-                <p valstr="^+o">PANE DECREASE</p>
-                <p valstr="{TAB}">INDENT</p>
-                <p valstr="{{SHIFT}}{TAB}">UNINDENT</p>
-                <p valstr="%{UP}">LINEUP</p>
-                <p valstr="%{DOWN}">LINE DOWN</p>
-                <p valstr="^+a">BALANCE OUT</p>
-                <p valstr="^d">CURSE IT</p>
-                <p valstr="^{DOWN}">ROLL DOWN</p>
-                <p valstr="^{UP}">ROLL UP</p>
-            </list>  
-          </rule>
-          <rule name="vsKeys2">
-           <list propname = "pressedOnce">
-             <p valstr="^b">HIDE LEFT</p>
-             <p valstr="{{CTRL}}{{SHIFT}}e">SHOW FILES</p>
-             <p valstr="^f">FINDER</p>
-             <p valstr="^+f">SEARCH ALL FILES</p>
-             <p valstr="^,">SHOW SETTINGS</p>
-             <p valstr="{{CTRL}}`">FOCUS TERMINAL</p>
-             <p valstr="%z">WORD WRAP</p>
-             <p valstr="^+x">SHOW EXTENSIONS</p>
-             <p valstr="^0">PANE 0</p>
-             <p valstr="^1">PANE 1</p>
-             <p valstr="^2">PANE 2</p>
-             <p valstr="^+p">COMMANDER</p>
-             <p valstr="^{F2}">CHANGE ALL</p>
-             <p valstr="^/">COMMENT</p>
-             <p valstr="^+n">NEW WINDOW</p>
-             <p valstr="{F5}">RUN DEBUG</p>
-             <p valstr="+{F5}">STOP DEBUG</p>
-            </list>
-          </rule>
-        
-          <numbers name="1to20" start="1" stop="20"/>
+<!-- ##################################################
+     ##
+     ##    COMPOSITE COMMANDS
+     ##
+     ################################################## -->
+  
+  <command>
+    <appIsInForeground processName="code.exe" />
+    <listenFor>SHOW KEYBOARD SHORTCUTS</listenFor>
+    <sendKeys times="1">^k</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="1">^s</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground processName="code.exe" />
+    <listenFor>SHOW SETTINGS JSON</listenFor>
+    <sendKeys times="1">^k</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="1">^+j</sendKeys>
+    <setTextFeedback>CTRL+K  CTRL+SHIFT+J</setTextFeedback>
+  </command>
+  <command>
+    <appIsInForeground processName="code.exe" />
+    <listenFor>FOLDER OPEN</listenFor>
+    <sendKeys times="1">^k</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="1">^o</sendKeys>
+    <setTextFeedback>CTRL+K  CTRL+O</setTextFeedback>
+  </command>
+  <command>
+    <appIsInForeground processName="code.exe" />
+    <listenFor>SHOW PREVIEW</listenFor>
+    <sendKeys times="1">^k</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="1">v</sendKeys>
+    <setTextFeedback>CTRL+K  V</setTextFeedback>
+  </command>
+  <command>
+    <appIsInForeground processName="code.exe" />
+    <listenFor>GROUP DOWN</listenFor>
+    <emulateRecognition>click that</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>BALANCE OUT</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>SAME BELOW</emulateRecognition>
+  </command>
+
+<!-- ##################################################
+     ##
+     ##    SCROLLING FIX
+     ##
+     ################################################## -->
+
+  <command priority="127">
+    <appIsInForeground processName="code.exe" />
+    <listenFor>LIS</listenFor>
+    <emulateRecognition>PAGE Down</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>ROLL DOWN 20</emulateRecognition>
+  </command>
+
+  <command priority="127">
+    <appIsInForeground processName="code.exe" />
+    <listenFor>LISSER</listenFor>
+    <emulateRecognition>go down 20</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>ROLL DOWN 10</emulateRecognition>
+  </command>
+
+  <command priority="127">
+    <appIsInForeground processName="code.exe" />
+    <listenFor>MOSSER</listenFor>
+    <emulateRecognition>go up 20</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>ROLL up 10</emulateRecognition>
+  </command>
+
+  <command priority="127">
+    <appIsInForeground processName="code.exe" />
+    <listenFor>MOSS</listenFor>
+    <emulateRecognition>PAGE Up</emulateRecognition>
+    <waitFor seconds="0.05"/>
+    <emulateRecognition>ROLL UP 20</emulateRecognition>
+  </command>
+
+<!-- ##################################################
+     ##
+     ##    LIST AND RULE IMPLEMENTATIONS
+     ##
+     ################################################## -->
+
+  <command>
+    <appIsInForeground processName="code.exe"/>
+    <rule>
+      <p><ruleref name="vsKeys" propname="vsKeys"/></p>
+      <o><ruleref name="1to20" propname="1to20"/></o>
+    </rule>
+    <sendKeys times="{[1to20]}">{[vsKeys.multiPress]}</sendKeys>
+  </command>
+  
+  <command>
+    <appIsInForeground processName="code.exe"/>
+      <rule> 
+      <p><ruleref name="vsKeys2" propname="vsKeys2"/></p>
+    </rule>
+    <sendKeys>{[vskeys2.pressedOnce]}</sendKeys>
+  </command>
+  
+  <command>
+    <appIsInForeground processName="code.exe"/>
+    <rule>
+      <p>GO TO LINE</p>
+      <o><ruleref name="num" propname="num"/></o>
+    </rule>
+    <sendKeys>^g{[num]}~</sendKeys>
+  </command>
+
+<!-- ##################################################
+     ##  
+     ##      LIST AND RULE DEFINITIONS 
+     ##  
+     ################################################## -->
+
+  <rule name="vsKeys">
+    <list propname = "multiPress">
+        <p valstr="^+k">LINE DEL</p>
+        <p valstr="%+{DOWN}">SAME BELOW</p>
+        <p valstr="^%{DOWN}">CURSE DOWN</p>
+        <p valstr="^%{UP}">CURSE UP</p>
+        <p valstr="^+i">PANE INCREASE</p>
+        <p valstr="^+o">PANE DECREASE</p>
+        <p valstr="{TAB}">INDENT</p>
+        <p valstr="{{SHIFT}}{TAB}">UNINDENT</p>
+        <p valstr="%{UP}">LINEUP</p>
+        <p valstr="%{DOWN}">LINE DOWN</p>
+        <p valstr="^+a">BALANCE OUT</p>
+        <p valstr="^d">CURSE IT</p>
+        <p valstr="^{DOWN}">ROLL DOWN</p>
+        <p valstr="^{UP}">ROLL UP</p>
+    </list>  
+  </rule>
+  <rule name="vsKeys2">
+    <list propname = "pressedOnce">
+      <p valstr="^b">HIDE LEFT</p>
+      <p valstr="{{CTRL}}{{SHIFT}}e">SHOW FILES</p>
+      <p valstr="^f">FINDER</p>
+      <p valstr="^+f">SEARCH ALL FILES</p>
+      <p valstr="^,">SHOW SETTINGS</p>
+      <p valstr="{{CTRL}}`">FOCUS TERMINAL</p>
+      <p valstr="%z">WORD WRAP</p>
+      <p valstr="^+x">SHOW EXTENSIONS</p>
+      <p valstr="^0">PANE 0</p>
+      <p valstr="^1">PANE 1</p>
+      <p valstr="^2">PANE 2</p>
+      <p valstr="^+p">COMMANDER</p>
+      <p valstr="^{F2}">CHANGE ALL</p>
+      <p valstr="^/">COMMENT</p>
+      <p valstr="^+n">NEW WINDOW</p>
+      <p valstr="{F5}">RUN DEBUG</p>
+      <p valstr="+{F5}">STOP DEBUG</p>
+    </list>
+  </rule>
+
+  <numbers name="1to20" start="1" stop="20"/>
+  <numbers name="num" start="1" stop="1000"/>
 
 </speechMacros>
