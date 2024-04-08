@@ -128,6 +128,24 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       </command>
 
       <command priority="127">
+        <listenFor>SWITCH MINUS 1</listenFor>
+        <sendKeys>{{WIN}}t</sendKeys>
+        <waitFor seconds="0.05"/>
+        <sendKeys>{END}</sendKeys>
+      </command>
+
+      <command priority="127">
+        <rule>
+          <p>SWITCH MINUS</p>
+          <p><ruleref name="offByOne" propname="offByOne"/></p>
+        </rule>
+        <sendKeys>{{WIN}}t</sendKeys>
+        <waitFor seconds="0.05"/>
+        <sendKeys>{END}</sendKeys>
+        <sendKeys times="{[offByOne.num]}">{UP}</sendKeys>
+      </command>
+
+      <command priority="127">
         <rule>
           <p><ruleref name="explorerNav" propname="explorerNav"/> </p>
           <o><ruleref name="1to20" propname="1to20"/></o>
@@ -378,6 +396,19 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="%{LEFT}">GO BACK</p>
               <p valstr="%{LEFT}">PREVIOUS PAGE</p>
               <p valstr="%{RIGHT}">GO FORWARD</p>
+            </list>
+          </rule>
+
+          <rule name="offByOne">
+            <list propname = "num">
+              <p valstr="1">2</p>
+              <p valstr="2">3</p>
+              <p valstr="3">4</p>
+              <p valstr="4">5</p>
+              <p valstr="5">6</p>
+              <p valstr="6">7</p>
+              <p valstr="7">8</p>
+              <p valstr="8">9</p>
             </list>
           </rule>
     
