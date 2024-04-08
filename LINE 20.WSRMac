@@ -1,8 +1,0 @@
-﻿<speechMacros>
-  <command>
-    <listenFor>LINE 20</listenFor>
-    <sendKeys>^g20~</sendKeys>
-  </command>
-
-
-</speechMacros>
