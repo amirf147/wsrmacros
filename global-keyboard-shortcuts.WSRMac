@@ -125,13 +125,16 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p><ruleref name="0to9" propname="0to9"/></p>
         </rule>
         <sendKeys>{{WIN}}{[0to9]}</sendKeys>
+
       </command>
 
       <command priority="127">
         <listenFor>SWITCH MINUS 1</listenFor>
         <sendKeys>{{WIN}}t</sendKeys>
-        <waitFor seconds="0.05"/>
+        <waitFor seconds="0.2"/>
         <sendKeys>{END}</sendKeys>
+        <waitFor seconds="0.1"/>
+        <sendKeys>{ENTER}</sendKeys>
       </command>
 
       <command priority="127">
@@ -140,9 +143,12 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
           <p><ruleref name="offByOne" propname="offByOne"/></p>
         </rule>
         <sendKeys>{{WIN}}t</sendKeys>
-        <waitFor seconds="0.05"/>
+        <waitFor seconds="0.2"/>
         <sendKeys>{END}</sendKeys>
+        <waitFor seconds="0.1"/>
         <sendKeys times="{[offByOne.num]}">{UP}</sendKeys>
+        <waitFor seconds="0.1"/>
+        <sendKeys>~</sendKeys>
       </command>
 
       <command priority="127">
