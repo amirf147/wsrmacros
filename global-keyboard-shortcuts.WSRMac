@@ -118,14 +118,12 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
            ##
            ################################################## -->
           
-    
       <command priority="127">
         <rule>
           <p>SWITCH</p>
           <p><ruleref name="0to9" propname="0to9"/></p>
         </rule>
         <sendKeys>{{WIN}}{[0to9]}</sendKeys>
-
       </command>
 
       <command priority="127">
@@ -167,6 +165,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     
     <command priority="127"> 
         <rule> 
+          <o>PRESS</o>
           <p>
             <o>
               <ruleref name="textManipulation" propname="p1.textManipulation"/>
