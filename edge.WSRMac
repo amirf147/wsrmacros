@@ -52,6 +52,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
 <command>
   <appIsInForeground processName = "msedge.exe" />
     <listenFor>ZOOM OUT</listenFor>
+    <listenFor>TEXT SHRINK</listenFor>
     <sendKeys>^-</sendKeys>
 </command>
 
