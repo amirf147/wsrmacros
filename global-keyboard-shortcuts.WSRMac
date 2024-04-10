@@ -84,6 +84,36 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <waitFor seconds="0.5"/>
     <emulateRecognition>DRUM ENTER</emulateRecognition>
   </command>
+
+  <!-- Move window to the left monitor -->
+  <command priority="127">
+    <listenFor>MOVE OVER LEFT</listenFor>
+    <emulateRecognition>PRESS KEY WINDOWS LEFT</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY WINDOWS LEFT</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>CANCEL</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY WINDOWS LEFT</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>CANCEL</emulateRecognition>
+  </command>
+
+  <!-- Move window to the right monitor -->
+  <command priority="127">
+    <listenFor>MOVE OVER RIGHT</listenFor>
+    <emulateRecognition>PRESS KEY WINDOWS RIGHT</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY WINDOWS RIGHT</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>CANCEL</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY WINDOWS RIGHT</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>CANCEL</emulateRecognition>
+  </command>
+
+  
     
       <!-- ##################################################
            ##
