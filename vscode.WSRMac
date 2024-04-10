@@ -155,6 +155,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^+f">SEARCH ALL FILES</p>
       <p valstr="^,">SHOW SETTINGS</p>
       <p valstr="{{CTRL}}`">FOCUS TERMINAL</p>
+      <p valstr="{{CTRL}}`">TERMINAL FOCUS</p>
       <p valstr="%z">WORD WRAP</p>
       <p valstr="^+x">SHOW EXTENSIONS</p>
       <p valstr="^0">PANE 0</p>
