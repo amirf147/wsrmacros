@@ -326,7 +326,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="{{CTRL}}{PGDN}">TAB UNDER</p>
               <p valstr="{{CTRL}}{PGUP}">TAB OVER</p>
               <p valstr="^w">TAB CLOSE</p>
-              <p valstr="^w">SHUT TAB</p>
+              <p valstr="^w">CLOSE THIS TAB</p>
               <p valstr="^+t">TAB RESTORE</p>
               <p valstr="{ENTER}">ENTER</p>
               <p valstr="%{ENTER}">ALTER</p>
@@ -350,7 +350,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
               <p valstr="^+{HOME}">TOPPER CELL</p>
               <p valstr = "^+{LEFT}"     > BESSIE </p>
               <p valstr = "^+{RIGHT}"    > AXEL   </p>
-              <p valstr = "^{LEFT}"      > BASE   </p>
+              <p valstr = "^{LEFT}"      > SHEEP  </p>
               <p valstr = "^{RIGHT}"     > JUMP   </p>
               <p valstr = "^{BACKSPACE}" > SCRATCH  </p>
               <p valstr = "^{DELETE}"    > DEER   </p>
