@@ -7,6 +7,12 @@
     <waitFor seconds="0.1"/>
     <emulateRecognition>STOP LISTENING</emulateRecognition>
   </command>
+  <command priority="127">
+    <listenFor>SLEEP</listenFor>
+    <emulateRecognition>POINTER</emulateRecognition>
+    <waitFor seconds="0.1"/>
+    <emulateRecognition>STOP LISTENING</emulateRecognition>
+  </command>
   
   <command>
     <listenFor>RELEASE CAMERA</listenFor>

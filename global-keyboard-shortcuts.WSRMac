@@ -7,30 +7,30 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
 -->
 <speechMacros>
 
-  <!-- ##################################################
-       ##
-       ##    IGNORE THESE RECOGNITIONS
-       ##
-       ################################################## -->
+<!-- ##################################################
+     ##
+     ##    IGNORE THESE RECOGNITIONS
+     ##
+     ################################################## -->
 
-       <command priority="127">
-        <listenFor>CUT</listenFor>
-        <sendKeys></sendKeys>
-      </command>
-      <command priority="127">
-        <listenFor>END</listenFor>
-        <sendKeys></sendKeys>
-      </command>
-      <command priority="127">
-        <listenFor>HOME</listenFor>
-        <sendKeys></sendKeys>
-      </command>
+  <command priority="127">
+    <listenFor>CUT</listenFor>
+    <sendKeys></sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>END</listenFor>
+    <sendKeys></sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>HOME</listenFor>
+    <sendKeys></sendKeys>
+  </command>
 
-   <!-- ##################################################
-        ##
-        ##    HELPFUL EMULATIONS 
-        ##
-        ################################################## -->
+<!-- ##################################################
+     ##
+     ##    HELPFUL EMULATIONS 
+     ##
+     ################################################## -->
 
   <command priority="127">
     <listenFor>SHUSH</listenFor>
@@ -115,233 +115,259 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
 
   
     
-      <!-- ##################################################
-           ##
-           ##    VARIATIONS OF "COPY"
-           ##
-           ################################################## -->
-    
-      <command priority="127">
-        <listenFor>COPY ALL</listenFor>
-        <sendKeys>^a</sendKeys>
-        <waitFor seconds="0.3"/>
-        <sendKeys>^c</sendKeys>
-      </command>
-      <command priority="127">
-        <listenFor>COPY ALL SWITCH BACK</listenFor>
-        <sendKeys>^a</sendKeys>
-        <waitFor seconds="0.3"/>
-        <sendKeys>^c</sendKeys>
-        <waitFor seconds="0.05"/>
-        <sendKeys>%{TAB}</sendKeys>
-      </command>
-      <command priority="127">
-        <listenFor>COPY SWITCH BACK</listenFor>
-        <sendKeys>^c</sendKeys>
-        <waitFor seconds="0.05"/>
-        <sendKeys>%{TAB}</sendKeys>
-      </command>
-    
-      <!-- ##################################################
-           ##
-           ##    LIST AND RULE IMPLEMENTATIONS
-           ##
-           ################################################## -->
-          
-      <command priority="127">
-        <rule>
-          <p>SWITCH</p>
-          <p><ruleref name="0to9" propname="0to9"/></p>
-        </rule>
-        <sendKeys>{{WIN}}{[0to9]}</sendKeys>
-      </command>
+<!-- ##################################################
+     ##
+     ##    VARIATIONS OF "COPY"
+     ##
+     ################################################## -->
 
-      <command priority="127">
-        <listenFor>SWITCH MINUS 1</listenFor>
-        <sendKeys>{{WIN}}t</sendKeys>
-        <waitFor seconds="0.2"/>
-        <sendKeys>{END}</sendKeys>
-        <waitFor seconds="0.1"/>
-        <sendKeys>{ENTER}</sendKeys>
-      </command>
-
-      <command priority="127">
-        <rule>
-          <p>SWITCH MINUS</p>
-          <p><ruleref name="offByOne" propname="offByOne"/></p>
-        </rule>
-        <sendKeys>{{WIN}}t</sendKeys>
-        <waitFor seconds="0.2"/>
-        <sendKeys>{END}</sendKeys>
-        <waitFor seconds="0.1"/>
-        <sendKeys times="{[offByOne.num]}">{UP}</sendKeys>
-        <waitFor seconds="0.1"/>
-        <sendKeys>~</sendKeys>
-      </command>
-
-      <command priority="127">
-        <rule>
-          <p><ruleref name="explorerNav" propname="explorerNav"/> </p>
-          <o><ruleref name="1to20" propname="1to20"/></o>
-        </rule>
-        <sendKeys times="{[1to20]}">{[explorerNav.key]}</sendKeys>
-      </command>
+  <command priority="127">
+    <listenFor>COPY ALL</listenFor>
+    <sendKeys>^a</sendKeys>
+    <waitFor seconds="0.3"/>
+    <sendKeys>^c</sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>COPY ALL SWITCH BACK</listenFor>
+    <sendKeys>^a</sendKeys>
+    <waitFor seconds="0.3"/>
+    <sendKeys>^c</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys>%{TAB}</sendKeys>
+  </command>
+  <command priority="127">
+    <listenFor>COPY SWITCH BACK</listenFor>
+    <sendKeys>^c</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys>%{TAB}</sendKeys>
+  </command>
     
-      <!-- ##################################################
-           ##
-           ##    EXECUTION OF FIVE KEY/SET COMBINATIONS 
-           ##
-           ################################################## -->
+ <!-- ##################################################
+      ##
+      ##    LIST AND RULE IMPLEMENTATIONS
+      ##
+      ################################################## -->
+      
+  <command priority="127">
+    <rule>
+      <p>SWITCH</p>
+      <p><ruleref name="0to9" propname="0to9"/></p>
+    </rule>
+    <sendKeys>{{WIN}}{[0to9]}</sendKeys>
+  </command>
+
+  <command priority="127">
+    <listenFor>SWITCH MINUS 1</listenFor>
+    <sendKeys>{{WIN}}t</sendKeys>
+    <waitFor seconds="0.2"/>
+    <sendKeys>{END}</sendKeys>
+    <waitFor seconds="0.1"/>
+    <sendKeys>{ENTER}</sendKeys>
+  </command>
+
+  <command priority="127">
+    <rule>
+      <p>SWITCH MINUS</p>
+      <p><ruleref name="offByOne" propname="offByOne"/></p>
+    </rule>
+    <sendKeys>{{WIN}}t</sendKeys>
+    <waitFor seconds="0.2"/>
+    <sendKeys>{END}</sendKeys>
+    <waitFor seconds="0.1"/>
+    <sendKeys times="{[offByOne.num]}">{UP}</sendKeys>
+    <waitFor seconds="0.1"/>
+    <sendKeys>~</sendKeys>
+  </command>
+
+  <command priority="127">
+    <rule>
+      <p><ruleref name="explorerNav" propname="explorerNav"/> </p>
+      <o><ruleref name="1to20" propname="1to20"/></o>
+    </rule>
+    <sendKeys times="{[1to20]}">{[explorerNav.key]}</sendKeys>
+  </command>
     
-    <command priority="127"> 
-        <rule> 
-          <o>PRESS</o>
-          <p>
-            <o>
-              <ruleref name="textManipulation" propname="p1.textManipulation"/>
-              <o><ruleref name="1to20" propname="p1.1to20"/></o>
-            </o>
-            <o>
-              <ruleref name="keyCombo2" propname="p1.keyCombo2"/>
-            </o>
-            <o>
-              <p min="1" max="10">
-                <ruleref name="alphaNumeSym" propname="p1.alphaNumeSym"/></p>
-            </o>
-            <o>
-              <p>ALL CAPS</p>
-              <p min="1" max="10">
-                <ruleref name="capitalLetters" propname="p1.capitalLetters"/></p>
-            </o>
-            <o>
-              <p>NUMBER</p>
-              <p min="1" max="10">
-                <ruleref name="0to9" propname="p1.0to9"></ruleref></p>
-            </o>
-          </p>      
-          <p>
-            <o>
-              <ruleref name="textManipulation" propname="p2.textManipulation"/>
-              <o><ruleref name="1to20" propname="p2.1to20"/></o>
-            </o>
-            <o>
-              <ruleref name="keyCombo2" propname="p2.keyCombo2"/>
-            </o>
-            <o>
-              <p min="1" max="10">
-                <ruleref name="alphaNumeSym" propname="p2.alphaNumeSym"/> </p>
-            </o>
-            <o>
-              <p>ALL CAPS</p>
-              <p min="1" max="10">
-                <ruleref name="capitalLetters" propname="p2.capitalLetters"/></p>
-            </o>
-            <o>
-              <p>NUMBER</p>
-              <p min="1" max="10">
-                <ruleref name="0to9" propname="p2.0to9"></ruleref></p>
-            </o>
-          </p>
-          <p>
-            <o>
-              <ruleref name="textManipulation" propname="p3.textManipulation"/>
-              <o><ruleref name="1to20" propname="p3.1to20"/></o>
-            </o>
-            <o>
-              <ruleref name="keyCombo2" propname="p3.keyCombo2"/>
-            </o>
-            <o>
-              <p min="1" max="10">
-                <ruleref name="alphaNumeSym" propname="p3.alphaNumeSym"/> </p>
-            </o>
-            <o>
-              <p>ALL CAPS</p>
-              <p min="1" max="10">
-                <ruleref name="capitalLetters" propname="p3.capitalLetters"/></p>
-            </o>
-            <o>
-              <p>NUMBER</p>
-              <p min="1" max="10">
-                <ruleref name="0to9" propname="p3.0to9"></ruleref></p>
-            </o>
-          </p>
-          <p>
-            <o>
-              <ruleref name="textManipulation" propname="p4.textManipulation"/>
-              <o><ruleref name="1to20" propname="p4.1to20"/></o>
-            </o>
-            <o>
-              <ruleref name="keyCombo2" propname="p.keyCombo2"/>
-            </o>
-            <o>
-              <p min="1" max="10">
-                <ruleref name="alphaNumeSym" propname="p4.alphaNumeSym"/> </p>
-            </o>
-            <o>
-              <p>ALL CAPS</p>
-              <p min="1" max="10">
-                <ruleref name="capitalLetters" propname="p4.capitalLetters"/></p>
-            </o>
-            <o>
-              <p>NUMBER</p>
-              <p min="1" max="10">
-                <ruleref name="0to9" propname="p4.0to9"></ruleref></p>
-            </o>
-          </p>
-          <p>
-            <o>
-              <ruleref name="textManipulation" propname="p5.textManipulation"/>
-              <o><ruleref name="1to20" propname="p5.1to20"/></o>
-            </o>
-            <o>
-              <ruleref name="keyCombo2" propname="p5.keyCombo2"/>
-            </o>
-            <o>
-              <p min="1" max="10">
-                <ruleref name="alphaNumeSym" propname="p5.alphaNumeSym"/> </p>
-            </o>
-            <o>
-              <p>ALL CAPS</p>
-              <p min="1" max="10">
-                <ruleref name="capitalLetters" propname="p5.capitalLetters"/></p>
-            </o>
-            <o>
-              <p>NUMBER</p>
-              <p min="1" max="10">
-                <ruleref name="0to9" propname="p5.0to9"></ruleref></p>
-            </o>
-          </p>
-        </rule>
-        <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
-        <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
-        <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
-        <sendKeys>{[p1.capitalLetters.unit]}</sendKeys>
-        <sendKeys>{[p1.0to9]}</sendKeys>
-        <waitFor seconds="0.2"/>
-        <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
-        <sendKeys>{[p2.keyCombo2.pressedOnce]}</sendKeys>
-        <sendKeys>{[p2.alphaNumeSym.unit]}</sendKeys>
-        <sendKeys>{[p2.capitalLetters.unit]}</sendKeys>
-        <sendKeys>{[p2.0to9]}</sendKeys>
-        <waitFor seconds="0.05"/>
-        <sendKeys times="{[p3.1to20]}">{[p3.textManipulation.keys]}</sendKeys>
-        <sendKeys>{[p3.keyCombo2.pressedOnce]}</sendKeys>
-        <sendKeys>{[p3.alphaNumeSym.unit]}</sendKeys>
-        <sendKeys>{[p3.capitalLetters.unit]}</sendKeys>
-        <sendKeys>{[p3.0to9]}</sendKeys>
-        <waitFor seconds="0.05"/>
-        <sendKeys times="{[p4.1to20]}">{[p4.textManipulation.keys]}</sendKeys>
-        <sendKeys>{[p4.keyCombo2.pressedOnce]}</sendKeys>
-        <sendKeys>{[p4.alphaNumeSym.unit]}</sendKeys>
-        <sendKeys>{[p4.capitalLetters.unit]}</sendKeys>
-        <sendKeys>{[p4.0to9]}</sendKeys>
-        <waitFor seconds="0.05"/>
-        <sendKeys times="{[p5.1to20]}">{[p5.textManipulation.keys]}</sendKeys>
-        <sendKeys>{[p5.keyCombo2.pressedOnce]}</sendKeys>
-        <sendKeys>{[p5.alphaNumeSym.unit]}</sendKeys>
-        <sendKeys>{[p5.capitalLetters.unit]}</sendKeys>
-        <sendKeys>{[p5.0to9]}</sendKeys>
-    </command>
+  <!-- Decrease the volume via the Volume OSD -->
+  <command priority="127">
+    <rule>
+      <p>VOLUME DECREASE</p>
+      <o><ruleref name="1to20" propname="1to20"/></o>
+    </rule>
+    <emulateRecognition>SYS TRAY</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>LEFT {[1to20]}</emulateRecognition>
+  </command>
+
+  <!-- Increase the volume via the Volume OSD -->
+  <command priority="127">
+    <rule>
+      <p>VOLUME INCREASE</p>
+      <o><ruleref name="1to20" propname="1to20"/></o>
+    </rule>
+    <emulateRecognition>SYS TRAY</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>RIGHT {[1to20]}</emulateRecognition>
+  </command>
+
+<!-- ##################################################
+     ##
+     ##    EXECUTION OF FIVE KEY/SET COMBINATIONS 
+     ##
+     ################################################## -->
+    
+  <command priority="127"> 
+    <rule> 
+      <o>PRESS</o>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p1.textManipulation"/>
+          <o><ruleref name="1to20" propname="p1.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p1.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p1.alphaNumeSym"/></p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p1.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p1.0to9"></ruleref></p>
+        </o>
+      </p>      
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p2.textManipulation"/>
+          <o><ruleref name="1to20" propname="p2.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p2.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p2.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p2.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p2.0to9"></ruleref></p>
+        </o>
+      </p>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p3.textManipulation"/>
+          <o><ruleref name="1to20" propname="p3.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p3.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p3.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p3.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p3.0to9"></ruleref></p>
+        </o>
+      </p>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p4.textManipulation"/>
+          <o><ruleref name="1to20" propname="p4.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p4.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p4.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p4.0to9"></ruleref></p>
+        </o>
+      </p>
+      <p>
+        <o>
+          <ruleref name="textManipulation" propname="p5.textManipulation"/>
+          <o><ruleref name="1to20" propname="p5.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p5.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p5.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p5.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p5.0to9"></ruleref></p>
+        </o>
+      </p>
+    </rule>
+    <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
+    <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
+    <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p1.capitalLetters.unit]}</sendKeys>
+    <sendKeys>{[p1.0to9]}</sendKeys>
+    <waitFor seconds="0.2"/>
+    <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
+    <sendKeys>{[p2.keyCombo2.pressedOnce]}</sendKeys>
+    <sendKeys>{[p2.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p2.capitalLetters.unit]}</sendKeys>
+    <sendKeys>{[p2.0to9]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="{[p3.1to20]}">{[p3.textManipulation.keys]}</sendKeys>
+    <sendKeys>{[p3.keyCombo2.pressedOnce]}</sendKeys>
+    <sendKeys>{[p3.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p3.capitalLetters.unit]}</sendKeys>
+    <sendKeys>{[p3.0to9]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="{[p4.1to20]}">{[p4.textManipulation.keys]}</sendKeys>
+    <sendKeys>{[p4.keyCombo2.pressedOnce]}</sendKeys>
+    <sendKeys>{[p4.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p4.capitalLetters.unit]}</sendKeys>
+    <sendKeys>{[p4.0to9]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="{[p5.1to20]}">{[p5.textManipulation.keys]}</sendKeys>
+    <sendKeys>{[p5.keyCombo2.pressedOnce]}</sendKeys>
+    <sendKeys>{[p5.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p5.capitalLetters.unit]}</sendKeys>
+    <sendKeys>{[p5.0to9]}</sendKeys>
+  </command>
     
       <!-- ##################################################
            ##
