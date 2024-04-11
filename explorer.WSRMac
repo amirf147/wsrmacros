@@ -5,9 +5,15 @@
     <listenFor>Open ?My Documents</listenFor>
 	<run command="explorer.exe" params="%userprofile%\\Documents"/>
   </command>
+
+<!-- Neither of these work they only open the documents folder instead -->
 <command priority="127"> 
     <listenFor>Open ?My Downloads</listenFor>
 	<run command="explorer.exe" params="%userprofile%\\Downloads"/>
+  </command>
+<command priority="127"> 
+    <listenFor>Open Home</listenFor>
+	<run command="explorer.exe" params="%userprofile%"/>
   </command>
 
 

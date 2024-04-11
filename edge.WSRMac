@@ -13,6 +13,13 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   </command>
   <command>
 	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>Caret browsing</listenFor>
+    <sendKeys>{F7}</sendKeys>
+    <waitFor seconds="0.3"/>
+    <sendKeys>{ENTER}</sendKeys>
+  </command>
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
     <listenFor>NEW PRIVATE</listenFor>
     <sendKeys>^+n</sendKeys>
   </command>
@@ -101,7 +108,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command>
     <appIsInForeground windowTitleContains="Copilot"/>
     <listenFor>INSERT PROMPT HEADER</listenFor>
-    <insertText>The user is using a voice recognition application. Commands such as "stop listening", "stop service", and "start listening" are used to control this application and should not be interpreted as part of the user's request.</insertText>
+    <insertText>I am using a voice recognition application. Commands such as "stop listening", "stop service", and "start listening" are used to control this application and should not be interpreted as part of my request.</insertText>
   </command>
   
     <!-- ##################################################
