@@ -121,11 +121,11 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <sendKeys times="1">+.</sendKeys>
   </command>
 
-  <!-- ##################################################
-       ##
-       ##    TAB NAVIGATION
-       ##
-       ################################################## -->
+<!-- ##################################################
+     ##
+     ##    TAB NAVIGATION
+     ##
+     ################################################## -->
        
   <command priority="127">
     <appIsInForeground processName = "msedge.exe" />
@@ -135,29 +135,44 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       </rule>
       <sendKeys>^{[num.ordinal]}</sendKeys>
   </command>
+
+  <command priority="127">
+    <appIsInForeground processName = "msedge.exe" />
+      <rule>
+        <p>TAB MINUS</p>
+        <p><ruleref name="1to10" propname="1to10"/></p>
+      </rule>
+      <sendKeys>^9</sendKeys>
+      <sendKeys times="{[1to10]}">^{PGUP}</sendKeys>
+  </command>
+
   <command>
     <appIsInForeground processName = "msedge.exe" />
       <listenFor>TAB LAST</listenFor>
+        <listenFor>TAB MINUS ?1</listenFor>
       <sendKeys>^9</sendKeys>
     </command>
 
- <!-- ##################################################
-      ##
-      ##   RULES
-      ##
-      ################################################## -->
+<!-- ##################################################
+     ##
+     ##   RULES
+     ##
+     ################################################## -->
 
-    <rule name="num">
-      <list propname="ordinal">
-          <p valstr="1">FIRST</p>
-          <p valstr="2">SECOND</p>
-          <p valstr="3">THIRD</p>
-          <p valstr="4">FOURTH</p>
-          <p valstr="5">FIFTH</p>
-          <p valstr="6">SIXTH</p>
-          <p valstr="7">SEVENTH</p>
-          <p valstr="8">EIGHTH</p>
-          <p valstr="9">NINTH</p>
-      </list>
-    </rule>
+  <rule name="num">
+    <list propname="ordinal">
+      <p valstr="1">FIRST</p>
+      <p valstr="2">SECOND</p>
+      <p valstr="3">THIRD</p>
+      <p valstr="4">FOURTH</p>
+      <p valstr="5">FIFTH</p>
+      <p valstr="6">SIXTH</p>
+      <p valstr="7">SEVENTH</p>
+      <p valstr="8">EIGHTH</p>
+      <p valstr="9">NINTH</p>
+    </list>
+  </rule>
+
+  <numbers name="1to10" start="1" stop="10"/>
+
 </speechMacros>

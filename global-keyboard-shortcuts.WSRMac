@@ -157,7 +157,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   </command>
 
   <command priority="127">
-    <listenFor>SWITCH MINUS 1</listenFor>
+    <listenFor>SWITCH MINUS ?1</listenFor>
+    <listenFor>SWITCH LAST</listenFor>
     <sendKeys>{{WIN}}t</sendKeys>
     <waitFor seconds="0.2"/>
     <sendKeys>{END}</sendKeys>
@@ -369,314 +370,315 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <sendKeys>{[p5.0to9]}</sendKeys>
   </command>
     
-      <!-- ##################################################
-           ##
-           ##    LIST AND RULE DEFINITIONS 
-           ##
-           ################################################## -->
-         
-           <rule name="textManipulation">
-            <list propname = "keys">
-              <p valstr="{TAB}">TABLE</p>
-              <p valstr="{{SHIFT}}{TAB}">BACK TAB</p>
-              <p valstr="{{CTRL}}{PGDN}">TAB UNDER</p>
-              <p valstr="{{CTRL}}{PGUP}">TAB OVER</p>
-              <p valstr="^w">TAB CLOSE</p>
-              <p valstr="^w">CLOSE THIS TAB</p>
-              <p valstr="^+t">TAB RESTORE</p>
-              <p valstr="{ENTER}">ENTER</p>
-              <p valstr="%{ENTER}">ALTER</p>
-              <p valstr=" ">SPACE</p>
-              <p valstr="+{ENTER}">SHELTER</p>
-              <p valstr="{BACKSPACE}">BACKS</p>
-              <p valstr="{BACKSPACE}">BACKSPACE</p>
-              <p valstr="{DELETE}">DELETE</p>
-              <p valstr="{END}">ENDS</p>
-              <p valstr="^{END}">SOUTH</p>
-              <p valstr="+{END}">ENCH</p>
-              <p valstr="{HOME}">HOMER</p>
-              <p valstr="^{HOME}">TOPPER</p>
-              <p valstr="+{HOME}">TOP CELL</p>
-              <p valstr="^x">CUTS</p>
-              <p valstr="^c">COPY</p>
-              <p valstr="^z">UNDO</p>
-              <p valstr="^v">PASTE</p>
-              <p valstr="+{UP}">UPSHUR</p>
-              <p valstr="+{DOWN}">SHELBY</p>
-              <p valstr="^+{HOME}">TOPPER CELL</p>
-              <p valstr = "^+{LEFT}"     > BESSIE </p>
-              <p valstr = "^+{RIGHT}"    > AXEL   </p>
-              <p valstr = "^{LEFT}"      > SHEEP  </p>
-              <p valstr = "^{RIGHT}"     > JUMP   </p>
-              <p valstr = "^{BACKSPACE}" > SCRATCH  </p>
-              <p valstr = "^{DELETE}"    > DEER   </p>
-              <p valstr = "{LEFT}"  > LEFT  </p>
-              <p valstr = "+{LEFT}"  > LEACH  </p>
-              <p valstr = "{RIGHT}" > RIGHT  </p>
-              <p valstr = "+{RIGHT}" > REX  </p>
-              <p valstr = "{UP}"    > SKAY   </p>
-              <p valstr = "{DOWN}"  > DRUM </p>
-            </list>
-          </rule>
-    
-          <rule name="keyCombo2">
-            <list propname = "pressedOnce">
-              <p valstr = "{ESC}"  > ESCAPE </p>
-              <p valstr = "^t"  > TAB NEW</p>
-              <p valstr = "^t"  > PAGE NEW</p>
-              <p valstr="^a">SELECT ALL</p>
-              <p valstr="^l">ADDRESS BAR</p>
-              <p valstr="^s">FILE SAVE</p>
-              <p valstr="^s">SAVE THIS ?FILE</p>
-              <p valstr="^+s">FILE SAVE AS</p>
-              <p valstr="^o">FILE OPEN</p>
-              <p valstr="%{TAB}">SWITCH BACK</p>
-              <p valstr="^x">CUTS</p>
-              <p valstr="^c">COPY</p>
-              <p valstr="^f">FINDER</p>
-              <p valstr="{{WIN}}v">CLIPBOARD</p>
-              <p valstr="{{WIN}}{{SHIFT}}s">SCREENSHOT</p>
-              <p valstr="{{WIN}}b">SYS TRAY</p>
-              <p valstr="{F11}">POINTER</p>
-              <p valstr="^l">SLINE</p>
-              <p valstr="{{SHIFT}}{INSERT}">TERMINAL PASTE</p>
-              <p valstr="%{F4}">FORCE CLOSE</p>
-              <p valstr="%f">FILE MENU</p>
-              <p valstr="{ESC}">ESCAPE</p>
-              <p valstr="{{WIN}}P">MONITOR SELECT</p>
-              <p valstr="{F2}">FLASH</p>
-              <p valstr="{{WIN}}r">WIN RUN</p>
-              <p valstr="{{CTRL}}{{ALT}}t">PRIMARY MONITOR</p>
-              <p valstr="{{CTRL}}{{ALT}}v">SECONDARY MONITOR</p>
-            </list>
-          </rule>
+<!-- ##################################################
+     ##
+     ##    LIST AND RULE DEFINITIONS 
+     ##
+     ################################################## -->
+  
+  <rule name="textManipulation">
+    <list propname = "keys">
+      <p valstr="{TAB}">TABLE</p>
+      <p valstr="{{SHIFT}}{TAB}">BACK TAB</p>
+      <p valstr="{{CTRL}}{PGDN}">TAB UNDER</p>
+      <p valstr="{{CTRL}}{PGUP}">TAB OVER</p>
+      <p valstr="^w">TAB CLOSE</p>
+      <p valstr="^w">CLOSE THIS TAB</p>
+      <p valstr="^+t">TAB RESTORE</p>
+      <p valstr="{ENTER}">ENTER</p>
+      <p valstr="%{ENTER}">ALTER</p>
+      <p valstr=" ">SPACE</p>
+      <p valstr="+{ENTER}">SHELTER</p>
+      <p valstr="{BACKSPACE}">BACKS</p>
+      <p valstr="{BACKSPACE}">BACKSPACE</p>
+      <p valstr="{DELETE}">DELETE</p>
+      <p valstr="{END}">ENDS</p>
+      <p valstr="^{END}">SOUTH</p>
+      <p valstr="+{END}">ENCH</p>
+      <p valstr="{HOME}">HOMER</p>
+      <p valstr="^{HOME}">TOPPER</p>
+      <p valstr="+{HOME}">TOP CELL</p>
+      <p valstr="^x">CUTS</p>
+      <p valstr="^c">COPY</p>
+      <p valstr="^z">UNDO</p>
+      <p valstr="^v">PASTE</p>
+      <p valstr="+{UP}">UPSHUR</p>
+      <p valstr="+{DOWN}">SHELBY</p>
+      <p valstr="^+{HOME}">TOPPER CELL</p>
+      <p valstr = "^+{LEFT}"     > BESSIE </p>
+      <p valstr = "^+{RIGHT}"    > AXEL   </p>
+      <p valstr = "^{LEFT}"      > SQUEEZE  </p>
+      <p valstr = "^{RIGHT}"     > JUICE    </p>
+      <p valstr = "^{BACKSPACE}" > SCRATCH  </p>
+      <p valstr = "^{DELETE}"    > DEER   </p>
+      <p valstr = "{LEFT}"  > LEFT  </p>
+      <p valstr = "+{LEFT}"  > LEACH  </p>
+      <p valstr = "{RIGHT}" > RIGHT  </p>
+      <p valstr = "+{RIGHT}" > REX  </p>
+      <p valstr = "{UP}"    > SKAY   </p>
+      <p valstr = "{DOWN}"  > DRUM </p>
+    </list>
+  </rule>
 
-          <rule name="explorerNav">
-            <list propname = "key">
-              <p valstr="%{UP}">DIRRUP</p>
-              <p valstr="%{LEFT}">GO BACK</p>
-              <p valstr="%{LEFT}">PREVIOUS PAGE</p>
-              <p valstr="%{RIGHT}">GO FORWARD</p>
-            </list>
-          </rule>
+  <rule name="keyCombo2">
+    <list propname = "pressedOnce">
+      <p valstr = "{ESC}"  > ESCAPE </p>
+      <p valstr = "^t"  > TAB NEW</p>
+      <p valstr = "^t"  > PAGE NEW</p>
+      <p valstr="^a">SELECT ALL</p>
+      <p valstr="^l">ADDRESS BAR</p>
+      <p valstr="^s">FILE SAVE</p>
+      <p valstr="^s">SAVE THIS ?FILE</p>
+      <p valstr="^+s">FILE SAVE AS</p>
+      <p valstr="^o">FILE OPEN</p>
+      <p valstr="%{TAB}">SWITCH BACK</p>
+      <p valstr="^x">CUTS</p>
+      <p valstr="^c">COPY</p>
+      <p valstr="^f">FINDER</p>
+      <p valstr="{{WIN}}v">CLIPBOARD</p>
+      <p valstr="{{WIN}}{{SHIFT}}s">SCREENSHOT</p>
+      <p valstr="{{WIN}}b">SYS TRAY</p>
+      <p valstr="{F11}">POINTER</p>
+      <p valstr="{F11}">FREEZE</p>
+      <p valstr="^l">SLINE</p>
+      <p valstr="{{SHIFT}}{INSERT}">TERMINAL PASTE</p>
+      <p valstr="%{F4}">FORCE CLOSE</p>
+      <p valstr="%f">FILE MENU</p>
+      <p valstr="{ESC}">ESCAPE</p>
+      <p valstr="{{WIN}}P">MONITOR SELECT</p>
+      <p valstr="{F2}">FLASH</p>
+      <p valstr="{{WIN}}r">WIN RUN</p>
+      <p valstr="{{CTRL}}{{ALT}}t">PRIMARY MONITOR</p>
+      <p valstr="{{CTRL}}{{ALT}}v">SECONDARY MONITOR</p>
+    </list>
+  </rule>
 
-          <rule name="offByOne">
-            <list propname = "num">
-              <p valstr="1">2</p>
-              <p valstr="2">3</p>
-              <p valstr="3">4</p>
-              <p valstr="4">5</p>
-              <p valstr="5">6</p>
-              <p valstr="6">7</p>
-              <p valstr="7">8</p>
-              <p valstr="8">9</p>
-            </list>
-          </rule>
-    
-          <numbers name="1to20" start="1" stop="20"/>
-          <numbers name="0to9" start="0" stop="9"/>
-    
-          <rule name="alphaNumeSym">
-            <list propname="unit">
-              <!-- alphanumeric -->
-              <p valstr="a">Alpha</p>
-              <p valstr="b">Bravo</p>
-              <p valstr="c">Charlie</p>
-              <p valstr="d">Delta</p>
-              <p valstr="e">Echo</p>
-              <p valstr="f">Foxtrot</p>
-              <p valstr="g">Golf</p>
-              <p valstr="h">Hotel</p>
-              <p valstr="i">India</p>
-              <p valstr="j">Juliett</p>
-              <p valstr="k">Kilo</p>
-              <p valstr="l">Lima</p>
-              <p valstr="m">Mike</p>
-              <p valstr="n">November</p>
-              <p valstr="o">Oscar</p>
-              <p valstr="p">Papa</p>
-              <p valstr="q">Quebec</p>
-              <p valstr="r">Romeo</p>
-              <p valstr="s">Sierra</p>
-              <p valstr="t">Tango</p>
-              <p valstr="u">Uniform</p>
-              <p valstr="v">Victor</p>
-              <p valstr="w">Whiskey</p>
-              <p valstr="x">X-ray</p>
-              <p valstr="y">Yankee</p>
-              <p valstr="z">Zulu</p>
-              <p valstr="A">Capital Alpha</p>
-              <p valstr="B">Capital Bravo</p>
-              <p valstr="C">Capital Charlie</p>
-              <p valstr="D">Capital Delta</p>
-              <p valstr="E">Capital Echo</p>
-              <p valstr="F">Capital Foxtrot</p>
-              <p valstr="G">Capital Golf</p>
-              <p valstr="H">Capital Hotel</p>
-              <p valstr="I">Capital India</p>
-              <p valstr="J">Capital Juliett</p>
-              <p valstr="K">Capital Kilo</p>
-              <p valstr="L">Capital Lima</p>
-              <p valstr="M">Capital Mike</p>
-              <p valstr="N">Capital November</p>
-              <p valstr="O">Capital Oscar</p>
-              <p valstr="P">Capital Papa</p>
-              <p valstr="Q">Capital Quebec</p>
-              <p valstr="R">Capital Romeo</p>
-              <p valstr="S">Capital Sierra</p>
-              <p valstr="T">Capital Tango</p>
-              <p valstr="U">Capital Uniform</p>
-              <p valstr="V">Capital Victor</p>
-              <p valstr="W">Capital Whiskey</p>
-              <p valstr="X">Capital X-ray</p>
-              <p valstr="Y">Capital Yankee</p>
-              <p valstr="Z">Capital Zulu</p>
-              <p valstr="a">a</p>
-              <p valstr="b">b</p>
-              <p valstr="c">c</p>
-              <p valstr="d">d</p>
-              <p valstr="e">e</p>
-              <p valstr="f">f</p>
-              <p valstr="g">g</p>
-              <p valstr="h">h</p>
-              <p valstr="i">i</p>
-              <p valstr="j">j</p>
-              <p valstr="k">k</p>
-              <p valstr="l">l</p>
-              <p valstr="m">m</p>
-              <p valstr="n">n</p>
-              <p valstr="o">o</p>
-              <p valstr="p">p</p>
-              <p valstr="q">q</p>
-              <p valstr="r">r</p>
-              <p valstr="s">s</p>
-              <p valstr="t">t</p>
-              <p valstr="u">u</p>
-              <p valstr="v">v</p>
-              <p valstr="w">w</p>
-              <p valstr="x">x</p>
-              <p valstr="y">y</p>
-              <p valstr="z">z</p>
-              <p valstr="A">capital a</p>
-              <p valstr="B">capital b</p>
-              <p valstr="C">capital c</p>
-              <p valstr="D">capital d</p>
-              <p valstr="E">capital e</p>
-              <p valstr="F">capital f</p>
-              <p valstr="G">capital g</p>
-              <p valstr="H">capital h</p>
-              <p valstr="I">capital i</p>
-              <p valstr="J">capital j</p>
-              <p valstr="K">capital k</p>
-              <p valstr="L">capital l</p>
-              <p valstr="M">capital m</p>
-              <p valstr="N">capital n</p>
-              <p valstr="O">capital o</p>
-              <p valstr="P">capital p</p>
-              <p valstr="Q">capital q</p>
-              <p valstr="R">capital r</p>
-              <p valstr="S">capital s</p>
-              <p valstr="T">capital t</p>
-              <p valstr="U">capital u</p>
-              <p valstr="V">capital v</p>
-              <p valstr="W">capital w</p>
-              <p valstr="X">capital x</p>
-              <p valstr="Y">capital y</p>
-              <p valstr="Z">capital z</p>
-          <!-- Special Characters -->
-          <p valstr="*">star</p>
-          <p valstr="!">exclamation point</p>
-          <p valstr="!">bang</p>
-          <p valstr=".">dot</p>
-          <p valstr=" ">space</p>
-          <p valstr=".">point</p>
-          <p valstr=".">period</p>
-          <p valstr="?">?</p>
-          <p valstr=",">,</p>
-          <p valstr=":">colon</p>
-          <p valstr=":">:</p>
-          <p valstr=";">semicolon</p>
-          <p valstr="$">dollar sign</p>
-          <p valstr="'">'</p>
-          <p valstr="@">at ?symbol</p>
-          <p valstr="{U+005E}">caret</p>
-          <p valstr="{U+005F}">underscore</p>
-          <p valstr="{U+0020}">space</p>
-          <p valstr="{U+0022}">double quote</p>
-          <p valstr="{U+0028}">open paren</p>
-          <p valstr="{U+0029}">close paren</p>
-          <p valstr="{U+003C}">less than</p>
-          <p valstr="{U+003C}">open angle</p>
-          <p valstr="{U+003E}">greater than</p>
-          <p valstr="{U+003E}">close angle</p>
-          <p valstr="[">open bracket</p>
-          <p valstr="]">close bracket</p>
-          <p valstr="{U+007B}">open brace</p>
-          <p valstr="{U+007D}">close brace</p>
-          <p valstr="/">slash</p> 
-          <p valstr="\">backslash</p>
-          <p valstr="-">minus</p>
-          <p valstr="-">hyphen</p>
-          <p valstr="-">dash</p>
-          <p valstr="{U+002B}">plus</p>
-          <p valstr="=">equals</p> 
-          <p valstr="#">hash</p> 
-            </list>    
-          </rule>
-          <rule name="capitalLetters">
-            <list propname="unit">
-              <p valstr="A">Alpha</p>
-              <p valstr="B">Bravo</p>
-              <p valstr="C">Charlie</p>
-              <p valstr="D">Delta</p>
-              <p valstr="E">Echo</p>
-              <p valstr="F">Foxtrot</p>
-              <p valstr="G">Golf</p>
-              <p valstr="H">Hotel</p>
-              <p valstr="I">India</p>
-              <p valstr="J">Juliett</p>
-              <p valstr="K">Kilo</p>
-              <p valstr="L">Lima</p>
-              <p valstr="M">Mike</p>
-              <p valstr="N">November</p>
-              <p valstr="O">Oscar</p>
-              <p valstr="P">Papa</p>
-              <p valstr="Q">Quebec</p>
-              <p valstr="R">Romeo</p>
-              <p valstr="S">Sierra</p>
-              <p valstr="T">Tango</p>
-              <p valstr="U">Uniform</p>
-              <p valstr="V">Victor</p>
-              <p valstr="W">Whiskey</p>
-              <p valstr="X">X-ray</p>
-              <p valstr="Y">Yankee</p>
-              <p valstr="Z">Zulu</p>
-              <p valstr="A">a</p>
-              <p valstr="B">b</p>
-              <p valstr="C">c</p>
-              <p valstr="D">d</p>
-              <p valstr="E">e</p>
-              <p valstr="F">f</p>
-              <p valstr="G">g</p>
-              <p valstr="H">h</p>
-              <p valstr="I">i</p>
-              <p valstr="J">j</p>
-              <p valstr="K">k</p>
-              <p valstr="L">l</p>
-              <p valstr="M">m</p>
-              <p valstr="N">n</p>
-              <p valstr="O">o</p>
-              <p valstr="P">p</p>
-              <p valstr="Q">q</p>
-              <p valstr="R">r</p>
-              <p valstr="S">s</p>
-              <p valstr="T">t</p>
-              <p valstr="U">u</p>
-              <p valstr="V">v</p>
-              <p valstr="W">w</p>
-              <p valstr="X">x</p>
-              <p valstr="Y">y</p>
-              <p valstr="Z">z</p>
-            </list>
-          </rule>
+  <rule name="explorerNav">
+    <list propname = "key">
+      <p valstr="%{UP}">DIRRUP</p>
+      <p valstr="%{LEFT}">GO BACK</p>
+      <p valstr="%{LEFT}">PREVIOUS PAGE</p>
+      <p valstr="%{RIGHT}">GO FORWARD</p>
+    </list>
+  </rule>
+
+  <rule name="offByOne">
+    <list propname = "num">
+      <p valstr="1">2</p>
+      <p valstr="2">3</p>
+      <p valstr="3">4</p>
+      <p valstr="4">5</p>
+      <p valstr="5">6</p>
+      <p valstr="6">7</p>
+      <p valstr="7">8</p>
+      <p valstr="8">9</p>
+    </list>
+  </rule>
+
+  <numbers name="1to20" start="1" stop="20"/>
+  <numbers name="0to9" start="0" stop="9"/>
+
+  <rule name="alphaNumeSym">
+    <list propname="unit">
+      <!-- alphanumeric -->
+      <p valstr="a">Alpha</p>
+      <p valstr="b">Bravo</p>
+      <p valstr="c">Charlie</p>
+      <p valstr="d">Delta</p>
+      <p valstr="e">Echo</p>
+      <p valstr="f">Foxtrot</p>
+      <p valstr="g">Golf</p>
+      <p valstr="h">Hotel</p>
+      <p valstr="i">India</p>
+      <p valstr="j">Juliett</p>
+      <p valstr="k">Kilo</p>
+      <p valstr="l">Lima</p>
+      <p valstr="m">Mike</p>
+      <p valstr="n">November</p>
+      <p valstr="o">Oscar</p>
+      <p valstr="p">Papa</p>
+      <p valstr="q">Quebec</p>
+      <p valstr="r">Romeo</p>
+      <p valstr="s">Sierra</p>
+      <p valstr="t">Tango</p>
+      <p valstr="u">Uniform</p>
+      <p valstr="v">Victor</p>
+      <p valstr="w">Whiskey</p>
+      <p valstr="x">X-ray</p>
+      <p valstr="y">Yankee</p>
+      <p valstr="z">Zulu</p>
+      <p valstr="A">Capital Alpha</p>
+      <p valstr="B">Capital Bravo</p>
+      <p valstr="C">Capital Charlie</p>
+      <p valstr="D">Capital Delta</p>
+      <p valstr="E">Capital Echo</p>
+      <p valstr="F">Capital Foxtrot</p>
+      <p valstr="G">Capital Golf</p>
+      <p valstr="H">Capital Hotel</p>
+      <p valstr="I">Capital India</p>
+      <p valstr="J">Capital Juliett</p>
+      <p valstr="K">Capital Kilo</p>
+      <p valstr="L">Capital Lima</p>
+      <p valstr="M">Capital Mike</p>
+      <p valstr="N">Capital November</p>
+      <p valstr="O">Capital Oscar</p>
+      <p valstr="P">Capital Papa</p>
+      <p valstr="Q">Capital Quebec</p>
+      <p valstr="R">Capital Romeo</p>
+      <p valstr="S">Capital Sierra</p>
+      <p valstr="T">Capital Tango</p>
+      <p valstr="U">Capital Uniform</p>
+      <p valstr="V">Capital Victor</p>
+      <p valstr="W">Capital Whiskey</p>
+      <p valstr="X">Capital X-ray</p>
+      <p valstr="Y">Capital Yankee</p>
+      <p valstr="Z">Capital Zulu</p>
+      <p valstr="a">a</p>
+      <p valstr="b">b</p>
+      <p valstr="c">c</p>
+      <p valstr="d">d</p>
+      <p valstr="e">e</p>
+      <p valstr="f">f</p>
+      <p valstr="g">g</p>
+      <p valstr="h">h</p>
+      <p valstr="i">i</p>
+      <p valstr="j">j</p>
+      <p valstr="k">k</p>
+      <p valstr="l">l</p>
+      <p valstr="m">m</p>
+      <p valstr="n">n</p>
+      <p valstr="o">o</p>
+      <p valstr="p">p</p>
+      <p valstr="q">q</p>
+      <p valstr="r">r</p>
+      <p valstr="s">s</p>
+      <p valstr="t">t</p>
+      <p valstr="u">u</p>
+      <p valstr="v">v</p>
+      <p valstr="w">w</p>
+      <p valstr="x">x</p>
+      <p valstr="y">y</p>
+      <p valstr="z">z</p>
+      <p valstr="A">capital a</p>
+      <p valstr="B">capital b</p>
+      <p valstr="C">capital c</p>
+      <p valstr="D">capital d</p>
+      <p valstr="E">capital e</p>
+      <p valstr="F">capital f</p>
+      <p valstr="G">capital g</p>
+      <p valstr="H">capital h</p>
+      <p valstr="I">capital i</p>
+      <p valstr="J">capital j</p>
+      <p valstr="K">capital k</p>
+      <p valstr="L">capital l</p>
+      <p valstr="M">capital m</p>
+      <p valstr="N">capital n</p>
+      <p valstr="O">capital o</p>
+      <p valstr="P">capital p</p>
+      <p valstr="Q">capital q</p>
+      <p valstr="R">capital r</p>
+      <p valstr="S">capital s</p>
+      <p valstr="T">capital t</p>
+      <p valstr="U">capital u</p>
+      <p valstr="V">capital v</p>
+      <p valstr="W">capital w</p>
+      <p valstr="X">capital x</p>
+      <p valstr="Y">capital y</p>
+      <p valstr="Z">capital z</p>
+      <!-- Special Characters -->
+      <p valstr="*">star</p>
+      <p valstr="!">exclamation point</p>
+      <p valstr="!">bang</p>
+      <p valstr=".">dot</p>
+      <p valstr=" ">space</p>
+      <p valstr=".">point</p>
+      <p valstr=".">period</p>
+      <p valstr="?">?</p>
+      <p valstr=",">,</p>
+      <p valstr=":">colon</p>
+      <p valstr=":">:</p>
+      <p valstr=";">semicolon</p>
+      <p valstr="$">dollar sign</p>
+      <p valstr="'">'</p>
+      <p valstr="@">at ?symbol</p>
+      <p valstr="{U+005E}">caret</p>
+      <p valstr="{U+005F}">underscore</p>
+      <p valstr="{U+0020}">space</p>
+      <p valstr="{U+0022}">double quote</p>
+      <p valstr="{U+0028}">open paren</p>
+      <p valstr="{U+0029}">close paren</p>
+      <p valstr="{U+003C}">less than</p>
+      <p valstr="{U+003C}">open angle</p>
+      <p valstr="{U+003E}">greater than</p>
+      <p valstr="{U+003E}">close angle</p>
+      <p valstr="[">open bracket</p>
+      <p valstr="]">close bracket</p>
+      <p valstr="{U+007B}">open brace</p>
+      <p valstr="{U+007D}">close brace</p>
+      <p valstr="/">slash</p> 
+      <p valstr="\">backslash</p>
+      <p valstr="-">minus</p>
+      <p valstr="-">hyphen</p>
+      <p valstr="-">dash</p>
+      <p valstr="{U+002B}">plus</p>
+      <p valstr="=">equals</p> 
+      <p valstr="#">hash</p> 
+    </list>    
+  </rule>
+  <rule name="capitalLetters">
+    <list propname="unit">
+      <p valstr="A">Alpha</p>
+      <p valstr="B">Bravo</p>
+      <p valstr="C">Charlie</p>
+      <p valstr="D">Delta</p>
+      <p valstr="E">Echo</p>
+      <p valstr="F">Foxtrot</p>
+      <p valstr="G">Golf</p>
+      <p valstr="H">Hotel</p>
+      <p valstr="I">India</p>
+      <p valstr="J">Juliett</p>
+      <p valstr="K">Kilo</p>
+      <p valstr="L">Lima</p>
+      <p valstr="M">Mike</p>
+      <p valstr="N">November</p>
+      <p valstr="O">Oscar</p>
+      <p valstr="P">Papa</p>
+      <p valstr="Q">Quebec</p>
+      <p valstr="R">Romeo</p>
+      <p valstr="S">Sierra</p>
+      <p valstr="T">Tango</p>
+      <p valstr="U">Uniform</p>
+      <p valstr="V">Victor</p>
+      <p valstr="W">Whiskey</p>
+      <p valstr="X">X-ray</p>
+      <p valstr="Y">Yankee</p>
+      <p valstr="Z">Zulu</p>
+      <p valstr="A">a</p>
+      <p valstr="B">b</p>
+      <p valstr="C">c</p>
+      <p valstr="D">d</p>
+      <p valstr="E">e</p>
+      <p valstr="F">f</p>
+      <p valstr="G">g</p>
+      <p valstr="H">h</p>
+      <p valstr="I">i</p>
+      <p valstr="J">j</p>
+      <p valstr="K">k</p>
+      <p valstr="L">l</p>
+      <p valstr="M">m</p>
+      <p valstr="N">n</p>
+      <p valstr="O">o</p>
+      <p valstr="P">p</p>
+      <p valstr="Q">q</p>
+      <p valstr="R">r</p>
+      <p valstr="S">s</p>
+      <p valstr="T">t</p>
+      <p valstr="U">u</p>
+      <p valstr="V">v</p>
+      <p valstr="W">w</p>
+      <p valstr="X">x</p>
+      <p valstr="Y">y</p>
+      <p valstr="Z">z</p>
+    </list>
+  </rule>
 </speechMacros>

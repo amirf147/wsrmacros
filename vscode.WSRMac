@@ -169,6 +169,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="+{F5}">STOP DEBUG</p>
       <p valstr="^+9">MOVE PANEL RIGHT</p>
       <p valstr="^+3">MOVE PANEL BOTTOM</p>
+      <p valstr="%]">NEXT SUGGESTION</p>
+      <p valstr="%[">PREVIOUS SUGGESTION</p>
     </list>
   </rule>
 
