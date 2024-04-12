@@ -45,33 +45,26 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <emulateRecognition>PRESS UP UP UP UP ENTER</emulateRecognition>
     <waitFor seconds="0.5"/>
     <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
-    <emulateRecognition>PRESS ENTER TAB</emulateRecognition>
-  </command>
-  
-  <!-- Change sound output up one option in the Volume OSD -->
-  <command priority="127">
-    <listenFor>VOLUME OUTPUT UP</listenFor>
-    <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.2"/>
-    <emulateRecognition>PRESS UP UP UP UP UP ENTER</emulateRecognition>
-    <waitFor seconds="0.5"/>
-    <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
+    <waitFor seconds="0.3"/>
     <emulateRecognition>PRESS ENTER</emulateRecognition>
     <waitFor seconds="0.3"/>
-    <emulateRecognition>PRESS TAB UP ENTER</emulateRecognition>
+    <emulateRecognition>PRESS TAB</emulateRecognition>
   </command>
   
-  <!-- Change sound output down one option in the Volume OSD -->
+  <!-- Change sound output to microphone in the Volume OSD -->
   <command priority="127">
-    <listenFor>VOLUME OUTPUT DOWN</listenFor>
-    <emulateRecognition>SYS TRAY</emulateRecognition>
-    <waitFor seconds="0.2"/>
-    <emulateRecognition>PRESS UP UP UP UP UP ENTER</emulateRecognition>
-    <waitFor seconds="0.5"/>
-    <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
-    <emulateRecognition>PRESS ENTER</emulateRecognition>
-    <waitFor seconds="0.3"/>
-    <emulateRecognition>PRESS TAB DOWN ENTER</emulateRecognition>
+    <listenFor>VOLUME OUTPUT MICROPHONE</listenFor>
+    <emulateRecognition>VOLUME OUTPUT</emulateRecognition>
+    <waitFor seconds="1.8"/>
+    <emulateRecognition>PRESS DOWN DOWN ENTER</emulateRecognition>
+  </command>
+  
+  <!-- Change sound output to speakers in the Volume OSD -->
+  <command priority="127">
+    <listenFor>VOLUME OUTPUT SPEAKERS</listenFor>
+    <emulateRecognition>VOLUME OUTPUT</emulateRecognition>
+    <waitFor seconds="1.8"/>
+    <emulateRecognition>PRESS UP UP ENTER</emulateRecognition>
   </command>
 
   <!-- Change monitor setup  -->
@@ -240,6 +233,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <o>PRESS</o>
       <p>
         <o>
+          <ruleref name="emulVsKeys" propname="p0.emulVsKeys"/>
+          <o><ruleref name="1to20" propname="p0.1to20"/></o>
+        </o>
+        <o>
           <ruleref name="textManipulation" propname="p1.textManipulation"/>
           <o><ruleref name="1to20" propname="p1.1to20"/></o>
         </o>
@@ -354,6 +351,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         </o>
       </p>
     </rule>
+    <!-- <emulateRecognition waitForDisambiguation="false">{[p0.emulVsKeys.multiPress]}{[p0.1to20]}</emulateRecognition> -->
     <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
@@ -407,7 +405,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="{BACKSPACE}">BACKS</p>
       <p valstr="{BACKSPACE}">BACKSPACE</p>
       <p valstr="{DELETE}">DELETE</p>
-      <p valstr="{END}">ENDS</p>
+      <p valstr="{END}">SQL</p>
       <p valstr="^{END}">SOUTH</p>
       <p valstr="+{END}">ENCH</p>
       <p valstr="{HOME}">HOMER</p>
@@ -422,16 +420,18 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^+{HOME}">TOPPER CELL</p>
       <p valstr = "^+{LEFT}"     > BLUSH </p>
       <p valstr = "^+{RIGHT}"    > AXEL   </p>
-      <p valstr = "^{LEFT}"      > SQUEEZE  </p>
+      <p valstr = "^{LEFT}"      >BACK SKIP   </p>
       <p valstr = "^{RIGHT}"     > JUICE    </p>
       <p valstr = "^{BACKSPACE}" > SCRATCH  </p>
       <p valstr = "^{DELETE}"    > DEER   </p>
       <p valstr = "{LEFT}"  > LEFT  </p>
+      <p valstr = "{LEFT}"  > LESBO   </p>
       <p valstr = "+{LEFT}"  > LEACH  </p>
       <p valstr = "{RIGHT}" > RIGHT  </p>
+      <p valstr = "{RIGHT}" > RICO  </p>
       <p valstr = "+{RIGHT}" > REX  </p>
-      <p valstr = "{UP}"    > SKAY   </p>
-      <p valstr = "{DOWN}"  > DRUM </p>
+      <p valstr = "{UP}"    > NURSE   </p>
+      <p valstr = "{DOWN}"  > DRIZZLE </p>
     </list>
   </rule>
 
@@ -474,6 +474,25 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="%{LEFT}">GO BACK</p>
       <p valstr="%{LEFT}">PREVIOUS PAGE</p>
       <p valstr="%{RIGHT}">GO FORWARD</p>
+    </list>
+  </rule>
+
+  <rule name="emulVsKeys">
+    <list propname = "multiPress">
+      <p valstr="LINE DEL">LINE DEL</p>
+      <p valstr="%+{DOWN}">SAME BELOW</p>
+      <p valstr="^%{DOWN}">CURSE DOWN</p>
+      <p valstr="^%{UP}">CURSE UP</p>
+      <p valstr="^+i">PANE INCREASE</p>
+      <p valstr="^+o">PANE DECREASE</p>
+      <p valstr="{TAB}">INDENT</p>
+      <p valstr="{{SHIFT}}{TAB}">UNINDENT</p>
+      <p valstr="%{UP}">LINEUP</p>
+      <p valstr="%{DOWN}">LINE DOWN</p>
+      <p valstr="^+a">BALANCE OUT</p>
+      <p valstr="^d">CURSE IT</p>
+      <p valstr="^{DOWN}">ROLL DOWN</p>
+      <p valstr="^{UP}">ROLL UP</p>
     </list>
   </rule>
 
