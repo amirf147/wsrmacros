@@ -42,9 +42,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>VOLUME OUTPUT</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
     <waitFor seconds="0.2"/>
-    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <emulateRecognition>PRESS UP UP UP UP ENTER</emulateRecognition>
     <waitFor seconds="0.5"/>
-    <emulateRecognition>BACK TAB 2 ENTER TABLE</emulateRecognition>
+    <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
+    <emulateRecognition>PRESS ENTER TAB</emulateRecognition>
   </command>
   
   <!-- Change sound output up one option in the Volume OSD -->
@@ -52,11 +53,12 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>VOLUME OUTPUT UP</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
     <waitFor seconds="0.2"/>
-    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <emulateRecognition>PRESS UP UP UP UP UP ENTER</emulateRecognition>
     <waitFor seconds="0.5"/>
-    <emulateRecognition>BACK TAB 2 ENTER</emulateRecognition>
+    <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
+    <emulateRecognition>PRESS ENTER</emulateRecognition>
     <waitFor seconds="0.3"/>
-    <emulateRecognition>TABLE SKAY ENTER</emulateRecognition>
+    <emulateRecognition>PRESS TAB UP ENTER</emulateRecognition>
   </command>
   
   <!-- Change sound output down one option in the Volume OSD -->
@@ -64,11 +66,12 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>VOLUME OUTPUT DOWN</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
     <waitFor seconds="0.2"/>
-    <emulateRecognition>SKAY 4 ENTER</emulateRecognition>
+    <emulateRecognition>PRESS UP UP UP UP UP ENTER</emulateRecognition>
     <waitFor seconds="0.5"/>
-    <emulateRecognition>BACK TAB 2 ENTER</emulateRecognition>
+    <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
+    <emulateRecognition>PRESS ENTER</emulateRecognition>
     <waitFor seconds="0.3"/>
-    <emulateRecognition>TABLE DRUM ENTER</emulateRecognition>
+    <emulateRecognition>PRESS TAB DOWN ENTER</emulateRecognition>
   </command>
 
   <!-- Change monitor setup  -->
@@ -76,13 +79,27 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>MONITOR EXTEND</listenFor>
     <emulateRecognition>PRESS KEY WINDOWS PAPA</emulateRecognition>
     <waitFor seconds="0.5"/>
-    <emulateRecognition>SKAY ENTER</emulateRecognition>
+    <emulateRecognition>PRESS UP ENTER</emulateRecognition>
   </command>
   <command priority="127">
     <listenFor>MONITOR SECOND SCREEN</listenFor>
     <emulateRecognition>PRESS KEY WINDOWS PAPA</emulateRecognition>
     <waitFor seconds="0.5"/>
-    <emulateRecognition>DRUM ENTER</emulateRecognition>
+    <emulateRecognition>PRESS DOWN ENTER</emulateRecognition>
+  </command>
+
+  <!-- Position cursor on primary monitor and then click where it lands -->
+  <command priority="127">
+    <listenFor>OTHER SIDE</listenFor>
+    <emulateRecognition>PRIMARY MONITOR</emulateRecognition>
+    <emulateRecognition>CLICK THAT</emulateRecognition>
+  </command>
+
+  <!-- Position cursor on secondary monitor and then click where it lands -->
+  <command priority="127">
+    <listenFor>TV SIDE</listenFor>
+    <emulateRecognition>SECONDARY MONITOR</emulateRecognition>
+    <emulateRecognition>CLICK THAT</emulateRecognition>
   </command>
 
   <!-- Move window to the left monitor -->
@@ -112,9 +129,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <waitFor seconds="0.5"/>
     <emulateRecognition>CANCEL</emulateRecognition>
   </command>
-
   
-    
 <!-- ##################################################
      ##
      ##    VARIATIONS OF "COPY"
@@ -405,7 +420,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="+{UP}">UPSHUR</p>
       <p valstr="+{DOWN}">SHELBY</p>
       <p valstr="^+{HOME}">TOPPER CELL</p>
-      <p valstr = "^+{LEFT}"     > BESSIE </p>
+      <p valstr = "^+{LEFT}"     > BLUSH </p>
       <p valstr = "^+{RIGHT}"    > AXEL   </p>
       <p valstr = "^{LEFT}"      > SQUEEZE  </p>
       <p valstr = "^{RIGHT}"     > JUICE    </p>
