@@ -233,10 +233,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <o>PRESS</o>
       <p>
         <o>
-          <ruleref name="emulVsKeys" propname="p0.emulVsKeys"/>
-          <o><ruleref name="1to20" propname="p0.1to20"/></o>
-        </o>
-        <o>
           <ruleref name="textManipulation" propname="p1.textManipulation"/>
           <o><ruleref name="1to20" propname="p1.1to20"/></o>
         </o>
@@ -351,7 +347,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         </o>
       </p>
     </rule>
-    <!-- <emulateRecognition waitForDisambiguation="false">{[p0.emulVsKeys.multiPress]}{[p0.1to20]}</emulateRecognition> -->
     <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
@@ -474,25 +469,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="%{LEFT}">GO BACK</p>
       <p valstr="%{LEFT}">PREVIOUS PAGE</p>
       <p valstr="%{RIGHT}">GO FORWARD</p>
-    </list>
-  </rule>
-
-  <rule name="emulVsKeys">
-    <list propname = "multiPress">
-      <p valstr="LINE DEL">LINE DEL</p>
-      <p valstr="%+{DOWN}">SAME BELOW</p>
-      <p valstr="^%{DOWN}">CURSE DOWN</p>
-      <p valstr="^%{UP}">CURSE UP</p>
-      <p valstr="^+i">PANE INCREASE</p>
-      <p valstr="^+o">PANE DECREASE</p>
-      <p valstr="{TAB}">INDENT</p>
-      <p valstr="{{SHIFT}}{TAB}">UNINDENT</p>
-      <p valstr="%{UP}">LINEUP</p>
-      <p valstr="%{DOWN}">LINE DOWN</p>
-      <p valstr="^+a">BALANCE OUT</p>
-      <p valstr="^d">CURSE IT</p>
-      <p valstr="^{DOWN}">ROLL DOWN</p>
-      <p valstr="^{UP}">ROLL UP</p>
     </list>
   </rule>
 
