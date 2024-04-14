@@ -414,7 +414,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="+{UP}">UPSHUR</p>
       <p valstr="+{DOWN}">SHELBY</p>
       <p valstr="^+{HOME}">TOPPER CELL</p>
-      <p valstr = "^+{LEFT}"     > BLUSH </p>
+      <p valstr = "^+{LEFT}"     > BLUSH SKIP </p>
       <p valstr = "^+{RIGHT}"    > AXEL   </p>
       <p valstr = "^{LEFT}"      >BACK SKIP   </p>
       <p valstr = "^{RIGHT}"     > JUICE    </p>
