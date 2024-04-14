@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speechMacros>
+
+  <command priority="127">
+    <appIsInForeground processName="sumatraPDF.exe"/>
+    <listenFor>FOCUS BOOKMARKS</listenFor>
+    <listenFor>FOCUS BOOKMARK</listenFor>
+    <listenFor>BOOKMARK FOCUS</listenFor>
+    <listenFor>BOOKMARKS FOCUS</listenFor>
+    <sendKeys>{F6}</sendKeys>
+  </command>
+  
+</speechMacros>

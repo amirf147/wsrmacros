@@ -439,7 +439,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^a">SELECT ALL</p>
       <p valstr="^l">ADDRESS BAR</p>
       <p valstr="^s">FILE SAVE</p>
-      <p valstr="^s">SAVE THIS ?FILE</p>
+      <p valstr="^s">FILE RETAIN</p>
+      <p valstr="^s">SAVE ?THIS FILE</p>
       <p valstr="^+s">FILE SAVE AS</p>
       <p valstr="^o">FILE OPEN</p>
       <p valstr="%{TAB}">SWITCH BACK</p>
@@ -451,7 +452,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="{{WIN}}b">SYS TRAY</p>
       <p valstr="{F11}">POINTER</p>
       <p valstr="{F11}">FREEZE</p>
-      <p valstr="^l">SLINE</p>
+      <p valstr="^l">SELINA</p>
       <p valstr="{{SHIFT}}{INSERT}">TERMINAL PASTE</p>
       <p valstr="%{F4}">FORCE CLOSE</p>
       <p valstr="%f">FILE MENU</p>
@@ -461,6 +462,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="{{WIN}}r">WIN RUN</p>
       <p valstr="{{CTRL}}{{ALT}}t">PRIMARY MONITOR</p>
       <p valstr="{{CTRL}}{{ALT}}v">SECONDARY MONITOR</p>
+      <p valstr="+{F10}">CONTEXT MENU</p>
     </list>
   </rule>
 
