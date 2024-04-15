@@ -6,12 +6,11 @@
   </command>
   <command>
     <listenFor>insert python</listenFor>
-    <insertText>python</insertText>
+    <insertText>python </insertText>
   </command>
   <command>
     <listenFor>python run interactive</listenFor>
     <insertText>python -i </insertText>
   </command>
-
 
 </speechMacros>

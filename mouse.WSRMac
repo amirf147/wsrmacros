@@ -71,14 +71,14 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
 </command>
 
 <command> 
-    <listenFor>triple</listenFor>
+    <listenFor>triple CLICK</listenFor>
 	<emulateRecognition>click that</emulateRecognition>
 	<emulateRecognition>double click that</emulateRecognition>
 </command>
 
 <command priority="127"> 
   <listenFor>yerkey</listenFor> 
-<emulateRecognition>triple</emulateRecognition>
+<emulateRecognition>triple CLICK</emulateRecognition>
 <waitFor seconds="0.1"/>
 <emulateRecognition>copy</emulateRecognition>
 </command>
@@ -289,62 +289,62 @@ Sadly, the above does not work as an "emulate" command, so reverting to the buil
 
     
     <command>
-      <listenFor>TRIPLE 2</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 2</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   <command>
-      <listenFor>TRIPLE 3</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 3</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="1">+{DOWN}</sendKeys>
       <waitFor seconds="0.15"/>
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   <command>
-      <listenFor>TRIPLE 4</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 4</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="2">+{DOWN}</sendKeys>
       <waitFor seconds="0.15"/>
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   <command>
-      <listenFor>TRIPLE 5</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 5</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="3">+{DOWN}</sendKeys>
       <waitFor seconds="0.15"/>
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   <command>
-      <listenFor>TRIPLE 6</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 6</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="4">+{DOWN}</sendKeys>
       <waitFor seconds="0.15"/>
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   <command>
-      <listenFor>TRIPLE 7</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 7</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="5">+{DOWN}</sendKeys>
       <waitFor seconds="0.15"/>
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   <command>
-      <listenFor>TRIPLE 8</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 8</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="6">+{DOWN}</sendKeys>
       <waitFor seconds="0.15"/>
       <sendKeys times="1">+{END}</sendKeys>
   </command>
   <command>
-      <listenFor>TRIPLE 9</listenFor>
-      <emulateRecognition>triple</emulateRecognition>
+      <listenFor>TRIPLE CLICK 9</listenFor>
+      <emulateRecognition>triple CLICK</emulateRecognition>
       <waitFor seconds="0.3"/>
       <sendKeys times="7">+{DOWN}</sendKeys>
       <waitFor seconds="0.15"/>

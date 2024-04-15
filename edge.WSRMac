@@ -100,51 +100,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <sendKeys>^+l</sendKeys>
   </command>
 
-    <!-- ##################################################
-         ##
-         ##    COPILOT
-         ##
-         ################################################## -->
-    
-  <command>
-    <appIsInForeground windowTitleContains="Copilot"/>
-    <listenFor>HEY LISTEN</listenFor>
-    <emulateRecognition>CLICK USE MICROPHONE</emulateRecognition>
-    <emulateRecognition>STOP LISTENING</emulateRecognition>
-  </command>
-  <command>
-    <appIsInForeground processName = "msedge.exe" />
-    <listenFor>Ask Chat</listenFor>
-    <emulateRecognition>CLICK ask me anything</emulateRecognition>
-  </command>
-  <command>
-    <appIsInForeground windowTitleContains="Copilot"/>
-    <listenFor>INSERT PROMPT HEADER</listenFor>
-    <insertText>I am using a voice recognition application. Commands such as "stop listening", "stop service", and "start listening" are used to control this application and should not be interpreted as part of my request.</insertText>
-  </command>
-  <command>
-    <appIsInForeground windowTitleContains="Copilot"/>
-    <listenFor>INSERT PASTE HEADER</listenFor>
-    <insertText>This is a paste:</insertText>
-  </command>
-  
-    <!-- ##################################################
-         ##
-         ##    YOUTUBE
-         ##
-         ################################################## -->
-
-  <command>
-    <appIsInForeground windowTitleContains="Youtube" />
-    <listenFor>SLOW DOWN</listenFor>
-    <sendKeys times="1">+,</sendKeys>
-  </command>
-  <command>
-    <appIsInForeground windowTitleContains="Youtube" />
-    <listenFor>SPEED UP</listenFor>
-    <sendKeys times="1">+.</sendKeys>
-  </command>
-
 <!-- ##################################################
      ##
      ##    TAB NAVIGATION
