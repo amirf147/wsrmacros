@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speechMacros>
+
+  <command>
+    <appIsInForeground windowTitleContains="Youtube" />
+    <listenFor>SLOW DOWN</listenFor>
+    <sendKeys times="1">+,</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground windowTitleContains="Youtube" />
+    <listenFor>SPEED UP</listenFor>
+    <sendKeys times="1">+.</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground windowTitleContains="Youtube" />
+    <listenFor>SEARCH BAR</listenFor>
+    <sendKeys>/</sendKeys>
+  </command>
+
+
+</speechMacros>
