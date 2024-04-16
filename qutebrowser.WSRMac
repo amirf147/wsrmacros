@@ -178,10 +178,11 @@
       <appIsInForeground processName = "qutebrowser.exe" />
       <rule>
         <p>TAB MINUS</p>
-        <p><ruleref name="1to10" propname="1to10"/></p>
+        <p><ruleref name="offByOne" propname="offByOne"/></p>
       </rule>
       <sendKeys>%9</sendKeys>
-      <sendKeys times="{[1to10]}">^{PGUP}</sendKeys>
+      <waitFor seconds="0.4"/>
+      <sendKeys times="{[offByOne.num]}">^{PGUP}</sendKeys>
   </command>
 
   <command>
@@ -522,6 +523,20 @@
       <p valstr="7">SEVENTH</p>
       <p valstr="8">EIGHTH</p>
       <p valstr="9">NINTH</p>
+    </list>
+  </rule>
+
+  
+  <rule name="offByOne">
+    <list propname = "num">
+      <p valstr="1">2</p>
+      <p valstr="2">3</p>
+      <p valstr="3">4</p>
+      <p valstr="4">5</p>
+      <p valstr="5">6</p>
+      <p valstr="6">7</p>
+      <p valstr="7">8</p>
+      <p valstr="8">9</p>
     </list>
   </rule>
 

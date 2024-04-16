@@ -42,7 +42,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>VOLUME OUTPUT</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
     <waitFor seconds="0.2"/>
-    <emulateRecognition>PRESS UP UP UP UP ENTER</emulateRecognition>
+    <emulateRecognition>PRESS UP UP ENTER</emulateRecognition>
     <waitFor seconds="0.5"/>
     <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
     <waitFor seconds="0.3"/>
