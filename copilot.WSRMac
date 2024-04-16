@@ -14,7 +14,7 @@
   <command>
     <appIsInForeground windowTitleContains="Copilot"/>
     <listenFor>INSERT PROMPT HEADER</listenFor>
-    <insertText>I am using a voice recognition application. Commands such as "stop listening", "stop service", and "start listening" are used to control this application and should not be interpreted as part of my request.</insertText>
+    <insertText>I am using a voice recognition application. Commands such as "stop listening", "stop service", and "start listening" are used to control this application and should not be interpreted as part of my request. Also, for your response, make sure you keep it terse without sacrificing on comprehensiveness. No yapping. </insertText>
   </command>
   <command>
     <appIsInForeground windowTitleContains="Copilot"/>

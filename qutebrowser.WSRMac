@@ -159,6 +159,47 @@
         <sendKeys>{[p5.0to9]}</sendKeys>
       </command>
 
+      <!-- ##################################################
+     ##
+     ##    TAB NAVIGATION
+     ##
+     ################################################## -->
+       
+  <command priority="127">
+    <appIsInForeground processName = "qutebrowser.exe" />
+    <rule>
+        <p>TAB</p>
+        <p><ruleref name="num" propname="num"/></p>
+      </rule>
+      <sendKeys>%{[num.ordinal]}</sendKeys>
+  </command>
+
+  <command priority="127">
+      <appIsInForeground processName = "qutebrowser.exe" />
+      <rule>
+        <p>TAB MINUS</p>
+        <p><ruleref name="1to10" propname="1to10"/></p>
+      </rule>
+      <sendKeys>%9</sendKeys>
+      <sendKeys times="{[1to10]}">^{PGUP}</sendKeys>
+  </command>
+
+  <command>
+    <appIsInForeground processName = "qutebrowser.exe" />
+    <listenFor>TAB LAST</listenFor>
+        <listenFor>TAB MINUS ?1</listenFor>
+      <sendKeys>%9</sendKeys>
+    </command>
+
+    <command priority="127">
+    <appIsInForeground processName = "qutebrowser.exe" />
+        <rule>
+          <p><ruleref name="explorerNav" propname="explorerNav"/> </p>
+          <o><ruleref name="1to20" propname="1to20"/></o>
+        </rule>
+        <sendKeys times="{[1to20]}">{[explorerNav.key]}</sendKeys>
+      </command>
+
    
 <!-- ##################################################
      ##
@@ -248,6 +289,14 @@
           <p valstr="{{CTRL}}{{ALT}}v">SECONDARY MONITOR</p>
           <p valstr="+{F10}">CONTEXT MENU</p>
           <p valstr=":">COMMAND</p>
+        </list>
+      </rule>
+
+      <rule name="explorerNav">
+        <list propname = "key">
+          <p valstr="H">GO BACK</p>
+          <p valstr="L">PREVIOUS PAGE</p>
+          <p valstr="L">GO FORWARD</p>
         </list>
       </rule>
 
@@ -456,7 +505,24 @@
     </list>    
   </rule>
 
+  <numbers name="1to10" start="1" stop="10"/>
+
+
   <numbers name="0to9" start="0" stop="9"/>
   <numbers name="1to20" start="1" stop="20"/>
+  
+  <rule name="num">
+    <list propname="ordinal">
+      <p valstr="1">FIRST</p>
+      <p valstr="2">SECOND</p>
+      <p valstr="3">THIRD</p>
+      <p valstr="4">FOURTH</p>
+      <p valstr="5">FIFTH</p>
+      <p valstr="6">SIXTH</p>
+      <p valstr="7">SEVENTH</p>
+      <p valstr="8">EIGHTH</p>
+      <p valstr="9">NINTH</p>
+    </list>
+  </rule>
 
 </speechMacros>
