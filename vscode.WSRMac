@@ -157,22 +157,30 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         <p valstr="^d">CURSE IT</p>
         <p valstr="^{DOWN}">ROLL DOWN</p>
         <p valstr="^{UP}">ROLL UP</p>
+        <p valstr="%{RIGHT}">TAB RIGHT</p>
+        <p valstr="%{LEFT}">TAB LEFT</p>
     </list>  
   </rule>
   <rule name="vsKeys2">
     <list propname = "pressedOnce">
+      <p valstr="{UP}~">REPEAT</p>
       <p valstr="^b">HIDE LEFT</p>
       <p valstr="{{CTRL}}{{SHIFT}}e">SHOW FILES</p>
       <p valstr="^f">FINDER</p>
       <p valstr="^+f">SEARCH ALL FILES</p>
       <p valstr="^,">SHOW SETTINGS</p>
       <p valstr="{{CTRL}}`">FOCUS TERMINAL</p>
+      <p valstr="{{CTRL}}`">SHELL</p>
+      <p valstr="^%w">KILL TERMINAL</p>
+      <p valstr="^%w">KILL SHELL</p>
+      <p valstr="^+5">SPLIT SHELL</p>
       <p valstr="{{CTRL}}`">SHOW CONSOLE</p>
       <p valstr="{{CTRL}}`">TERMINAL FOCUS</p>
       <p valstr="%z">WORD WRAP</p>
       <p valstr="^+x">SHOW EXTENSIONS</p>
       <p valstr="^0">PANE 0</p>
       <p valstr="^1">PANE 1</p>
+      <p valstr="^1">IN ZONE</p>
       <p valstr="^2">PANE 2</p>
       <p valstr="^+p">COMMANDER</p>
       <p valstr="^{F2}">CHANGE ALL</p>

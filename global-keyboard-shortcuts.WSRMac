@@ -443,7 +443,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^a">SELECT ALL</p>
       <p valstr="^l">ADDRESS BAR</p>
       <p valstr="^s">FILE SAVE</p>
-      <p valstr="^s">FILE RETAIN</p>
+      <p valstr="^s">?FILE RETAIN</p>
       <p valstr="^s">SAVE ?THIS FILE</p>
       <p valstr="^+s">FILE SAVE AS</p>
       <p valstr="^o">FILE OPEN</p>
