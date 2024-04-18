@@ -458,6 +458,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="{F11}">FREEZE</p>
       <p valstr="^l">SELINA</p>
       <p valstr="{{SHIFT}}{INSERT}">TERMINAL PASTE</p>
+      <p valstr="{{SHIFT}}{INSERT}">SHELL PASTE</p>
       <p valstr="%{F4}">FORCE CLOSE</p>
       <p valstr="%f">FILE MENU</p>
       <p valstr="{ESC}">ESCAPE</p>
