@@ -2,6 +2,28 @@
 <speechMacros>
 
 
+  <command>
+    <appIsInForeground processName = "qutebrowser.exe" />
+    <listenFor>MOSSY</listenFor>
+    <sendKeys times="1">{UP}</sendKeys>
+  </command>
+  
+  <command>
+    <appIsInForeground processName = "qutebrowser.exe" />
+    <listenFor>LISSY</listenFor>
+    <sendKeys times="1">{DOWN}</sendKeys>
+  </command>
+
+  <command>
+    <appIsInForeground processName = "qutebrowser.exe" />
+    <listenFor>MOSSER</listenFor>
+    <sendKeys times="3">{UP}</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground processName = "qutebrowser.exe" />
+    <listenFor>LISSER</listenFor>
+    <sendKeys times="3">{DOWN}</sendKeys>
+  </command>
   <!-- ##################################################
      ##
      ##    EXECUTION OF FIVE KEY/SET COMBINATIONS 
