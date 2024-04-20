@@ -469,6 +469,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="{{CTRL}}{{ALT}}v">SECONDARY MONITOR</p>
       <p valstr="+{F10}">CONTEXT MENU</p>
       <p valstr="^{F9}">Yep</p>
+      <p valstr="^-">TEXT SHRINK</p>
+      <p valstr="^=">TEXT ENLARGE</p>
     </list>
   </rule>
 
