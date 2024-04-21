@@ -11,6 +11,14 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>SHOW CHAT</listenFor>
     <sendKeys>^+.</sendKeys>
   </command>
+
+  <!-- Show link hints in vimium extension -->
+  <command>
+	<appIsInForeground processName = "msedge.exe" />
+    <listenFor>LINKER</listenFor>
+    <sendKeys>f</sendKeys>
+  </command>
+  
   <command>
 	<appIsInForeground processName = "msedge.exe" />
     <listenFor>Caret browsing</listenFor>
