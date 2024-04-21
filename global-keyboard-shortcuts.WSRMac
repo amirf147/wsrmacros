@@ -42,7 +42,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>VOLUME OUTPUT</listenFor>
     <emulateRecognition>SYS TRAY</emulateRecognition>
     <waitFor seconds="0.2"/>
-    <emulateRecognition>PRESS UP UP ENTER</emulateRecognition>
+    <emulateRecognition>PRESS UP UP UP ENTER</emulateRecognition>
     <waitFor seconds="0.5"/>
     <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
     <waitFor seconds="0.3"/>
@@ -64,7 +64,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>VOLUME OUTPUT SPEAKERS</listenFor>
     <emulateRecognition>VOLUME OUTPUT</emulateRecognition>
     <waitFor seconds="1.8"/>
-    <emulateRecognition>PRESS UP UP ENTER</emulateRecognition>
+    <emulateRecognition>PRESS UP ENTER</emulateRecognition>
   </command>
 
   <!-- Change monitor setup  -->
@@ -397,6 +397,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^w">CLOSE THIS TAB</p>
       <p valstr="^+t">TAB RESTORE</p>
       <p valstr="{ENTER}">ENTER</p>
+      <p valstr="{ENTER}">RETURN</p>
       <p valstr="%{ENTER}">ALTER</p>
       <p valstr=" ">SPACE</p>
       <p valstr="+{ENTER}">SHELTER</p>
