@@ -455,6 +455,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="{{WIN}}v">CLIPBOARD</p>
       <p valstr="{{WIN}}{{SHIFT}}s">SCREENSHOT</p>
       <p valstr="{{WIN}}b">SYS TRAY</p>
+      <p valstr="{{WIN}}b">SYSTEM TRAY</p>
       <p valstr="{F11}">POINTER</p>
       <p valstr="{F11}">FREEZE</p>
       <p valstr="^l">SELINA</p>
