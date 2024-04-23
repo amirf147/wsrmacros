@@ -15,7 +15,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <!-- Show link hints in vimium extension -->
   <command>
 	<appIsInForeground processName = "msedge.exe" />
-    <listenFor>LINKER</listenFor>
+    <listenFor>JUMPY</listenFor>
     <sendKeys>f</sendKeys>
   </command>
   
