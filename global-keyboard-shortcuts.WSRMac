@@ -233,6 +233,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <o>PRESS</o>
       <p>
         <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p1.text"/>
+        </o>
+        <o>
           <ruleref name="textManipulation" propname="p1.textManipulation"/>
           <o><ruleref name="1to20" propname="p1.1to20"/></o>
         </o>
@@ -255,6 +259,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         </o>
       </p>      
       <p>
+        <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p2.text"/>
+        </o>
         <o>
           <ruleref name="textManipulation" propname="p2.textManipulation"/>
           <o><ruleref name="1to20" propname="p2.1to20"/></o>
@@ -279,6 +287,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       </p>
       <p>
         <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p3.text"/>
+        </o>
+        <o>
           <ruleref name="textManipulation" propname="p3.textManipulation"/>
           <o><ruleref name="1to20" propname="p3.1to20"/></o>
         </o>
@@ -301,6 +313,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         </o>
       </p>
       <p>
+        <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p4.text"/>
+        </o>
         <o>
           <ruleref name="textManipulation" propname="p4.textManipulation"/>
           <o><ruleref name="1to20" propname="p4.1to20"/></o>
@@ -325,6 +341,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       </p>
       <p>
         <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p5.text"/>
+        </o>
+        <o>
           <ruleref name="textManipulation" propname="p5.textManipulation"/>
           <o><ruleref name="1to20" propname="p5.1to20"/></o>
         </o>
@@ -347,30 +367,35 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
         </o>
       </p>
     </rule>
+    <sendKeys>{[p1.text]}</sendKeys>
     <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p1.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
     <sendKeys>{[p1.capitalLetters.unit]}</sendKeys>
     <sendKeys>{[p1.0to9]}</sendKeys>
     <waitFor seconds="0.2"/>
+    <sendKeys>{[p2.text]}</sendKeys>
     <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p2.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p2.alphaNumeSym.unit]}</sendKeys>
     <sendKeys>{[p2.capitalLetters.unit]}</sendKeys>
     <sendKeys>{[p2.0to9]}</sendKeys>
     <waitFor seconds="0.05"/>
+    <sendKeys>{[p3.text]}</sendKeys>
     <sendKeys times="{[p3.1to20]}">{[p3.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p3.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p3.alphaNumeSym.unit]}</sendKeys>
     <sendKeys>{[p3.capitalLetters.unit]}</sendKeys>
     <sendKeys>{[p3.0to9]}</sendKeys>
     <waitFor seconds="0.05"/>
+    <sendKeys>{[p4.text]}</sendKeys>
     <sendKeys times="{[p4.1to20]}">{[p4.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p4.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p4.alphaNumeSym.unit]}</sendKeys>
     <sendKeys>{[p4.capitalLetters.unit]}</sendKeys>
     <sendKeys>{[p4.0to9]}</sendKeys>
     <waitFor seconds="0.05"/>
+    <sendKeys>{[p5.text]}</sendKeys>
     <sendKeys times="{[p5.1to20]}">{[p5.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p5.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p5.alphaNumeSym.unit]}</sendKeys>
@@ -496,6 +521,10 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="7">8</p>
       <p valstr="8">9</p>
     </list>
+  </rule>
+
+  <rule name="text">
+    <p> <DICTATION MAX="30"/> </p>
   </rule>
 
   <numbers name="1to20" start="1" stop="20"/>
