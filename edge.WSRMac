@@ -33,11 +33,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   </command>
 
   <command>
-	<appIsInForeground processName = "msedge.exe" />
-    <listenFor>SHOW NOTES</listenFor>
-    <sendKeys>%n</sendKeys>
-  </command>
-  <command>
     <appIsInForeground processName = "msedge.exe" />
     <listenFor>SHOW DOWNLOADS</listenFor>
     <sendKeys>^j</sendKeys>
