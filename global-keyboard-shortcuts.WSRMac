@@ -524,6 +524,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^{HOME}">TOPPER</p>
       <p valstr="^{HOME}">COPPER</p>
       <p valstr="+{HOME}">TOP CELL</p>
+      <p valstr="+{HOME}">TOP SELECT</p>
       <p valstr="^x">CUTS</p>
       <p valstr="^c">COPY</p>
       <p valstr="^z">UNDO</p>
@@ -536,7 +537,8 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr = "^+{RIGHT}"    > AXEL   </p>
       <p valstr = "^{LEFT}"      >BACK SKIP   </p>
       <p valstr = "^{RIGHT}"     > JUICE    </p>
-      <p valstr = "^{BACKSPACE}" > SCRATCH  </p>
+      <p valstr = "^{BACKSPACE}" > SCRATCH ?BACK  </p>
+      <p valstr = "^{BACKSPACE}" > SCRATCH ?BAG  </p>
       <p valstr = "^{DELETE}"    > DEER   </p>
       <p valstr = "{LEFT}"  > LEFT  </p>
       <p valstr = "{LEFT}"  > LINDA  </p>
