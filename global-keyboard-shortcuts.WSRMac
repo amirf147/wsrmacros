@@ -366,6 +366,87 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
             <ruleref name="0to9" propname="p5.0to9"></ruleref></p>
         </o>
       </p>
+      <p>
+        <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p4.text"/>
+        </o>
+        <o>
+          <ruleref name="textManipulation" propname="p4.textManipulation"/>
+          <o><ruleref name="1to20" propname="p4.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p4.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p4.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p4.0to9"></ruleref></p>
+        </o>
+      </p>
+      <p>
+        <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p5.text"/>
+        </o>
+        <o>
+          <ruleref name="textManipulation" propname="p5.textManipulation"/>
+          <o><ruleref name="1to20" propname="p5.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p5.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p5.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p5.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p5.0to9"></ruleref></p>
+        </o>
+      </p>
+      <p>
+        <o>
+          <p>JUST TYPE</p>
+          <ruleref name="text" propname="p6.text"/>
+        </o>
+        <o>
+          <ruleref name="textManipulation" propname="p6.textManipulation"/>
+          <o><ruleref name="1to20" propname="p6.1to20"/></o>
+        </o>
+        <o>
+          <ruleref name="keyCombo2" propname="p6.keyCombo2"/>
+        </o>
+        <o>
+          <p min="1" max="10">
+            <ruleref name="alphaNumeSym" propname="p6.alphaNumeSym"/> </p>
+        </o>
+        <o>
+          <p>ALL CAPS</p>
+          <p min="1" max="10">
+            <ruleref name="capitalLetters" propname="p6.capitalLetters"/></p>
+        </o>
+        <o>
+          <p>NUMBER</p>
+          <p min="1" max="10">
+            <ruleref name="0to9" propname="p6.0to9"></ruleref></p>
+        </o>
+      </p>
     </rule>
     <sendKeys>{[p1.text]}</sendKeys>
     <sendKeys times="{[p1.1to20]}">{[p1.textManipulation.keys]}</sendKeys>
@@ -373,14 +454,14 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <sendKeys>{[p1.alphaNumeSym.unit]}</sendKeys>
     <sendKeys>{[p1.capitalLetters.unit]}</sendKeys>
     <sendKeys>{[p1.0to9]}</sendKeys>
-    <waitFor seconds="0.2"/>
+    <waitFor seconds="0.3"/>
     <sendKeys>{[p2.text]}</sendKeys>
     <sendKeys times="{[p2.1to20]}">{[p2.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p2.keyCombo2.pressedOnce]}</sendKeys>
     <sendKeys>{[p2.alphaNumeSym.unit]}</sendKeys>
     <sendKeys>{[p2.capitalLetters.unit]}</sendKeys>
     <sendKeys>{[p2.0to9]}</sendKeys>
-    <waitFor seconds="0.05"/>
+    <waitFor seconds="0.2"/>
     <sendKeys>{[p3.text]}</sendKeys>
     <sendKeys times="{[p3.1to20]}">{[p3.textManipulation.keys]}</sendKeys>
     <sendKeys>{[p3.keyCombo2.pressedOnce]}</sendKeys>
@@ -401,6 +482,13 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <sendKeys>{[p5.alphaNumeSym.unit]}</sendKeys>
     <sendKeys>{[p5.capitalLetters.unit]}</sendKeys>
     <sendKeys>{[p5.0to9]}</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys>{[p6.text]}</sendKeys>
+    <sendKeys times="{[p6.1to20]}">{[p6.textManipulation.keys]}</sendKeys>
+    <sendKeys>{[p6.keyCombo2.pressedOnce]}</sendKeys>
+    <sendKeys>{[p6.alphaNumeSym.unit]}</sendKeys>
+    <sendKeys>{[p6.capitalLetters.unit]}</sendKeys>
+    <sendKeys>{[p6.0to9]}</sendKeys>
   </command>
     
 <!-- ##################################################
