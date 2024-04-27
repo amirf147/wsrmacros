@@ -143,12 +143,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <waitFor seconds="0.05"/>
     <sendKeys>%{TAB}</sendKeys>
   </command>
-  <command priority="127">
-    <listenFor>COPY SWITCH BACK</listenFor>
-    <sendKeys>^c</sendKeys>
-    <waitFor seconds="0.05"/>
-    <sendKeys>%{TAB}</sendKeys>
-  </command>
     
  <!-- ##################################################
       ##
@@ -501,6 +495,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <list propname = "keys">
       <p valstr="{TAB}">TABLE</p>
       <p valstr="{{SHIFT}}{TAB}">BACK TAB</p>
+      <p valstr="{{SHIFT}}{TAB}">BACK TABLE</p>
       <p valstr="{{CTRL}}{PGDN}">TAB UNDER</p>
       <p valstr="{{CTRL}}{PGDN}">THUNDER</p>
       <p valstr="{{CTRL}}{PGUP}">TAB OVER</p>

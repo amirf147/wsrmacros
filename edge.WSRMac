@@ -131,7 +131,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command>
     <appIsInForeground processName = "msedge.exe" />
       <listenFor>TAB LAST</listenFor>
-        <listenFor>TAB MINUS ?1</listenFor>
+      <listenFor>TAB MINUS ?1</listenFor>
       <sendKeys>^9</sendKeys>
     </command>
 
@@ -154,7 +154,6 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="9">NINTH</p>
     </list>
   </rule>
-
   
   <rule name="offByOne">
     <list propname = "num">
