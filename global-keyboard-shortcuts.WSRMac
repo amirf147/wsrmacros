@@ -56,7 +56,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <listenFor>VOLUME OUTPUT MICROPHONE</listenFor>
     <emulateRecognition>VOLUME OUTPUT</emulateRecognition>
     <waitFor seconds="1.8"/>
-    <emulateRecognition>PRESS DOWN DOWN ENTER</emulateRecognition>
+    <emulateRecognition>PRESS DOWN ENTER</emulateRecognition>
   </command>
   
   <!-- Change sound output to speakers in the Volume OSD -->
