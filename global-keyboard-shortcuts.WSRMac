@@ -45,7 +45,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <emulateRecognition>PRESS UP UP UP ENTER</emulateRecognition>
     <waitFor seconds="0.5"/>
     <emulateRecognition>PRESS SHIFT TAB 2 TIMES</emulateRecognition>
-    <waitFor seconds="0.3"/>
+    <waitFor seconds="0.5"/>
     <emulateRecognition>PRESS ENTER</emulateRecognition>
     <waitFor seconds="0.3"/>
     <emulateRecognition>PRESS TAB</emulateRecognition>
@@ -55,7 +55,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command priority="127">
     <listenFor>VOLUME OUTPUT MICROPHONE</listenFor>
     <emulateRecognition>VOLUME OUTPUT</emulateRecognition>
-    <waitFor seconds="1.8"/>
+    <waitFor seconds="2.5"/>
     <emulateRecognition>PRESS DOWN ENTER</emulateRecognition>
   </command>
   
@@ -63,7 +63,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
   <command priority="127">
     <listenFor>VOLUME OUTPUT SPEAKERS</listenFor>
     <emulateRecognition>VOLUME OUTPUT</emulateRecognition>
-    <waitFor seconds="1.8"/>
+    <waitFor seconds="2.5"/>
     <emulateRecognition>PRESS UP ENTER</emulateRecognition>
   </command>
 

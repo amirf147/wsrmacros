@@ -9,6 +9,14 @@
     <insertText>python </insertText>
   </command>
   <command>
+    <listenFor>put pie 3</listenFor>
+    <insertText>$env:p312</insertText>
+  </command>
+  <command>
+    <listenFor>put pie ?3 ?with pip</listenFor>
+    <insertText>$env:p312 -m pip</insertText>
+  </command>
+  <command>
     <listenFor>python run interactive</listenFor>
     <insertText>python -i </insertText>
   </command>

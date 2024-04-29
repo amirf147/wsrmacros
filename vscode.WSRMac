@@ -132,7 +132,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     </rule>
     <sendKeys>^g{[num]}~</sendKeys>
     <waitFor seconds="0.2" />
-    <sendKeys times="10">^{DOWN}</sendKeys>
+    <!-- <sendKeys times="10">^{DOWN}</sendKeys> -->
   </command>
 
 <!-- ##################################################
