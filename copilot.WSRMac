@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <speechMacros>
   <command>
-    <appIsInForeground windowTitleContains="Copilot"/>
+    <condition operator="OR">
+      <appIsInForeground windowTitleContains="Copilot"/>
+      <appIsInForeground processName = "msedge.exe" />
+    </condition>
     <listenFor>HEY LISTEN</listenFor>
     <emulateRecognition>CLICK USE MICROPHONE</emulateRecognition>
     <emulateRecognition>STOP LISTENING</emulateRecognition>
