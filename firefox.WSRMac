@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speechMacros>
+
+  <!-- <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>Caret browsing</listenFor>
+    <sendKeys>{F7}</sendKeys>
+    <waitFor seconds="0.3"/>
+    <sendKeys>{ENTER}</sendKeys>
+  </command> -->
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>NEW PRIVATE</listenFor>
+    <sendKeys>^+n</sendKeys>
+  </command>
+
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>SHOW DOWNLOADS</listenFor>
+    <sendKeys>^j</sendKeys>
+  </command>
+
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>MOSSY</listenFor>
+    <sendKeys times="1">{UP}</sendKeys>
+  </command>
+    
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>LISSY</listenFor>
+    <sendKeys times="1">{DOWN}</sendKeys>
+  </command>
+
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>MOSSER</listenFor>
+    <sendKeys times="3">{UP}</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>LISSER</listenFor>
+    <sendKeys times="3">{DOWN}</sendKeys>
+  </command>
+  <command> 
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>REFRESH</listenFor>
+    <sendKeys>{F5}</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>ZOOM IN</listenFor>
+    <listenFor>TEXT ENLARGE</listenFor>
+    <sendKeys>^=</sendKeys>
+  </command>
+  <command>
+    <appIsInForeground processName = "firefox.exe" />
+    <listenFor>ZOOM OUT</listenFor>
+    <listenFor>TEXT SHRINK</listenFor>
+    <sendKeys>^-</sendKeys>
+  </command>
+
+  
+<!-- ##################################################
+     ##
+     ##    TAB NAVIGATION
+     ##
+     ################################################## -->
+       
+     <command priority="127">
+      <appIsInForeground processName = "firefox.exe" />
+        <rule>
+          <p>TAB</p>
+          <p><ruleref name="num" propname="num"/></p>
+        </rule>
+        <sendKeys>^{[num.ordinal]}</sendKeys>
+    </command>
+  
+    <command priority="127">
+      <appIsInForeground processName = "firefox.exe" />
+        <rule>
+          <p>TAB MINUS</p>
+          <p><ruleref name="offByOne" propname="offByOne"/></p>
+        </rule>
+        <sendKeys>^9</sendKeys>
+        <sendKeys times="{[offByOne.num]}">^{PGUP}</sendKeys>
+    </command>
+  
+    <command>
+      <appIsInForeground processName = "firefox.exe" />
+        <listenFor>TAB LAST</listenFor>
+        <listenFor>TAB MINUS ?1</listenFor>
+        <sendKeys>^9</sendKeys>
+      </command>
+  
+  <!-- ##################################################
+       ##
+       ##   RULES
+       ##
+       ################################################## -->
+  
+    <rule name="num">
+      <list propname="ordinal">
+        <p valstr="1">FIRST</p>
+        <p valstr="2">SECOND</p>
+        <p valstr="3">THIRD</p>
+        <p valstr="4">FOURTH</p>
+        <p valstr="5">FIFTH</p>
+        <p valstr="6">SIXTH</p>
+        <p valstr="7">SEVENTH</p>
+        <p valstr="8">EIGHTH</p>
+        <p valstr="9">NINTH</p>
+      </list>
+    </rule>
+    
+    <rule name="offByOne">
+      <list propname = "num">
+        <p valstr="1">2</p>
+        <p valstr="2">3</p>
+        <p valstr="3">4</p>
+        <p valstr="4">5</p>
+        <p valstr="5">6</p>
+        <p valstr="6">7</p>
+        <p valstr="7">8</p>
+        <p valstr="8">9</p>
+      </list>
+    </rule>
+  
+    <numbers name="1to10" start="1" stop="10"/>
+  
+    
+
+</speechMacros>
