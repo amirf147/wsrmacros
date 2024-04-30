@@ -14,7 +14,7 @@
   <command>
     <appIsInForeground windowTitleContains="Copilot"/>
     <listenFor>INSERT PROMPT HEADER</listenFor>
-    <insertText>I am using a voice recognition application. Commands such as "stop listening", "stop service", and "start listening" are used to control this application and should not be interpreted as part of my request. Also, for your response, make sure you keep it terse without sacrificing on comprehensiveness. No yapping. </insertText>
+    <insertText>Here are some considerations for our conversation today: I am using a voice recognition application. I will often preface or postscript my prompts with the phrases: 'stop listening' or 'stop service' or 'start listening' in order to stop or start my on-device voice recognition application from interpreting dictation meant for you. So whenever you see this in my prompt, you can ignore it. Also, for your responses in this conversation, make sure you keep them concise and terse without sacrificing comprehensiveness wherever necessary. </insertText>
   </command>
   <command>
     <appIsInForeground windowTitleContains="Copilot"/>
