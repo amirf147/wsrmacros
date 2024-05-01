@@ -99,7 +99,7 @@ Sadly, the above does not work as an "emulate" command, so reverting to the buil
 <!-- Drag & Drop. Since WSR macros cannot do a click and drag natively, Autohotkey is needed to pick up this key press and perform the drag operation. AHK script is in the installation documentation. -->
   <command>
 	<listenFor>drag</listenFor>
-	<listenFor>grab here</listenFor>
+	<listenFor>grab ?here</listenFor>
 	<sendKeys>{{LSHIFT}}{F12}</sendKeys>
   </command>
 
