@@ -523,6 +523,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^x">CUTS</p>
       <p valstr="^c">COPY</p>
       <p valstr="^z">UNDO</p>
+      <p valstr="^y">REDO</p>
       <p valstr="^v">PASTE</p>
       <p valstr="+{UP}">SPLASH UP</p>
       <p valstr="+{UP}">SPLASH OF</p>

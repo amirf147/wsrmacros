@@ -23,24 +23,24 @@
   <command>
     <appIsInForeground processName = "firefox.exe" />
     <listenFor>MOSSY</listenFor>
-    <sendKeys times="1">{UP}</sendKeys>
+    <sendKeys times="3">{UP}</sendKeys>
   </command>
     
   <command>
     <appIsInForeground processName = "firefox.exe" />
     <listenFor>LISSY</listenFor>
-    <sendKeys times="1">{DOWN}</sendKeys>
+    <sendKeys times="3">{DOWN}</sendKeys>
   </command>
 
   <command>
     <appIsInForeground processName = "firefox.exe" />
     <listenFor>MOSSER</listenFor>
-    <sendKeys times="3">{UP}</sendKeys>
+    <sendKeys times="9">{UP}</sendKeys>
   </command>
   <command>
     <appIsInForeground processName = "firefox.exe" />
     <listenFor>LISSER</listenFor>
-    <sendKeys times="3">{DOWN}</sendKeys>
+    <sendKeys times="9">{DOWN}</sendKeys>
   </command>
   <command> 
     <appIsInForeground processName = "firefox.exe" />
@@ -91,6 +91,12 @@
         <listenFor>TAB LAST</listenFor>
         <listenFor>TAB MINUS ?1</listenFor>
         <sendKeys>^9</sendKeys>
+      </command>
+    <command>
+      <appIsInForeground processName = "firefox.exe" />
+        <listenFor>SHOW TAB</listenFor>
+        <listenFor>SHOW TABS</listenFor>
+        <sendKeys>{F1}</sendKeys>
       </command>
   
   <!-- ##################################################
