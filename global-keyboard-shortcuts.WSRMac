@@ -497,9 +497,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="{{SHIFT}}{TAB}">BACK TAB</p>
       <p valstr="{{SHIFT}}{TAB}">BACK TABLE</p>
       <p valstr="{{CTRL}}{PGDN}">TAB UNDER</p>
-      <p valstr="{{CTRL}}{PGDN}">THUNDER</p>
       <p valstr="{{CTRL}}{PGUP}">TAB OVER</p>
-      <p valstr="{{CTRL}}{PGUP}">TAVERN</p>
       <p valstr="^w">TAB CLOSE</p>
       <p valstr="^w">?TAB TERMINATE</p>
       <p valstr="^w">CLOSE THIS TAB</p>
