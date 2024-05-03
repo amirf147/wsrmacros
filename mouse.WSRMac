@@ -85,6 +85,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
 
 <command>
   <listenFor>bye bye</listenFor>
+  <listenFor>middle click</listenFor>
 <!-- 	<emulateRecognition>Middle click that</emulateRecognition>
 Sadly, the above does not work as an "emulate" command, so reverting to the built-in, which sometimes gets ignored by apps. Maybe, someday... through AHK? -->
       <mouse button="middle" command="click"/> 
