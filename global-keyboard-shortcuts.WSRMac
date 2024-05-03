@@ -38,6 +38,12 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <sendKeys>{{WIN}}h</sendKeys>
   </command>
 
+  <!-- Temporary fix for doing large number of backspace key strokes in the terminal -->
+  <command priority="127">
+    <listenFor>ONE HUNDRED BACKSPACE</listenFor>
+    <emulateRecognition>BACKSPACE 20 BACKSPACE 20 BACKSPACE 20 BACKSPACE 20 BACKSPACE 20</emulateRecognition>
+  </command>
+
   <command priority="127">
     <listenFor>SHUSH</listenFor>
     <emulateRecognition>CLICK CANCEL</emulateRecognition>
