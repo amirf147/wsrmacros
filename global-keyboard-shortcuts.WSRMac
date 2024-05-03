@@ -32,6 +32,12 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
      ##
      ################################################## -->
 
+  <!-- Begin windows dictation mode -->
+  <command priority="127">
+    <listenFor>DICTATION MODE</listenFor>
+    <sendKeys>{{WIN}}h</sendKeys>
+  </command>
+
   <command priority="127">
     <listenFor>SHUSH</listenFor>
     <emulateRecognition>CLICK CANCEL</emulateRecognition>
