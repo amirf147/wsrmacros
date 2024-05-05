@@ -134,6 +134,43 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <waitFor seconds="0.5"/>
     <emulateRecognition>CANCEL</emulateRecognition>
   </command>
+
+  <!-- Resize window from left side -->
+  <command priority="127">
+    <listenFor>RESIZE LEFT</listenFor>
+    <emulateRecognition>PRESS KEY alt space</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY sierra</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>PRESS KEY left</emulateRecognition>
+  </command>
+  <!-- Resize window from right side -->
+  <command priority="127">
+    <listenFor>RESIZE RIGHT</listenFor>
+    <emulateRecognition>PRESS KEY alt space</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY sierra</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>PRESS KEY right</emulateRecognition>
+  </command>
+  <!-- Resize window from up side -->
+  <command priority="127">
+    <listenFor>RESIZE TOP</listenFor>
+    <emulateRecognition>PRESS KEY alt space</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY sierra</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>PRESS KEY up</emulateRecognition>
+  </command>
+  <!-- Resize window from down side -->
+  <command priority="127">
+    <listenFor>RESIZE BOTTOM</listenFor>
+    <emulateRecognition>PRESS KEY alt space</emulateRecognition>
+    <waitFor seconds="0.5"/>
+    <emulateRecognition>PRESS KEY sierra</emulateRecognition>
+    <waitFor seconds="0.2"/>
+    <emulateRecognition>PRESS KEY down</emulateRecognition>
+  </command>
   
 <!-- ##################################################
      ##
