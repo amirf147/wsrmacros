@@ -182,6 +182,7 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
       <p valstr="^1">PANE 1</p>
       <p valstr="^1">IN ZONE</p>
       <p valstr="^2">PANE 2</p>
+      <p valstr="^3">PANE 3</p>
       <p valstr="^+p">COMMANDER</p>
       <p valstr="^{F2}">CHANGE ALL</p>
       <p valstr="^/">COMMENT</p>
