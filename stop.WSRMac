@@ -15,6 +15,8 @@
   </command>
   <command priority="127">
     <listenFor>SLEEP</listenFor>
+    <listenFor>START DRAGON</listenFor>
+    <listenFor>SWITCH TO DRAGON</listenFor>
     <emulateRecognition>STOP LISTENING</emulateRecognition>
   </command>
   <command>
