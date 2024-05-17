@@ -32,6 +32,12 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
      ##
      ################################################## -->
 
+  <!-- Grab the windows speech recognition GUI from the top left corner -->
+  <command>
+    <listenFor>reposition the GUI</listenFor>
+    <emulateRecognition>mousegrid 2 1 2 3 6 mark</emulateRecognition>
+  </command>
+
   <!-- Begin windows dictation mode -->
   <command priority="127">
     <listenFor>DICTATION MODE</listenFor>
