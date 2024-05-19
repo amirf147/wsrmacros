@@ -34,8 +34,14 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
 
   <!-- Grab the windows speech recognition GUI from the top left corner -->
   <command>
-    <listenFor>reposition the GUI</listenFor>
+    <listenFor>reposition ?the GUI</listenFor>
     <emulateRecognition>mousegrid 2 1 2 3 6 mark</emulateRecognition>
+  </command>
+
+  <!-- Position the mouse cursor on the x button to close the nvidia control panel dialogue that appears on pc start up -->
+  <command>
+    <listenFor>close that box</listenFor>
+    <emulateRecognition>mousegrid 9 9 2 8 1</emulateRecognition>
   </command>
 
   <!-- Begin windows dictation mode -->
