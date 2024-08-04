@@ -32,6 +32,14 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
      ##
      ################################################## -->
 
+  <!-- Minimize the windows speech recognition GUI and put it into sleep mode  -->
+  <command>
+    <listenFor>hide and sleep</listenFor>
+    <emulateRecognition>minimize speech recognition</emulateRecognition>
+    <waitFor seconds="0.3"/>
+    <emulateRecognition>stop listening</emulateRecognition>
+  </command>
+  
   <!-- Grab the windows speech recognition GUI from the top left corner -->
   <command>
     <listenFor>reposition ?the GUI</listenFor>
