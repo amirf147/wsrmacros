@@ -28,6 +28,15 @@ You can find his work here: https://github.com/leeorhelps/SpeechBird
     <waitFor seconds="0.05"/>
     <sendKeys times="1">^i</sendKeys>
   </command>
+  
+  <!-- User defined key binding: Move terminal into new window-->
+  <command>
+    <appIsInForeground processName="code.exe" />
+    <listenFor>POP OUT TERMINAL</listenFor>
+    <sendKeys times="1">^k</sendKeys>
+    <waitFor seconds="0.05"/>
+    <sendKeys times="1">%t</sendKeys>
+  </command>
 
   <command>
     <appIsInForeground processName="code.exe" />
